@@ -1,0 +1,815 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ordonnancement des workflows scientifiques sur le cloud avec optimisation
+ de l'énergie
+\end_layout
+
+\begin_layout Author
+TOUHAMI Abdelghani Chaabane
+\end_layout
+
+\begin_layout Author
+CHERIEF Houcine Abdelkader
+\end_layout
+
+\begin_layout Date
+Fibrary 21
+\begin_inset Formula $^{st}$
+\end_inset
+
+, 2023
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+TOdo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+General introduction
+\end_layout
+
+\begin_layout Subsection
+Context
+\end_layout
+
+\begin_layout Subsection
+Problematic
+\end_layout
+
+\begin_layout Subsection
+Objectives
+\end_layout
+
+\begin_layout Subsection
+Contribution
+\end_layout
+
+\begin_layout Subsection
+Outline
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Workflow and scientific workflow
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Workflow
+\end_layout
+
+\begin_layout Subsubsection
+Workflow definition
+\end_layout
+
+\begin_layout Standard
+Workflow is the sequence of tasks, steps, and decisions that need to be
+ followed to complete a specific process.
+ It can be thought of as a set of instructions that describe how a process
+ should be performed, including the order in which tasks are to be completed,
+ who is responsible for performing each task, and what should happen next
+ based on the outcome of each task.
+ 
+\end_layout
+
+\begin_layout Standard
+Workflows can be used to automate a wide range of business processes, such
+ as invoicing, order fulfillment, human resources, and project management.
+ The goal of a workflow is to make sure that tasks are completed in the
+ correct order and by the right people, and to ensure that the process is
+ efficient and accurate.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Process
+\end_layout
+
+\begin_layout Subsubsection
+Activity
+\end_layout
+
+\begin_layout Subsubsection
+Script
+\end_layout
+
+\begin_layout Subsubsection
+Work cases
+\end_layout
+
+\begin_layout Subsubsection
+Role
+\end_layout
+
+\begin_layout Subsubsection
+Participant
+\end_layout
+
+\begin_layout Subsection
+Concepts of workflow
+\end_layout
+
+\begin_layout Subsubsection
+[Les routes
+\end_layout
+
+\begin_layout Subsubsection
+Les règles
+\end_layout
+
+\begin_layout Subsubsection
+Les roles]
+\end_layout
+
+\begin_layout Subsection
+[Système de gestion des workflow]
+\end_layout
+
+\begin_layout Subsubsection
+Definition
+\end_layout
+
+\begin_layout Standard
+A workflow management system (WMS) is a software application that is designed
+ to help organizations automate and manage their business processes.
+ A WMS allows an organization to define and implement a workflow – a series
+ of tasks, steps, and decisions – that need to be followed to complete a
+ specific process.
+ The system can then be used to track the progress of the workflow, manage
+ the flow of information and documents, and ensure that tasks are completed
+ in the correct order and by the right people.
+\end_layout
+
+\begin_layout Standard
+A WMS can be used to automate a wide range of business processes, such as
+ invoicing, order fulfillment, human resources, and project management.
+ It can also be used to integrate different systems, such as email, calendar,
+ and customer relationship management (CRM) software.
+ WMS allows you to streamline the process and make it more efficient, reduce
+ errors and delays, and give you real-time visibility into the status of
+ your processes, also it’s common to have a built-in reporting and analytics
+ tools to measure the performance of the process.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+[Architecture d'un système de gestion de workflow]
+\end_layout
+
+\begin_layout Subsection
+[Classification du workflow]
+\end_layout
+
+\begin_layout Subsection
+Scientific Workflow
+\end_layout
+
+\begin_layout Subsubsection
+[Définition
+\end_layout
+
+\begin_layout Subsubsection
+Cycle de vie d'un workflow scientifique
+\end_layout
+
+\begin_layout Subsubsection
+Type de workflows scientifiques
+\end_layout
+
+\begin_layout Subsubsection
+Exemple de workflow scientifique
+\end_layout
+
+\begin_layout Subsubsection
+Comparaison entre le workflow scientifique avec workflows proffessionnels]
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsection
+[Historique
+\end_layout
+
+\begin_layout Subsection
+Définition du Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+Définition d'un service et un service Cloud
+\end_layout
+
+\begin_layout Subsubsection
+Définition d'un service
+\end_layout
+
+\begin_layout Subsubsection
+Définition d'un service Cloud
+\end_layout
+
+\begin_layout Subsection
+L'architecture du Cloud
+\end_layout
+
+\begin_layout Subsubsection
+Le modèle SPI
+\end_layout
+
+\begin_layout Paragraph
+Système logiciel Cloud (Saa)
+\end_layout
+
+\begin_layout Paragraph
+Système Cloud Plateforme
+\end_layout
+
+\begin_layout Paragraph
+Système d'infrastructure Cloud (IaaS)
+\end_layout
+
+\begin_layout Subsubsection
+? L'architecture du CLoud selon UCSB-IBM
+\end_layout
+
+\begin_layout Paragraph
+Applications (SaaS)
+\end_layout
+
+\begin_layout Paragraph
+Environnement logiciel Cloud (PaaS)
+\end_layout
+
+\begin_layout Paragraph
+Infrastructure logiciel Cloud
+\end_layout
+
+\begin_layout Subparagraph
+Ressources de calcul
+\end_layout
+
+\begin_layout Subparagraph
+Stockage
+\end_layout
+
+\begin_layout Subparagraph
+Communication
+\end_layout
+
+\begin_layout Paragraph
+La couche logiciel Kernelle
+\end_layout
+
+\begin_layout Paragraph
+La couche Hardware/Firmware
+\end_layout
+
+\begin_layout Subsection
+Caractéristiques du Cloud
+\end_layout
+
+\begin_layout Subsubsection
+Flexibilité
+\end_layout
+
+\begin_layout Subsubsection
+Récupération des données
+\end_layout
+
+\begin_layout Subsubsection
+Mise à jour logiciel automatique
+\end_layout
+
+\begin_layout Subsubsection
+Absence de frais d'investissement
+\end_layout
+
+\begin_layout Subsubsection
+Collaboration accrue
+\end_layout
+
+\begin_layout Subsubsection
+Mobile
+\end_layout
+
+\begin_layout Subsubsection
+Controle des documents
+\end_layout
+
+\begin_layout Subsubsection
+Compétitivité
+\end_layout
+
+\begin_layout Subsubsection
+Respect de l'environnement
+\end_layout
+
+\begin_layout Subsection
+Modèles de services
+\end_layout
+
+\begin_layout Subsubsection
+Logiciel en tant que service (SaaS)
+\end_layout
+
+\begin_layout Subsubsection
+Plateforme en tant que service (PaaS)
+\end_layout
+
+\begin_layout Subsubsection
+Infrastructure en tant que service (IaaS)
+\end_layout
+
+\begin_layout Subsection
+Avantages communs de tous les services
+\end_layout
+
+\begin_layout Subsection
+Modèles de déploiement
+\end_layout
+
+\begin_layout Subsection
+Autre modèles de déploiement
+\end_layout
+
+\begin_layout Subsection
+Acteurs Cloud
+\end_layout
+
+\begin_layout Subsection
+Intérêt du Cloud pour les workflows
+\end_layout
+
+\begin_layout Subsection
+Obstacles du Cloud Computing]
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+[Ordonnancement du workflow scientifique sur une plateforme Cloud
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsubsection
+Définitions et concepts
+\end_layout
+
+\begin_layout Subsubsection
+Types d'ordonnancement
+\end_layout
+
+\begin_layout Subsection
+L'ordonnanceur et l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+Définition de l'ordonnancement
+\end_layout
+
+\begin_layout Subsubsection
+Définition de l'ordonnanceur
+\end_layout
+
+\begin_layout Subsubsection
+L'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+Objectifs de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+Les techiniques de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+Catégories d'algorithmes d'ordonnancement existants
+\end_layout
+
+\begin_layout Subsection
+Critère de planification dans le Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+Algorithmes de planification
+\end_layout
+
+\begin_layout Subsection
+Comparaison entre les algorithmes
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problème d'ordonnancement de tâches de Workflow
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Représentation des applications parallèles
+\end_layout
+
+\begin_layout Subsection
+Modélisation du problèmes
+\end_layout
+
+\begin_layout Subsection
+Métaheuristiques pour l'optimisation
+\end_layout
+
+\begin_layout Subsubsection
+Problème d'optimisation
+\end_layout
+
+\begin_layout Subsubsection
+Optimisation difficile
+\end_layout
+
+\begin_layout Subsubsection
+Algorithmes d'optimisation approchées
+\end_layout
+
+\begin_layout Subsubsection
+Caractéristiques d'une méta-heuristique
+\end_layout
+
+\begin_layout Subsection
+Conclusion]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+[Etat de l'art et approche proposée
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Algorithme étudié
+\end_layout
+
+\begin_layout Subsection
+Algorithme de ...
+\end_layout
+
+\begin_layout Subsection
+Travaux connexes
+\end_layout
+
+\begin_layout Subsection
+Comparaison entre les approches d'ordonnancement des workflows
+\end_layout
+
+\begin_layout Subsection
+Approche proposée
+\end_layout
+
+\begin_layout Subsubsection
+Objectif du travail
+\end_layout
+
+\begin_layout Subsubsection
+Description de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+Politique de partage du temps vs de l'espace
+\end_layout
+
+\begin_layout Subsubsection
+Les étapes de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+Diagramme de l'approche proposée
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implémentation d'algrothme d'ordonnancement de workflow
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsection
+CloudSim & WorkflowSim sous eclipse
+\end_layout
+
+\begin_layout Subsubsection
+Présentation
+\end_layout
+
+\begin_layout Subsubsection
+Fonctionnalités de CloudSim
+\end_layout
+
+\begin_layout Subsubsection
+Architecture de CloudSim
+\end_layout
+
+\begin_layout Subsubsection
+Du CloudSim vers WorkflowSim
+\end_layout
+
+\begin_layout Subsubsection
+Téléchargement et installation de WorkflowSim
+\end_layout
+
+\begin_layout Subsubsection
+Avantages & Inconvénient de WorkflowSim
+\end_layout
+
+\begin_layout Subsection
+Objectif de notre travail
+\end_layout
+
+\begin_layout Subsection
+Pricipe de l'algorithme
+\end_layout
+
+\begin_layout Subsection
+Résultat de l'exécution
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implémentation et résultats
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Outil de simulation: CloudSim
+\end_layout
+
+\begin_layout Subsection
+Architecture de CloudSim
+\end_layout
+
+\begin_layout Subsection
+Paramètre de simulations
+\end_layout
+
+\begin_layout Subsection
+Expérimentation
+\end_layout
+
+\begin_layout Subsection
+Comparaison et discussion de la solution
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion générale
+\end_layout
+
+\begin_layout Paragraph
+Discussion
+\end_layout
+
+\begin_layout Paragraph
+Limites
+\end_layout
+
+\begin_layout Paragraph
+Perspectives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "bibleographie"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

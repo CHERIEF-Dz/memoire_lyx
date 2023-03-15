@@ -1,0 +1,726 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\size largest
+Remerciements
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Dédicace
+\end_layout
+
+\begin_layout Standard
+
+\size largest
+Table de matière
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Remerciements
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Dédicace
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Abstract
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Résumé
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Table des matières
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Introduction générale
+\end_layout
+
+\begin_layout Enumerate
+Contexte
+\end_layout
+
+\begin_layout Enumerate
+Problématique
+\end_layout
+
+\begin_layout Enumerate
+Objectifs 
+\end_layout
+
+\begin_layout Enumerate
+Contribution
+\end_layout
+
+\begin_layout Enumerate
+Organisation de la thèse
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre1: Etat de l’art sur le Workflow et workflow scientifiques
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_layout Enumerate
+Workflow
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Définition du workflow
+\end_layout
+
+\begin_layout Enumerate
+Processus
+\end_layout
+
+\begin_layout Enumerate
+Activité
+\end_layout
+
+\begin_layout Enumerate
+Script
+\end_layout
+
+\begin_layout Enumerate
+Cas de travail
+\end_layout
+
+\begin_layout Enumerate
+Rôle
+\end_layout
+
+\begin_layout Enumerate
+Participant
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Concepts du workflow
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Les Routes
+\end_layout
+
+\begin_layout Enumerate
+Les Règles 
+\end_layout
+
+\begin_layout Enumerate
+Les Rôles 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Système de gestion de workflow 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Définition 
+\end_layout
+
+\begin_layout Enumerate
+Architecture d’un système de gestion de workflow
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Classification du workflow
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Workflow de production 
+\end_layout
+
+\begin_layout Enumerate
+Workflow administratif 
+\end_layout
+
+\begin_layout Enumerate
+Workflow ad hoc 
+\end_layout
+
+\begin_layout Enumerate
+Workflow collaboratif 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Workflow Scientifique 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Définition
+\end_layout
+
+\begin_layout Enumerate
+Cycle de vie d’un workflow scientifique 
+\end_layout
+
+\begin_layout Enumerate
+Type de workflows scientifiques 
+\end_layout
+
+\begin_layout Enumerate
+Exemple de workflow scientifique
+\end_layout
+
+\begin_layout Enumerate
+Comparaison des workflows scientifiques avec workflows professionnels
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre2 : Le Cloud Computing
+\end_layout
+
+\begin_layout Enumerate
+Introduction 
+\end_layout
+
+\begin_layout Enumerate
+Historique 
+\end_layout
+
+\begin_layout Enumerate
+Définition du Cloud Computing
+\end_layout
+
+\begin_layout Enumerate
+Définition d’un service et un service cloud
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Définition du service
+\end_layout
+
+\begin_layout Enumerate
+Définition d’un Service Cloud
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+? L’architecture du Cloud
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Le modèle SPI
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Systèmes Logiciels Cloud (SaaS)
+\end_layout
+
+\begin_layout Enumerate
+Système Cloud Plateforme (PaaS)
+\end_layout
+
+\begin_layout Enumerate
+Système d’infrastructure Cloud (IaaS)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+L’architecture du Cloud selon UCSB-IBM
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Applications (SaaS)
+\end_layout
+
+\begin_layout Enumerate
+Environnement logiciel Cloud (PaaS) 
+\end_layout
+
+\begin_layout Enumerate
+Infrastructure logiciel Cloud 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ressources de calcul
+\end_layout
+
+\begin_layout Enumerate
+Stockage
+\end_layout
+
+\begin_layout Enumerate
+Communication
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La couche logicielle Kernel 
+\end_layout
+
+\begin_layout Enumerate
+La couche Hardware/Firmware
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Caractéristiques du Cloud
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Flexibilité
+\end_layout
+
+\begin_layout Enumerate
+Récupération des données
+\end_layout
+
+\begin_layout Enumerate
+Mise à jour logiciel automatique
+\end_layout
+
+\begin_layout Enumerate
+Absence de frais d'investissement
+\end_layout
+
+\begin_layout Enumerate
+Collaboration accrue
+\end_layout
+
+\begin_layout Enumerate
+Mobile
+\end_layout
+
+\begin_layout Enumerate
+Contrôle des documents 
+\end_layout
+
+\begin_layout Enumerate
+Compétitivité
+\end_layout
+
+\begin_layout Enumerate
+Respect de l'environnement
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+? Modèles de services
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Logiciel en tant que service (SaaS
+\end_layout
+
+\begin_layout Enumerate
+Plate-forme en tant que service (PaaS)
+\end_layout
+
+\begin_layout Enumerate
+Infrastructure en tant que service (IaaS)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Avantages communs de tous les services 
+\end_layout
+
+\begin_layout Enumerate
+Modèles de déploiement
+\end_layout
+
+\begin_layout Enumerate
+? Autres modèles de déploiement 
+\end_layout
+
+\begin_layout Enumerate
+Acteurs Cloud
+\end_layout
+
+\begin_layout Enumerate
+Intérêt du Cloud pour les workflows
+\end_layout
+
+\begin_layout Enumerate
+Obstacles du Cloud Computing
+\end_layout
+
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre 3 : Ordonnancement du workflow scientifique sur une plateforme
+ cloud 
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Définitions et concepts
+\end_layout
+
+\begin_layout Enumerate
+Types d’ordonnancement 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+L’ordonnanceur et l’ordonnancement du workflow 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Définition de l’ordonnancement 
+\end_layout
+
+\begin_layout Enumerate
+Définition de l’ordonnanceur 
+\end_layout
+
+\begin_layout Enumerate
+L’ordonnancement du workflow 
+\end_layout
+
+\begin_layout Enumerate
+Objectifs de l’ordonnancement du workflow 
+\end_layout
+
+\begin_layout Enumerate
+Les techniques de l’ordonnancement du workflow 
+\end_layout
+
+\begin_layout Enumerate
+Catégories d’algorithmes d’ordonnancement existants 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Critères de planification dans le Cloud Computing
+\end_layout
+
+\begin_layout Enumerate
+Algorithmes de planification 
+\end_layout
+
+\begin_layout Enumerate
+Comparaison entre les algorithmes 
+\end_layout
+
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre 4 : Problème d'ordonnancement de tâches de Workflow
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_layout Enumerate
+Représentation des applications parallèles 
+\end_layout
+
+\begin_layout Enumerate
+Modélisation du problème
+\end_layout
+
+\begin_layout Enumerate
+Métaheuristiques pour l’optimisation 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Problème d’optimisation
+\end_layout
+
+\begin_layout Enumerate
+Optimisation difficile 
+\end_layout
+
+\begin_layout Enumerate
+Algorithmes d’optimisation approchée
+\end_layout
+
+\begin_layout Enumerate
+Caractéristiques d’une méta-heuristique 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre 5: Etat de l’art et approche proposée
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_layout Enumerate
+Algorithme étudié
+\end_layout
+
+\begin_layout Enumerate
+Algorithme de colonies de fourmis
+\end_layout
+
+\begin_layout Enumerate
+Travaux connexes
+\end_layout
+
+\begin_layout Enumerate
+Comparaison entre les approches d’ordonnancement des workflows 
+\end_layout
+
+\begin_layout Enumerate
+Approche proposée 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Objectif du travail
+\end_layout
+
+\begin_layout Enumerate
+Description de l’approche
+\end_layout
+
+\begin_layout Enumerate
+Politique de partage du temps vs de l'espace
+\end_layout
+
+\begin_layout Enumerate
+Les étapes de l’approche
+\end_layout
+
+\begin_layout Enumerate
+Diagramme de l’approche proposée
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre 6: Implémentation d’Algorithme d’ordonnancement de workflow
+\end_layout
+
+\begin_layout Enumerate
+Introduction 
+\end_layout
+
+\begin_layout Enumerate
+CloudSim & WorkflowSim sous eclipse 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Présentation 
+\end_layout
+
+\begin_layout Enumerate
+Fonctionnalités de CloudSim 
+\end_layout
+
+\begin_layout Enumerate
+Architecture de CloudSim 
+\end_layout
+
+\begin_layout Enumerate
+De CloudSim vers WorkflowSim 
+\end_layout
+
+\begin_layout Enumerate
+Téléchargement et installation de WorkflowSim 
+\end_layout
+
+\begin_layout Enumerate
+Avantages & inconvénient de WorkflowSim 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Objectif de notre travail 
+\end_layout
+
+\begin_layout Enumerate
+Principe de l’algorithme 
+\end_layout
+
+\begin_layout Enumerate
+Résultat de l’exécution 
+\end_layout
+
+\begin_layout Enumerate
+Conclusion 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Chapitre 7: Implémentation et résultats
+\end_layout
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_layout Enumerate
+Outil de simulation : CloudSim
+\end_layout
+
+\begin_layout Enumerate
+Architecture de CloudSim 
+\end_layout
+
+\begin_layout Enumerate
+Paramètres de simulations 
+\end_layout
+
+\begin_layout Enumerate
+Expérimentation 
+\end_layout
+
+\begin_layout Enumerate
+Comparaison et discussion de la solution
+\end_layout
+
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Conclusion générale 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Glossaire
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Bibliographie
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1050 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\lang french
+Ordonnancement des workflows scientifiques sur le cloud avec optimisation
+ de l'énergie
+\end_layout
+
+\begin_layout Author
+
+\lang french
+TOUHAMI Abdelghani Chaabane
+\end_layout
+
+\begin_layout Author
+
+\lang french
+CHERIEF Houcine Abdelkader
+\end_layout
+
+\begin_layout Date
+
+\lang french
+19/02/2023
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\lang french
+TOdo
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Introduction générale
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Contexte
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Problématique
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Objectifs
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Contribution
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Organisation de la thèse
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Etat de l'art sur le workflow et workflow scientifiques
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Processus
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Activité
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Script
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Cas de travail
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Role
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Participant
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Concepts du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Les routes
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Les règles
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Les roles
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Système de gestion des workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Architecture d'un système de gestion de workflow
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Classification du workflow
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Workflow Scientifique
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Cycle de vie d'un workflow scientifique
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Type de workflows scientifiques
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Exemple de workflow scientifique
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Comparaison entre le workflow scientifique avec workflows proffessionnels
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Le Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Historique
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Définition du Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Définition d'un service et un service Cloud
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition d'un service
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition d'un service Cloud
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+L'architecture du Cloud
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Le modèle SPI
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+Système logiciel Cloud (Saa)
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+Système Cloud Plateforme
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+Système d'infrastructure Cloud (IaaS)
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+? L'architecture du CLoud selon UCSB-IBM
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+Applications (SaaS)
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+Environnement logiciel Cloud (PaaS)
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+Infrastructure logiciel Cloud
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang french
+Ressources de calcul
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang french
+Stockage
+\end_layout
+
+\begin_layout Subparagraph
+
+\lang french
+Communication
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+La couche logiciel Kernelle
+\end_layout
+
+\begin_layout Paragraph
+
+\lang french
+La couche Hardware/Firmware
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Caractéristiques du Cloud
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Flexibilité
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Récupération des données
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Mise à jour logiciel automatique
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Absence de frais d'investissement
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Collaboration accrue
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Mobile
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Controle des documents
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Compétitivité
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Respect de l'environnement
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Modèles de services
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Logiciel en tant que service (SaaS)
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Plateforme en tant que service (PaaS)
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Infrastructure en tant que service (IaaS)
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Avantages communs de tous les services
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Modèles de déploiement
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Autre modèles de déploiement
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Acteurs Cloud
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Intérêt du Cloud pour les workflows
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Obstacles du Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Ordonnancement du workflow scientifique sur une plateforme Cloud
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définitions et concepts
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Types d'ordonnancement
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+L'ordonnanceur et l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition de l'ordonnancement
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Définition de l'ordonnanceur
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+L'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Objectifs de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Les techiniques de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Catégories d'algorithmes d'ordonnancement existants
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Critère de planification dans le Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Algorithmes de planification
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Comparaison entre les algorithmes
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Problème d'ordonnancement de tâches de Workflow
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Représentation des applications parallèles
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Modélisation du problèmes
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Métaheuristiques pour l'optimisation
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Problème d'optimisation
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Optimisation difficile
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Algorithmes d'optimisation approchées
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Caractéristiques d'une méta-heuristique
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Etat de l'art et approche proposée
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Algorithme étudié
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Algorithme de ...
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Travaux connexes
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Comparaison entre les approches d'ordonnancement des workflows
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Approche proposée
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Objectif du travail
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Description de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Politique de partage du temps vs de l'espace
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Les étapes de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Diagramme de l'approche proposée
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Implémentation d'algrothme d'ordonnancement de workflow
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+CloudSim & WorkflowSim sous eclipse
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Présentation
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Fonctionnalités de CloudSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Architecture de CloudSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Du CloudSim vers WorkflowSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Téléchargement et installation de WorkflowSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang french
+Avantages & Inconvénient de WorkflowSim
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Objectif de notre travail
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Pricipe de l'algorithme
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Résultat de l'exécution
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Implémentation d'algrothme d'ordonnancement de workflow
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Outil de simulation: CloudSim
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Architecture de CloudSim
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Paramètre de simulations
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Expérimentation
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Comparaison et discussion de la solution
+\end_layout
+
+\begin_layout Subsection
+
+\lang french
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang french
+Conclusion générale
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\lang french
+TODO Glossaire
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\lang french
+TODO Bibliographie
+\end_layout
+
+\end_body
+\end_document

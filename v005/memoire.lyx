@@ -1,0 +1,1419 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ordonnancement des workflows scientifiques sur le cloud avec optimisation
+ de l'énergie
+\end_layout
+
+\begin_layout Author
+TOUHAMI Abdelghani Chaabane
+\end_layout
+
+\begin_layout Author
+CHERIEF Houcine Abdelkader
+\end_layout
+
+\begin_layout Date
+Fibrary 21
+\begin_inset Formula $^{st}$
+\end_inset
+
+, 2023
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\color brown
+To Do
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+General introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Context
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Problematic
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Objectives
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Contribution
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Outline
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Workflow and scientific workflow
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Workflow
+\end_layout
+
+\begin_layout Subsubsection
+Workflow definition
+\end_layout
+
+\begin_layout Standard
+Workflow is defined by Workflow Management Coalition (WfMC), which is a
+ consortium formed to define standards for the interoperability of workflow
+ management systems, as following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Workflow is the sequence of tasks, steps, and decisions that need to be
+ followed to complete a specific process.
+ It can be thought of as a set of instructions that describe how a process
+ should be performed, including the order in which tasks are to be completed,
+ who is responsible for performing each task, and what should happen next
+ based on the outcome of each task.
+ 
+\end_layout
+
+\begin_layout Standard
+Workflows can be used to automate a wide range of business processes, such
+ as invoicing, order fulfillment, human resources, and project management.
+ The goal of a workflow is to make sure that tasks are completed in the
+ correct order and by the right people, and to ensure that the process is
+ efficient and accurate.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Process
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Activity
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Script
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Work cases
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Role
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Participant
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Concepts of workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Les routes
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Les règles
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Les roles
+\end_layout
+
+\begin_layout Subsection
+Workflow Management System
+\end_layout
+
+\begin_layout Subsubsection
+Definition
+\end_layout
+
+\begin_layout Standard
+A workflow management system (WMS) is a software application that is designed
+ to help organizations automate and manage their business processes.
+ A WMS allows an organization to define and implement a workflow – a series
+ of tasks, steps, and decisions – that need to be followed to complete a
+ specific process.
+ The system can then be used to track the progress of the workflow, manage
+ the flow of information and documents, and ensure that tasks are completed
+ in the correct order and by the right people.
+\end_layout
+
+\begin_layout Standard
+A WMS can be used to automate a wide range of business processes, such as
+ invoicing, order fulfillment, human resources, and project management.
+ It can also be used to integrate different systems, such as email, calendar,
+ and customer relationship management (CRM) software.
+ WMS allows you to streamline the process and make it more efficient, reduce
+ errors and delays, and give you real-time visibility into the status of
+ your processes, also it’s common to have a built-in reporting and analytics
+ tools to measure the performance of the process.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Architecture d'un système de gestion de workflow
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Classification du workflow
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Scientific Workflow
+\end_layout
+
+\begin_layout Subsubsection
+Définition
+\end_layout
+
+\begin_layout Standard
+Scientific workflows are data-intensive applications representing distributed
+ data sources and complex computations in various domains, i.e.
+ astronomy, engineering sciences, and bioinformatics.
+ In distributed environments like fog computing, various sensors and experimenta
+l processes generate a large volume of data that need collection and processing
+ within specific time constraints.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "5"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Cycle de vie d'un workflow scientifique
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Type de workflows scientifiques
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Comparaison entre le workflow scientifique avec workflows proffessionnels
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Definition of Cloud Computing
+\end_layout
+
+\begin_layout Standard
+The National Institute of Standards and Technology (NIST) which is an agency
+ of the United States Department of Commerce whose mission is to promote
+ American innovation and industrial competitiveness, define the cloud computing
+ as following : 
+\begin_inset Quotes eld
+\end_inset
+
+Cloud computing is a model for enabling ubiquitous, convenient, on-demand
+ network access to a shared pool of configurable computing resources (e.g.,
+ networks, servers, storage, applications, and services) that can be rapidly
+ provisioned and released with minimal management effort or service provider
+ interaction.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Essential Characteristics:
+\end_layout
+
+\begin_layout Paragraph
+On-demand self-service
+\end_layout
+
+\begin_layout Standard
+A consumer can unilaterally provision computing capabilities, such as server
+ time and network storage, as needed automatically without requiring human
+ interaction with each service provider.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Broad network access
+\end_layout
+
+\begin_layout Standard
+Capabilities are available over the network and accessed through standard
+ mechanisms that promote use by heterogeneous thin or thick client platforms
+ (e.g., mobile phones, tablets, laptops, and workstations).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Resource pooling
+\end_layout
+
+\begin_layout Standard
+The provider’s computing resources are pooled to serve multiple consumers
+ using a multi-tenant model, with different physical and virtual resources
+ dynamically assigned and reassigned according to consumer demand.
+ There is a sense of location independence in that the customer generally
+ has no control or knowledge over the exact location of the provided resources
+ but may be able to specify location at a higher level of abstraction (e.g.,
+ country, state, or datacenter).
+ Examples of resources include storage, processing, memory, and network
+ bandwidth.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Rapid elasticity
+\end_layout
+
+\begin_layout Standard
+Capabilities can be elastically provisioned and released, in some cases
+ automatically, to scale rapidly outward and inward commensurate with demand.
+ To the consumer, the capabilities available for provisioning often appear
+ to be unlimited and can be appropriated in any quantity at any time.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Measured service
+\end_layout
+
+\begin_layout Standard
+Cloud systems automatically control and optimize resource use by leveraging
+ a metering capability1 at some level of abstraction appropriate to the
+ type of service (e.g., storage, processing, bandwidth, and active user accounts).
+ Resource usage can be monitored, controlled, and reported, providing transparen
+cy for both the provider and consumer of the utilized service.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Service Models
+\end_layout
+
+\begin_layout Subsubsection
+Software as a Service (SaaS)
+\end_layout
+
+\begin_layout Standard
+The capability provided to the consumer is to use the provider’s applications
+ running on a cloud infrastructure2 .
+ The applications are accessible from various client devices through either
+ a thin client interface, such as a web browser (e.g., web-based email), or
+ a program interface.
+ The consumer does not manage or control the underlying cloud infrastructure
+ including network, servers, operating systems, storage, or even individual
+ application capabilities, with the possible exception of limited userspecific
+ application configuration settings.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Platform as a Service (PaaS)
+\end_layout
+
+\begin_layout Standard
+The capability provided to the consumer is to deploy onto the cloud infrastructu
+re consumer-created or acquired applications created using programming languages
+, libraries, services, and tools supported by the provider.3 The consumer
+ does not manage or control the underlying cloud infrastructure including
+ network, servers, operating systems, or storage, but has control over the
+ deployed applications and possibly configuration settings for the application-h
+osting environment.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Infrastructure as a Service (IaaS)
+\end_layout
+
+\begin_layout Standard
+The capability provided to the consumer is to provision processing, storage,
+ networks, and other fundamental computing resources where the consumer
+ is able to deploy and run arbitrary software, which can include operating
+ systems and applications.
+ The consumer does not manage or control the underlying cloud infrastructure
+ but has control over operating systems, storage, and deployed applications;
+ and possibly limited control of select networking components (e.g., host
+ firewalls).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Benefits of cloud computing
+\begin_inset CommandInset citation
+LatexCommand cite
+key "3"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The current high levels of interest in, and the positive press enjoyed by,
+ Cloud Computing are fueled in part by its perceived benefits.
+ The ideal Cloud Computing infrastructure would possess the following desirable
+ characteristics: 
+\end_layout
+
+\begin_layout Itemize
+Self-healing: In case of failure, there will be a hot backup instance of
+ the application ready to take over without disruption.
+ When a backup becomes the primary, the system launches a new backup.
+ 
+\end_layout
+
+\begin_layout Itemize
+SLA-driven: The system is dynamically managed by service-level agreements
+ that define policies such as how quickly responses to requests need to
+ be delivered.
+\end_layout
+
+\begin_layout Itemize
+Multi-tenancy: The system is built in a way that allows several customers
+ to share infrastructure with mutual opacity and without compromising privacy
+ and security.
+ 
+\end_layout
+
+\begin_layout Itemize
+Service-oriented: The system allows composing applications out of discrete,
+ re-usable, loosely-coupled services.
+ Changes to, or failure of, a service will not disrupt other services.
+\end_layout
+
+\begin_layout Itemize
+Virtualized: Applications are decoupled from the underlying hardware.
+ An application may rely on Grid Computing and multiple applications could
+ run on a single computer.
+\end_layout
+
+\begin_layout Itemize
+Linearly Scalable: The system will scale predictably and efficiently (linearly)
+ with growing demand.
+ 
+\end_layout
+
+\begin_layout Itemize
+Data, Data, Data: The key to many of the above desirable characteristics
+ is management of data: its distribution, partitioning, security and synchroniza
+tion using technologies like Amazon’s SimpleDB (large-scale relational databases
+) and in-memory data grids.
+ According to premier Cloud Computing vendor, Salesforce.com, given a properly-im
+plemented Cloud Computing solution, a client should experience some or all
+ of the following benefits: 
+\end_layout
+
+\begin_layout Itemize
+Proven Web-services integration: Cloud Computing technology is much easier
+ and quicker to integrate with other enterprise applications.
+ 
+\end_layout
+
+\begin_layout Itemize
+World-class service delivery: Cloud Computing infrastructures offer much
+ greater scalability, complete disaster recovery, and impressive uptime
+ numbers.
+ 
+\end_layout
+
+\begin_layout Itemize
+No hardware or software to install: Cloud Computing requires significantly
+ lesser capital expenditures to get up and running.
+ 
+\end_layout
+
+\begin_layout Itemize
+Faster and lower-risk deployment: No more waiting months or years and spending
+ millions of dollars before anyone gets to log into your new solution.
+ Cloud Computing technology applications are alive in a matter of weeks
+ or months, even with extensive customization or integration.
+ 
+\end_layout
+
+\begin_layout Itemize
+Support for deep customizations: The Cloud Computing infrastructure not
+ only allows deep customization and application configuration, it preserves
+ all those customizations even during upgrades and with evolving needs,
+ thus freeing up organizational IT resources.
+ 
+\end_layout
+
+\begin_layout Itemize
+Empowered business users: Cloud computing technology allows on-the-fly,
+ point-and-click customization and report generation for business users,
+ so IT doesn’t spend significant time on such tasks.
+ 
+\end_layout
+
+\begin_layout Itemize
+Pre-built, pre-integrated apps: Hundreds of pre-built applications and applicati
+on exchange capabilities are either pre-integrated into larger, off-the-shelf
+ applications or available for quick integration to form new applications.
+ 
+\end_layout
+
+\begin_layout Subsection
+Deployment Models
+\end_layout
+
+\begin_layout Paragraph
+Private cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is provisioned for exclusive use by a single organizati
+on comprising multiple consumers (e.g., business units).
+ It may be owned, managed, and operated by the organization, a third party,
+ or some combination of them, and it may exist on or off premises.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Community cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is provisioned for exclusive use by a specific
+ community of consumers from organizations that have shared concerns (e.g.,
+ mission, security requirements, policy, and compliance considerations).
+ It may be owned, managed, and operated by one or more of the organizations
+ in the community, a third party, or some combination of them, and it may
+ exist on or off premises.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Public cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is provisioned for open use by the general public.
+ It may be owned, managed, and operated by a business, academic, or government
+ organization, or some combination of them.
+ It exists on the premises of the cloud provider.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Hybrid cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is a composition of two or more distinct cloud
+ infrastructures (private, community, or public) that remain unique entities,
+ but are bound together by standardized or proprietary technology that enables
+ data and application portability (e.g., cloud bursting for load balancing
+ between clouds).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Acteurs Cloud
+\end_layout
+
+\begin_layout Subsection
+Obstacles du Cloud Computing
+\begin_inset CommandInset citation
+LatexCommand cite
+key "4"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Cloud Vulnerability
+\end_layout
+
+\begin_layout Standard
+The primary challenge posed to data management in the cloud is content security.
+ Due to the ease of access to content over the internet, concerns have been
+ raised due to data vulnerability.
+ In a review of cloud security issues, funded by IBM, 382 organisations
+ disclosed cloud security issues in 2016 across 16 different industries
+ (Prasead Mozumber et al., 2017).
+ The security issues faced by cloud environments include; the mis-use of
+ cloud content, malicious hacking, failure of vendor security and shared
+ technology vulnerabilities (Kuhmar and Mishra, 2012).
+ While improve cloud security is an area currently undergoing considerable
+ research (e.g.
+ Bindra, 2012, Schwarzkopf, 2012), Subramanian and Jeyarai (2018) observe
+ that the security of cloud content is vulnerable on several levels.
+ On a "communications level" risk arises from the sharing of sensitive informati
+on (e.g.
+ access passwords).
+ On a "security level" the cloud is vulnerable to password cracking, cookie
+ poisoning and CAPTCHA breaking among other threats.
+ Moreover, cloud content is subject to Service Level Agreements (SLAs) such
+ as legal or confidentiality requirements which may compromise data security.
+ Due to the multi-tiered vulnerability of cloud architecture, current innovation
+s aiming to improve cloud security are unlikely to remove all levels of
+ threat.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Technical Issues
+\end_layout
+
+\begin_layout Standard
+Although CC offers improved efficiency by means of “on demand” content access,
+ the cloud can also be prone to technical malfunctions such as outages.
+ Even the most established cloud vendors do encounter unexpected technical
+ problems despite generally having high standards of maintenance (Apostu
+ et al.
+ 2013).
+ Aggregating statistics from press reports, Gagnaire et al.
+ (2012) estimate that cloud services are unavailable for 7.5 hours per year
+ (99.9% reliability).
+ While, at a glance, this figure may seem impressive, it does not reach
+ the expected reliability quotient of 99.999% for sensitive data management.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Cost Creep 
+\end_layout
+
+\begin_layout Standard
+At first glance migrating to a “pay-as-you-go” pricing model as employed
+ by many cloud providers may seem financially attractive.
+ However, it has been well documented that organisations that migrate to
+ a cloud environment are often charged with additional hidden usage charges.
+ Additional usage charge can accumulate to be a deterrent to cloud adoption,
+ particularly for smaller enterprises (Al-Duraibi, 2018; Apostu et al.
+ 2013).
+ 
+\end_layout
+
+\begin_layout Paragraph
+Financial Risk in Disaster Scenarios
+\end_layout
+
+\begin_layout Standard
+Cloud users can incur significant costs in cases of cloud outage, security
+ breach or vendor lock-in (see below).
+ According to the Penomen Institute, for example, in 2016, the average distribut
+ed cost incurred by a data centre outage was almost $750, 000 (Penomen,
+ 2016).
+ In the same year data breaches, depending on their nature, are estimated
+ to have cost between around 130$ and 170$ to resolve per record (see Prasead
+ Mozumber et al.
+ 2017).
+ The cost in these scenarios may fall on either the cloud utiliser or the
+ cloud vendor, depending on the pre-defined contract between the two parties.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Vendor Lock-In
+\end_layout
+
+\begin_layout Standard
+Vendor lock-in problem in cloud computing is characterized by expensive
+ and time-consuming migration of application and data to alternative providers.
+ Cloud software vendors lock in customers in several ways:
+\end_layout
+
+\begin_layout Itemize
+by designing a system incompatible with software developed by other vendors
+\end_layout
+
+\begin_layout Itemize
+by using proprietary standards or closed architectures that lack interoperabilit
+y with other applications
+\end_layout
+
+\begin_layout Itemize
+by licensing the software under exclusive conditions.
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Ordonnancement du workflow scientifique sur une plateforme Cloud
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Définitions et concepts
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Types d'ordonnancement
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+L'ordonnanceur et l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Définition de l'ordonnancement
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Définition de l'ordonnanceur
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+L'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Objectifs de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Les techiniques de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Catégories d'algorithmes d'ordonnancement existants
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Critère de planification dans le Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Algorithmes de planification
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Comparaison entre les algorithmes
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Problème d'ordonnancement de tâches de Workflow
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Représentation des applications parallèles
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Modélisation du problèmes
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Métaheuristiques pour l'optimisation
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Problème d'optimisation
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Optimisation difficile
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Algorithmes d'optimisation approchées
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Caractéristiques d'une méta-heuristique
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Etat de l'art et approche proposée
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Algorithme étudié
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Algorithme de ...
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Travaux connexes
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Comparaison entre les approches d'ordonnancement des workflows
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Approche proposée
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Objectif du travail
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Description de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Politique de partage du temps vs de l'espace
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Les étapes de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Diagramme de l'approche proposée
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Implémentation d'algrothme d'ordonnancement de workflow
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+CloudSim & WorkflowSim sous eclipse
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Présentation
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Fonctionnalités de CloudSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Architecture de CloudSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Du CloudSim vers WorkflowSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Téléchargement et installation de WorkflowSim
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Avantages & Inconvénient de WorkflowSim
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Objectif de notre travail
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Pricipe de l'algorithme
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Résultat de l'exécution
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Simulation et déscussion des résultats
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Outil de simulation: CloudSim
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Architecture de CloudSim
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Paramètre de simulations
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Expérimentation
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Comparaison et discussion de la solution
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Conclusion générale
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Discussion
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Limites
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Perspectives
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "bibleographie"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
