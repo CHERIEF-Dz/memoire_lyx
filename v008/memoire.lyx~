@@ -140,6 +140,21 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 
 \color brown
@@ -323,8 +338,34 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/WMS_architecture.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Workflow engine architecture
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -451,14 +492,32 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/scientific_workflow_lifecycle.png
 
 \end_inset
 
 
-\color brown
+\end_layout
 
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Scientific and Business workflow's life cycle 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "lifecycle"
@@ -469,9 +528,17 @@ literal "false"
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
 
-\color brown
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The life cycle for scientific workflows heavily distinguishes from other
  workflow types.
  The life cycle is inferred from observations about theway scientists create
@@ -480,16 +547,12 @@ The life cycle for scientific workflows heavily distinguishes from other
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 Typically, there is only one user group, the scientists, playing the roles
  of a modeler, user, administrator,and analyst.
  The focus of their work is usually on single workflow instances.
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 To be precise, scientists do not distinguish between workflow models and
  instances or are not aware of a difference between models and instances,
  respectively.
@@ -499,8 +562,6 @@ To be precise, scientists do not distinguish between workflow models and
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 In fact, they can be carried out alternated.
  An additional cycle therefore leads from execution back to modeling phase
  with the helpof a “suspend” operation on the workflow instance, which remains
@@ -509,8 +570,6 @@ In fact, they can be carried out alternated.
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 For instance, conventional workflow adaptation is experienced as scientific
  workflow modeling; the deployment (of parts of a workflow) is part of the
  “run/resume” operation , which is also hidden for the scientist.
@@ -519,16 +578,12 @@ For instance, conventional workflow adaptation is experienced as scientific
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 The traditional execution and monitoring phases aremerged into a single
  phase in the scien tific workflow life cycle because from ascientist’s
  point of view monitoring only visualizes a running workflow (instance).
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 After execution a scientist can analyze the computed results and may remodel
  and reexecute the workflow possibly with different parameters.
  
@@ -836,18 +891,49 @@ The capability provided to the consumer is to provision processing, storage,
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/cloud_services_model_graph-1024x465.jpg
+	scale 50
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Todo : 
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cloud service models
 \color brown
-from https://www.quisted.net/index.php/2018/08/30/dc-cloud-computing/
+ from https://www.quisted.net/index.php/2018/08/30/dc-cloud-computing/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1602,43 +1688,312 @@ Introduction
 \begin_layout Subsection
 
 \color brown
-CloudSim & WorkflowSim sous eclipse
+WorkflowSim
 \end_layout
 
 \begin_layout Subsubsection
+Description and main features
+\end_layout
 
-\color brown
-Présentation
+\begin_layout Standard
+WorkflowSim was introduced for modeling Scientific Workflows in cloud environmen
+t.
+ Workflows in heterogeneous distributed systems show different levels of
+ overheads that are explained based on computational operations and miscellaneou
+s works.
+\end_layout
+
+\begin_layout Standard
+Most of simulators such as CloudSim do not consider fine granularity simulations
+ of workflows and task clustering.
+ Task clustering reduces the number of jobs to be executed and so execution
+ overhead is decreased.
+\end_layout
+
+\begin_layout Standard
+Generally, a job may have high risk for suffering from failures since it
+ consists of several tasks.
+ Researchers with WorkflowSim can study the impact of job failures runtime
+ performance of workflows for different clustering methods.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
+Architecture
+\end_layout
 
-\color brown
-Fonctionnalités de CloudSim
+\begin_layout Standard
+Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:WorkflowSim's-Architecture"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+shows the structure of WorkflowSim that is composed of several components:
+\end_layout
+
+\begin_layout Enumerate
+Workflow Mapper that maps abstract workflows to concrete workflows
+\end_layout
+
+\begin_layout Enumerate
+Workflow Engine that controls the data dependencies
+\end_layout
+
+\begin_layout Enumerate
+Workflow Scheduler assigns jobs to resources
+\end_layout
+
+\begin_layout Enumerate
+Clustering Engine that groups small tasks into a large job
+\end_layout
+
+\begin_layout Enumerate
+Failure Generator that injects task failures for each execution site
+\end_layout
+
+\begin_layout Enumerate
+Failure Monitor that stores the failure information such as resource id
+ and task id.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/workflowSim_architecture.jpg
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:WorkflowSim's-Architecture"
+
+\end_inset
+
+WorkflowSim's Architecture 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
+Downloading and Installing WorkflowSim with Eclipse
+\end_layout
 
-\color brown
-Architecture de CloudSim
+\begin_layout Standard
+To make the first WorkflowSim project, follow this steps
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitHub_WorkflowSim_repo"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Register a GitHub account and fork WorkflowSim branch:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Go to the repository page (https://github.com/WorkflowSim/WorkflowSim-1.0)
+\end_layout
+
+\begin_layout Enumerate
+Click 'Fork' on the top-right corner next to 'Star'.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then you will have your own branch of WorkflowSim and you can maintain your
+ codes under this branch and commit your changes to it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Check out your source codes:
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+reate a new java project called 'WorkflowSim' (it doesn't have to be 'WorkflowSi
+m').
+\end_layout
+
+\begin_layout Enumerate
+Right click your project, choose 'Import'.
+ Click 'Git'->'Projects from Git'.
+\end_layout
+
+\begin_layout Enumerate
+Set the URL to be your reposotory.
+ And then you will see a branch called 'master', tick it and continue.
+ And you don't need import projects again so just cancel.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Import Source Files and Libraries:
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Right click the project again and choose 'Properties'.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Go to 'Java Build Path'.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Link two source directories (your_repo_root/examples, your_repo_root/sources)to
+ the source folders.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Add two external JARs (your_repo_root/lib/flanagan.jar and your_repo_root/lib/jdo
+m-2.0.0.jar) to the Libraries.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Run an Example:
+\series default
+ Run an example i.e., org.workflowsim.examples.WorkflowSimBasicExample1.java.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Open WorkflowSimBasicExample1.java
+\end_layout
+
+\begin_layout Enumerate
+replace the String daxPath = "/Users/chenweiwei/Work/WorkflowSim-1.0/config/dax/M
+ontage_100.xml"; with your real physical file path.
+\end_layout
+
+\begin_layout Enumerate
+Right click on WorkflowSimBasicExample1.java and choose 'Run File'.
+ You should be able to see some output
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Strengths
+\end_layout
+
+\begin_layout Standard
+WorkflowSim has many advantages
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+ which are:
+\end_layout
+
+\begin_layout Enumerate
+It supports a stack of workflow parser and workflow engine delay to workflow
+ optimization techniques with better accuracy are implemented.
+\end_layout
+
+\begin_layout Enumerate
+It implements several workflow-scheduling methods such as HEFT, Min-Min,
+ and Max-Min and so developers can compare their algorithms with them in
+ a simple way.
+\end_layout
+
+\begin_layout Enumerate
+It considers task clustering and layered overhead to the workflow simulation.
+ Therefore, developers can test various strategies based on a real trace
+ of overheads.
+\end_layout
+
+\begin_layout Enumerate
+It models failures for two layers (i.e., task/job) by an interface and hence
+ developers can design fault-tolerant techniques.
 \end_layout
 
 \begin_layout Subsubsection
-
-\color brown
-Du CloudSim vers WorkflowSim
+Limitations
 \end_layout
 
-\begin_layout Subsubsection
-
-\color brown
-Téléchargement et installation de WorkflowSim
+\begin_layout Standard
+WorkflowSim has some limitations such as:
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Enumerate
+It includes limited types of failures.
+ Therefore, developers cannot simulate the situation when a task is not
+ successfully sent due to network problems or workflow scheduler issues.
+\end_layout
 
-\color brown
-Avantages & Inconvénient de WorkflowSim
+\begin_layout Enumerate
+It does not consider the performance characteristic of file I/O.
+ Therefore, developers cannot obtain suitable simulation for data-intensive
+ applications since these applications involve reading or writing huge data
+ files.
+\end_layout
+
+\begin_layout Enumerate
+It supports only simple workflow techniques and so developers cannot use
+ other important approaches like workflow partitioning in their implementations.
 \end_layout
 
 \begin_layout Subsection
