@@ -86,20 +86,20 @@ Ordonnancement des workflows scientifiques sur le cloud avec optimisation
  de l'énergie
 \end_layout
 
-\begin_layout Author
-TOUHAMI Abdelghani Chaabane
+\begin_layout Date
+March 20
+\begin_inset Formula $^{th}$
+\end_inset
+
+, 2023
 \end_layout
 
 \begin_layout Author
 CHERIEF Houcine Abdelkader
 \end_layout
 
-\begin_layout Date
-Fibrary 21
-\begin_inset Formula $^{st}$
-\end_inset
-
-, 2023
+\begin_layout Author
+TOUHAMI Abdelghani Chaabane
 \end_layout
 
 \begin_layout Standard
@@ -114,7 +114,7 @@ Fibrary 21
 \begin_layout Abstract
 
 \color brown
-To Do
+ToDo
 \end_layout
 
 \begin_layout Standard
@@ -173,6 +173,22 @@ Context
 Problematic
 \end_layout
 
+\begin_layout Standard
+The energy consumption of cloud data centers is animportant challenge.
+ Energy consumption is increasing day by day due to a non-energyaware strategy
+ in resource management.
+ About 0.5% of energy consumption inworldwide is related to cloud data centers,
+ while this is envisaged to fourfold in 2020.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 
 \color brown
@@ -205,9 +221,56 @@ Workflow and scientific workflow
 \end_layout
 
 \begin_layout Subsection
-
-\color brown
 Introduction
+\end_layout
+
+\begin_layout Standard
+Workflows are a systematic way of describing and executing a series of computati
+onal or data manipulation steps, or tasks, in a specific application domain.
+ Workflow technology is established in the business domain for several years.
+ This fact suggests the need for detailed investigations in the qualification
+ of conventional workflow technology for the evolving application domain
+ of e-Science.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scientific workflows are a specialized form of workflows that are designed
+ for data-intensive or knowledge discovery applications in various scientific
+ disciplines.
+ Scientific workflows enable researchers to formulate, share, reuse, and
+ validate complex methods that involve multiple data sources and computational
+ platforms.
+ (TODO ChatGPT)
+\end_layout
+
+\begin_layout Standard
+There are many scientific applications in various fields, such as astronomy
+ and biology that contain a large amount of data and involve a large number
+ of tasks.
+ These applications are represented by a workflow that represents a set
+ of data processing steps.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "5"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this chapter, we present the workflow and Workflow Management System
+ (WMS) with its architecture.We will also talk about the scientific workflows,
+ its life cycle and its types.
 \end_layout
 
 \begin_layout Subsection
@@ -258,27 +321,214 @@ The execution of a workflow is managed by a Workflow Management System (WMS).
 \end_layout
 
 \begin_layout Subsection
-
-\color brown
-Concepts of workflow
+Scientific workflow
 \end_layout
 
-\begin_layout Paragraph
-
-\color brown
-Les routes
+\begin_layout Subsubsection
+Definition
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+Scientific workflows are data-intensive applications representing distributed
+ data sources and complex computations in various domains, i.e.
+ astronomy, engineering sciences, and bioinformatics.
+ In distributed environments like fog computing, various sensors and experimenta
+l processes generate a large volume of data that need collection and processing
+ within specific time constraints.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "5"
+literal "false"
 
-\color brown
-Les règles
+\end_inset
+
+
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
+Scientific workflow's life cycle
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
 
-\color brown
-Les roles
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/scientific_workflow_lifecycle.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Scientific and Business workflow's life cycle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The life cycle for scientific workflows heavily distinguishes from other
+ workflow types.
+ The life cycle is inferred from observations about theway scientists create
+ and conduct experiments and from known properties ofscientific simulations
+ and computations.
+\end_layout
+
+\begin_layout Standard
+Typically, there is only one user group, the scientists, playing the roles
+ of a modeler, user, administrator,and analyst.
+ The focus of their work is usually on single workflow instances.
+\end_layout
+
+\begin_layout Standard
+To be precise, scientists do not distinguish between workflow models and
+ instances or are not aware of a difference between models and instances,
+ respectively.
+ They setup a simulation and execute it once at a time.
+ Because scientists typically develop their workflow in a trial-and-error
+ manner, modeling and execution phases are not arranged in a strict sequence.
+\end_layout
+
+\begin_layout Standard
+In fact, they can be carried out alternated.
+ An additional cycle therefore leads from execution back to modeling phase
+ with the helpof a “suspend” operation on the workflow instance, which remains
+ hidden fromthe scientists.
+ Technical details are transparent for scientists altogether.
+\end_layout
+
+\begin_layout Standard
+For instance, conventional workflow adaptation is experienced as scientific
+ workflow modeling; the deployment (of parts of a workflow) is part of the
+ “run/resume” operation , which is also hidden for the scientist.
+ Workflow execution starts immediately after modeling.
+ 
+\end_layout
+
+\begin_layout Standard
+The traditional execution and monitoring phases aremerged into a single
+ phase in the scien tific workflow life cycle because from ascientist’s
+ point of view monitoring only visualizes a running workflow (instance).
+\end_layout
+
+\begin_layout Standard
+After execution a scientist can analyze the computed results and may remodel
+ and reexecute the workflow possibly with different parameters.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Benefits of workflow for the science
+\end_layout
+
+\begin_layout Standard
+Workflows in science provide multiple benefits
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+they contribute to sharing knowledge by being available as services for
+ collaborating scientists with the help of workflows a community-based analysis
+ of results is supported.
+\end_layout
+
+\begin_layout Itemize
+workflows are able to deal with huge amounts of data, e.g.
+ collected by sensors or calculated by scientific algorithms.
+\end_layout
+
+\begin_layout Itemize
+workflows are capable of running in distributed and highly heterogeneous
+ environments—a common scenario in scientific computations where a great
+ variety of platforms and programming languages is usually employed.
+\end_layout
+
+\begin_layout Itemize
+the automation of steps during workflow design and execution allows scientists
+ to concentrate on solving their main scientific problems.
+\end_layout
+
+\begin_layout Itemize
+workflows can be utilized to conduct scientific simulations in a parallel
+ and automated manner.
+\end_layout
+
+\begin_layout Subsubsection
+Differences between business and scientific workflows
+\end_layout
+
+\begin_layout Standard
+There are many differences between business and scientific workflows
+\begin_inset CommandInset citation
+LatexCommand cite
+key "defference_between_business_scientific_workflows"
+literal "false"
+
+\end_inset
+
+, we listed some of them:
+\end_layout
+
+\begin_layout Itemize
+Business workflows aim at automating organizational processes that are mainly
+ executed by humans, while scientific workflows aim at validating hypotheses
+ of a researcher based on available data.
+\end_layout
+
+\begin_layout Itemize
+Business workflows have a predetermined goal, while scientific workflows
+ have experimental and exploratory goals that vary more frequently.
+\end_layout
+
+\begin_layout Itemize
+Business workflows are executed under human control, while scientific workflows
+ are executed fully automatically by a computer.
+\end_layout
+
+\begin_layout Itemize
+Business workflows depend on certain resources including application programs,
+ while scientific workflows depend more strongly on proper parameter settings
 \end_layout
 
 \begin_layout Subsection
@@ -290,7 +540,15 @@ Definition
 \end_layout
 
 \begin_layout Standard
-Workflow management system (WMS) was defined by WfMC 
+Every workflow is executed on a workflow management system (WMS).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+ which was defined by WfMC 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "WfMC_glossary"
@@ -298,8 +556,12 @@ literal "false"
 
 \end_inset
 
- as a software application that is designed to help organizations automate
- and manage their business processes.
+ as following:
+\end_layout
+
+\begin_layout Standard
+A software application that is designed to help organizations automate and
+ manage their business processes.
  A WMS allows an organization to define and implement a workflow – a series
  of tasks, steps, and decisions – that need to be followed to complete a
  specific process.
@@ -321,6 +583,29 @@ A WMS can be used to automate a wide range of business processes, such as
 
 \begin_layout Subsubsection
 Workflow engine architecture
+\end_layout
+
+\begin_layout Standard
+workflows are compositions of tasks (also referred to as activities) by
+ means of causal or data dependencies that are carried out on a computer.
+ They are executed on a workflow management system (WMS).
+ A workflow that utilizes Web services (WSs) as implementations of tasks
+ is usually called service composition.
+ Web services are the most prominent implementation of the serviceoriented
+ architecture (SOA).
+ The Web Service technology is an approach to provide and request services
+ in distributed environments independent of programming languages, platforms,
+ and operating systems.
+ It is applied in a very wide range of applications where integration of
+ heterogeneous systems is a must.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -444,43 +729,19 @@ The 5th interface manages the administration and the monitoring tools of
  and the events should be recorded in log files.
 \end_layout
 
-\begin_layout Subsection
-
-\color brown
-Classification du workflow
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Scientific Workflow
-\end_layout
-
 \begin_layout Subsubsection
-Definition
+Main Requirements on Scientific Workflow Management Systems
 \end_layout
 
 \begin_layout Standard
-Scientific workflows are data-intensive applications representing distributed
- data sources and complex computations in various domains, i.e.
- astronomy, engineering sciences, and bioinformatics.
- In distributed environments like fog computing, various sensors and experimenta
-l processes generate a large volume of data that need collection and processing
- within specific time constraints.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "5"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-
-\color brown
-Scientific workflow's life cycle
+Workflows in the scientific area make use of a data-centric approach.
+ Typically, huge amounts of data have to be processed, e.g.
+ 5 GB data per day is transmitted by the Hubble telescope, and probably
+ need to be processed by a workflow, this is why modeling language for scientifi
+c workflows is primarily data-driven.
+ That means, for accommodating the scientists’ needs the main focus of the
+ modeling language should be on data flow while the control flow is considered
+ secondary.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "lifecycle"
@@ -492,32 +753,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/scientific_workflow_lifecycle.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Scientific and Business workflow's life cycle 
+There are many requirements listed in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "lifecycle"
@@ -525,117 +761,153 @@ literal "false"
 
 \end_inset
 
-
+:
 \end_layout
 
-\end_inset
+\begin_layout Itemize
 
-
+\series bold
+usability
+\series default
+: since the majority of users of sWfMSs are no computer scientists.
+ A scientist needs the support of easy-to-use tools, automation as far as
+ possible and maximal flexibility in the usage of the sWfMS.This means that
+ scientists want to:
 \end_layout
 
-\end_inset
-
-
+\begin_deeper
+\begin_layout Enumerate
+model their workflows in a convenient way.
 \end_layout
 
-\begin_layout Standard
-The life cycle for scientific workflows heavily distinguishes from other
- workflow types.
- The life cycle is inferred from observations about theway scientists create
- and conduct experiments and from known properties ofscientific simulations
- and computations.
+\begin_layout Enumerate
+run their workflows and store their data on resources that are specified
+ by the user himself or automatically chosen by the sWfMS.
 \end_layout
 
-\begin_layout Standard
-Typically, there is only one user group, the scientists, playing the roles
- of a modeler, user, administrator,and analyst.
- The focus of their work is usually on single workflow instances.
+\begin_layout Enumerate
+same support for services used in traditional workflows.
 \end_layout
 
-\begin_layout Standard
-To be precise, scientists do not distinguish between workflow models and
- instances or are not aware of a difference between models and instances,
- respectively.
- They setup a simulation and execute it once at a time.
- Because scientists typically develop their workflow in a trial-and-error
- manner, modeling and execution phases are not arranged in a strict sequence.
-\end_layout
+\end_deeper
+\begin_layout Itemize
 
-\begin_layout Standard
-In fact, they can be carried out alternated.
- An additional cycle therefore leads from execution back to modeling phase
- with the helpof a “suspend” operation on the workflow instance, which remains
- hidden fromthe scientists.
- Technical details are transparent for scientists altogether.
-\end_layout
-
-\begin_layout Standard
-For instance, conventional workflow adaptation is experienced as scientific
- workflow modeling; the deployment (of parts of a workflow) is part of the
- “run/resume” operation , which is also hidden for the scientist.
- Workflow execution starts immediately after modeling.
+\series bold
+flexible:
+\series default
+ it mean the ability of a system to react to changes in its environment.
+ Approaches to flexibility of workflows can be divided into two groups:
  
 \end_layout
 
-\begin_layout Standard
-The traditional execution and monitoring phases aremerged into a single
- phase in the scien tific workflow life cycle because from ascientist’s
- point of view monitoring only visualizes a running workflow (instance).
-\end_layout
-
-\begin_layout Standard
-After execution a scientist can analyze the computed results and may remodel
- and reexecute the workflow possibly with different parameters.
+\begin_deeper
+\begin_layout Enumerate
+workflow can be modified according to the changed situation (known as adaptation
+).
+ Such modifications can address different workflow dimensions (logical,
+ functional, organizational dimension) and may be applied to workflow models
+ or single workflow instances.
  
 \end_layout
 
-\begin_layout Subsubsection
-
-\color brown
-Type de workflows scientifiques
+\begin_layout Enumerate
+workflow can be modeled in a way that avoids its modification even in the
+ presence of a changing environment (known as avoid change).
 \end_layout
 
-\begin_layout Subsubsection
-Differences between business and scientific workflows
-\end_layout
+\end_deeper
+\begin_layout Itemize
 
-\begin_layout Standard
-There are many differences between business and scientific workflows
-\begin_inset CommandInset citation
-LatexCommand cite
-key "defference_between_business_scientific_workflows"
-literal "false"
-
-\end_inset
-
-, we listed some of them:
+\series bold
+monitoring: 
+\series default
+WMS should support the ability to monitor the status of the workflow execution.
+ For example, the scientist is interested in knowledge about running, finished
+ or faulted activities, allocated resources, and the dynamical choice of
+ a service implementation.
+ Inspecting the produced data is also a need.
 \end_layout
 
 \begin_layout Itemize
-Business workflows aim at automating organizational processes that are mainly
- executed by humans, while scientific workflows aim at validating hypotheses
- of a researcher based on available data.
+
+\series bold
+reproducibility:
+\series default
+ is of utmost importance for different reasons.
+ Scientists who are not involved in the execution of the workflow need to
+ be able to retrace the simulation, have to review the findings, or need
+ to use the results.
+ The operating scientist may want to repeat a workflow or parts of it to
+ draw conclusions, and to prove statements and assumptions.
+ Additionally, the scientist may share the results with people he collaborates
+ with.
+ While following and reproducing workflow runs and their (intermediate)
+ results scientists use provenance information.
+ Finally, provenance information should be displayed in a way that (non-computer
+) scientists understand the execution of workflows including the derivation
+ of data.
 \end_layout
 
 \begin_layout Itemize
-Business workflows have a predetermined goal, while scientific workflows
- have experimental and exploratory goals that vary more frequently.
+
+\series bold
+robustness: 
+\series default
+it is an important issue since scientific workflows are long-running.
+ The term robustness denotes the ability of being error- resistant.
+ The needed flexibility mechanisms mentioned above are a way to improve
+ the robustness of a system.
+ But additional approaches are needed to protect the execution progress
+ from being lost in case of unforeseeable failures, to reach a consistent
+ system state even in the presence of failures, and to proceed a simulation/expe
+riment after a failure.
 \end_layout
 
 \begin_layout Itemize
-Business workflows are executed under human control, while scientific workflows
- are executed fully automatically by a computer.
+
+\series bold
+scalability:
+\series default
+ scientific workflows should scale with the number of users, number of utilized
+ services, data or calculation resources and involved participants.
+ Today, typical scientific workflows are mostly executed in a central manner
+ on a single machine.
+ A decentralized workflow enactment can help to scale via distributed process
+ execution.
+ It can be achieved, for example, by parallel execution in distributed and
+ heterogeneous execution environments using provisioning techniques.
 \end_layout
 
 \begin_layout Itemize
-Business workflows depend on certain resources including application programs,
- while scientific workflows depend more strongly on proper parameter settings
+
+\series bold
+specific requirements:
+\series default
+ there are specific requirements for each specific scientific domain, e.g.
+ medical science, chemistry or mechanical engineering.
+ Specific domain related requirements and the fact that it is hard to cover
+ all scientific domains in one WMS create the need to extends WMSs and the
+ workflow models and possibly adapt these models and their instances.
+ This includes, for example, domain specific services, result displays or
+ meta-models for semantic annotations.
 \end_layout
 
 \begin_layout Subsection
-
-\color brown
 Conclusion
+\end_layout
+
+\begin_layout Standard
+In this chapter we have presented workflows, and specially about scientific
+ workflows, their lifecycle, their benifits and the differences between
+ them and business workflows.We have also presented workflow management system
+ (WMS) and it its architecture explained how the foreseen system meets general
+ requirements of scientists and scientific workflows.
+\end_layout
+
+\begin_layout Standard
+In the next chapter we will present the cloud computing on which scientific
+ workflows can be executed, since they require a scalable and costless infrastru
+cture.
 \end_layout
 
 \begin_layout Standard
@@ -648,19 +920,45 @@ Conclusion
 \end_layout
 
 \begin_layout Section
-
-\color brown
 The Cloud Computing
 \end_layout
 
 \begin_layout Subsection
-
-\color brown
 Introduction
+\end_layout
+
+\begin_layout Standard
+Nowadays, cloud computing is an emerging technology due to virtualization
+ and providing low price services on pay-as per-use basis and it is the
+ most popular computing system paradigm in the academic research and industry,
+ and it provides cloud services on-demand anywhere and anytime
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the previous chapter, we have introduced the workflow technology.
+ However the execution scientific workflows needs a huge amounts of data
+ or allocate enormous computing resources and a big scalability, this is
+ why we will present in this chapter the most convivial execution infrastructure
+ which is the cloud computing model.
 \end_layout
 
 \begin_layout Subsection
 Definition of Cloud Computing
+\end_layout
+
+\begin_layout Standard
+The modern literature provides several definitions of Cloud Computing.
+ Some definitions of Cloud Computing refer to services provided by data
+ centre, while others define it as a service provided by the Internet.Still,
+ the most quoted definition of Cloud Computing is the NIST definition.
 \end_layout
 
 \begin_layout Standard
@@ -695,69 +993,6 @@ Characteristics of Cloud Computing
 \end_layout
 
 \begin_layout Standard
-Cloud computing has a lot of characteristics
-\begin_inset CommandInset citation
-LatexCommand cite
-key "DIGITAL_NOTES_ON_CLOUD"
-literal "false"
-
-\end_inset
-
-: 
-\end_layout
-
-\begin_layout Enumerate
-Agility for organizations 
-\end_layout
-
-\begin_layout Enumerate
-Cost reductions, Centralization of infrastructure in locations with lower
- costs.
- 
-\end_layout
-
-\begin_layout Enumerate
-Device and location independence, which means no maintenance, required.
- 
-\end_layout
-
-\begin_layout Enumerate
-Pay-per-use means utilization and efficiency improvements for systems that
- are often only 10–20% utilized.
- 
-\end_layout
-
-\begin_layout Enumerate
-Performances are being monitored by IT experts from the service provider
- end.
- 
-\end_layout
-
-\begin_layout Enumerate
-Productivity increases which results in multiple users who can work on the
- same data simultaneously.
- 
-\end_layout
-
-\begin_layout Enumerate
-Time may be saved as information does not need to be re-entered when fields
- are matched 
-\end_layout
-
-\begin_layout Enumerate
-Availability improves with the use of multiple redundant sites 
-\end_layout
-
-\begin_layout Enumerate
-Resources that are abstracted or virtualized.
- 
-\end_layout
-
-\begin_layout Enumerate
-Security can improve due to centralization of data
-\end_layout
-
-\begin_layout Standard
 The National Institute of Standards and Technology's definition
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -774,9 +1009,11 @@ On-demand self-service
 \end_layout
 
 \begin_layout Standard
-A consumer can unilaterally provision computing capabilities, such as server
- time and network storage, as needed automatically without requiring human
- interaction with each service provider.
+Consumers of cloud computing services, such as server time and network storage,
+ as needed automatically nearly instant access to resources.
+ To support this expectation, clouds must allow self-service access so that
+ customers can request, customize, pay, and use services without intervention
+ of human operators.
 \end_layout
 
 \begin_layout Paragraph
@@ -810,10 +1047,13 @@ Rapid elasticity
 \end_layout
 
 \begin_layout Standard
-Capabilities can be elastically provisioned and released, in some cases
- automatically, to scale rapidly outward and inward commensurate with demand.
- To the consumer, the capabilities available for provisioning often appear
- to be unlimited and can be appropriated in any quantity at any time.
+Cloud computing gives the illusion of unlimited computing resources available
+ on demand in any quantity at any time.
+ Therefore, users expect clouds to rapidly provide resources in any quantity
+ at any time.
+ In particular, it is expected that the additional resources can be (a)
+ provisioned, possibly automatically, when an application load increases
+ and (b) released when load decreases (scale up and down).
 \end_layout
 
 \begin_layout Paragraph
@@ -821,11 +1061,62 @@ Measured service
 \end_layout
 
 \begin_layout Standard
+Services must be priced on a shortterm basis (e.g., by the hour), allowing
+ users to release (and not pay for) resources as soon as they are not needed.
+ For these reasons, clouds must implement features to allow efficient trading
+ of service such as pricing, accounting, and billing.
+ 
+\end_layout
+
+\begin_layout Standard
 Cloud systems automatically control and optimize resource use by leveraging
- a metering capability1 at some level of abstraction appropriate to the
- type of service (e.g., storage, processing, bandwidth, and active user accounts).
+ a metering capability at some level of abstraction appropriate to the type
+ of service (e.g., storage, processing, bandwidth, and active user accounts).
  Resource usage can be monitored, controlled, and reported, providing transparen
 cy for both the provider and consumer of the utilized service.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cloud computing has a lot of another characteristics
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DIGITAL_NOTES_ON_CLOUD"
+literal "false"
+
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Enumerate
+Performances are being monitored by IT experts from the service provider
+ end.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Resources are abstracted or virtualized.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Availability improves with the use of multiple redundant sites
+\end_layout
+
+\begin_layout Enumerate
+Customizable: resources rented from the cloud must be highly customizable.
+\end_layout
+
+\begin_layout Enumerate
+Device and location independence, which means no maintenance, required.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -1043,82 +1334,6 @@ vendor lock
 \end_layout
 
 \begin_layout Subsection
-Desired features of a Cloud
-\end_layout
-
-\begin_layout Standard
-The document 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "DIGITAL_NOTES_ON_CLOUD"
-literal "false"
-
-\end_inset
-
- list essential features to enable services that truly represent the cloud-compu
-ting model and satisfy expectations of consumers, and cloud offerings must
- be having following features: 
-\end_layout
-
-\begin_layout Paragraph
-Self-service
-\end_layout
-
-\begin_layout Standard
-Consumers of cloud computing services expect on-demand, nearly instant access
- to resources.
- To support this expectation, clouds must allow self-service access so that
- customers can request, customize, pay, and use services without intervention
- of human operators.
-\end_layout
-
-\begin_layout Paragraph
-Per-usage metered and billed 
-\end_layout
-
-\begin_layout Standard
-Cloud computing eliminates up-front commitment by users, allowing them to
- request and use only the necessary amount.
- Services must be priced on a shortterm basis (e.g., by the hour), allowing
- users to release (and not pay for) resources as soon as they are not needed.
- For these reasons, clouds must implement features to allow efficient trading
- of service such as pricing, accounting, and billing.
- Metering should be done accordingly for different types of service (e.g.,
- storage, processing, and bandwidth) and usage promptly reported, thus providing
- greater transparency.
-\end_layout
-
-\begin_layout Paragraph
-Elastic
-\end_layout
-
-\begin_layout Standard
-Cloud computing gives the illusion of infinite computing resources available
- on demand.
- Therefore, users expect clouds to rapidly provide resources in any quantity
- at any time.
- In particular, it is expected that the additional resources can be (a)
- provisioned, possibly automatically, when an application load increases
- and (b) released when load decreases (scale up and down).
-\end_layout
-
-\begin_layout Paragraph
-Customizable
-\end_layout
-
-\begin_layout Standard
-In a multi-tenant cloud a great disparity between user needs is often the
- case.
- Thus, resources rented from the cloud must be highly customizable.
- In the case of infrastructure services, customization means allowing users
- to deploy specialized virtual appliances and to be given privileged (root)
- access to the virtual servers.
- Other service classes (PaaS and SaaS) offer less flexibility and are not
- suitable for general-purpose computing, but still are expected to provide
- a certain level of customization.
-\end_layout
-
-\begin_layout Subsection
 Benefits of cloud computing
 \end_layout
 
@@ -1283,6 +1498,14 @@ Pre-built, pre-integrated apps
  
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Security
+\series default
+ can improve due to centralization of data.
+\end_layout
+
 \begin_layout Subsection
 Cloud Computing's obstacles
 \end_layout
@@ -1410,6 +1633,20 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
+In this chapter we have presented the Cloud Computing,its characteristics
+ which its distinguished from other computing model, then have listed the
+ most common used services models IaaS, PaaS and SaaS.Also, we have presented
+ several deployment models.
+ Finally, benefits and obstacles of this computing model was listed.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+In the next chapter, 
+\end_layout
+
+\begin_layout Standard
 
 \color brown
 \begin_inset Newpage newpage
@@ -1421,7 +1658,26 @@ Conclusion
 \begin_layout Section
 
 \color brown
-Ordonnancement du workflow scientifique sur une plateforme Cloud
+Scheduling the scientific workflow on a cloud platform
+\end_layout
+
+\begin_layout Standard
+In the workflow scheduling problem, applications are defined by the directed
+ acyclicgraphs (DAGs).
+ A workflow includes a set of interdependent tasks that are bounded together
+ through data or functional dependencies.
+ In cloud environment, effectivemanagement of scientific workflows is the
+ main challenge since there are numerous virtual machines and many user
+ tasks that should be scheduled by considering dependencies and various
+ objectives.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1436,16 +1692,16 @@ Introduction
 Définitions et concepts
 \end_layout
 
-\begin_layout Subsubsection
-
-\color brown
-Types d'ordonnancement
-\end_layout
-
 \begin_layout Subsection
 
 \color brown
 L'ordonnanceur et l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Définition de l'ordonnanceur
 \end_layout
 
 \begin_layout Subsubsection
@@ -1457,7 +1713,7 @@ Définition de l'ordonnancement
 \begin_layout Subsubsection
 
 \color brown
-Définition de l'ordonnanceur
+Types d'ordonnancement
 \end_layout
 
 \begin_layout Subsubsection
@@ -1535,10 +1791,111 @@ Introduction
 Représentation des applications parallèles
 \end_layout
 
+\begin_layout Standard
+In the workflow scheduling problem, applications are defined by the directed
+ acyclicgraphs (DAGs).
+ A workflow includes a set of interdependent tasks that are boundedtogether
+ through data or functional dependencies.
+ In cloud environment, effectivemanagement of scientific workflows is the
+ main challenge since there are numerousvirtual machines and many user tasks
+ that should be scheduled by considering dependencies and various objectives.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We consider a workflow W as a graph G = (T, D) , where T = { T , T ,…, T
+ } indicates n tasksand shows the data flow dependencies among them.
+ The dataflow dependency ( T
+\begin_inset Formula $_{i}$
+\end_inset
+
+ , T
+\begin_inset Formula $_{j}$
+\end_inset
+
+ ) means that task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+ is an immediate predecessor of task T
+\begin_inset Formula $_{j}$
+\end_inset
+
+ and task Tj is an immediate successor of task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+.
+ In some cases, there are several predecessors and successors and so Pr(T
+\begin_inset Formula $_{i}$
+\end_inset
+
+) and Su(T
+\begin_inset Formula $_{i}$
+\end_inset
+
+) are defined to indicate the set ofimmediate predecessors and successors
+ for task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Pr(T_{i})=\left\{ Tj|\left(T_{j},T_{i}\right)\epsilon D\right\} 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Su(T_{i})=\left\{ Tj|\left(T_{i},T_{j}\right)\epsilon D\right\} 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+T
+\begin_inset Formula $_{entry}$
+\end_inset
+
+ and T
+\begin_inset Formula $_{exit}$
+\end_inset
+
+ are a task without any predecessors and a task without any successors,respectiv
+ely.
+\end_layout
+
 \begin_layout Subsection
 
 \color brown
-Modélisation du problèmes
+Modélisation du problème
 \end_layout
 
 \begin_layout Subsection
@@ -1637,6 +1994,12 @@ Objectif du travail
 \begin_layout Subsubsection
 
 \color brown
+Principe de algorithm
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
 Description de l'approche
 \end_layout
 
@@ -1676,7 +2039,7 @@ Conclusion
 \begin_layout Section
 
 \color brown
-Implémentation d'algorithme d'ordonnancement de workflow
+Implémentation, simulation et déscussion des résultats
 \end_layout
 
 \begin_layout Subsection
@@ -1686,9 +2049,44 @@ Introduction
 \end_layout
 
 \begin_layout Subsection
+Simulation tool: WorkflowSim
+\end_layout
 
-\color brown
-WorkflowSim sous eclipse
+\begin_layout Standard
+Over the past few years, cloud computing has gained tremendous popularity
+ since itpresents a flexible and efficient solution for many services by
+ Internet .
+ Cloud is a large and complex system since it is composed of several users,
+ service providers,physical machines, service broker, task scheduling algorithms
+ , bandwidth, internetlatency, and storage technology etc.
+ On the other hands, all cloud-base dimplementations need various configurations.
+ Therefore, it is very difficult for researchers to evaluate the performance
+ of their policies in a real cloud environment
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As a result, the simulator can play an important role in reducing cost,
+ efficiency,infrastructure complexity, and security risks before a solution
+ can be deployed on realinfrastructure.
+ By focusing on issues related to the quality of a particular componentunder
+ various scenarios, cloud simulators enable performance analysts to monitor
+ the behaviors of the system
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1723,12 +2121,6 @@ literal "false"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-
-\color brown
-WorkflowSim Features
 \end_layout
 
 \begin_layout Subsubsection
@@ -1820,13 +2212,19 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-
-\color brown
 Downloading and Installing WorkflowSim with Eclipse
 \end_layout
 
 \begin_layout Standard
-To make the first WorkflowSim project, follow this steps:
+To make the first WorkflowSim project, follow this steps
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitHub_WorkflowSim_repo"
+literal "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Enumerate
@@ -1861,8 +2259,8 @@ Check out your source codes:
 
 \begin_deeper
 \begin_layout Enumerate
-reate a new java project called 'WorkflowSim' (it doesn't have to be 'WorkflowSi
-m').
+create a new java project called 'WorkflowSim' (it doesn't have to be 'WorkflowS
+im').
 \end_layout
 
 \begin_layout Enumerate
@@ -1903,7 +2301,7 @@ Link two source directories (your_repo_root/examples, your_repo_root/sources)to
 \end_layout
 
 \begin_layout Enumerate
-Add two external JARs (your_repo_root/lib/flanagan.jar and your_repo_root/lib/jdo
+Add two external Jars (your_repo_root/lib/flanagan.jar and your_repo_root/lib/jdo
 m-2.0.0.jar) to the Libraries.
 \end_layout
 
@@ -1933,7 +2331,7 @@ Right click on WorkflowSimBasicExample1.java and choose 'Run File'.
 
 \end_deeper
 \begin_layout Subsubsection
-Strengths of WorkflowSim
+Strengths
 \end_layout
 
 \begin_layout Standard
@@ -1971,11 +2369,19 @@ It models failures for two layers (i.e., task/job) by an interface and hence
 \end_layout
 
 \begin_layout Subsubsection
-Limitations of WorkflowSim
+Limitations
 \end_layout
 
 \begin_layout Standard
-WorkflowSim has some limitations such as:
+WorkflowSim has some limitations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+ such as:
 \end_layout
 
 \begin_layout Enumerate
@@ -1994,63 +2400,6 @@ It does not consider the performance characteristic of file I/O.
 \begin_layout Enumerate
 It supports only simple workflow techniques and so developers cannot use
  other important approaches like workflow partitioning in their implementations.
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Objectif de notre travail
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Pricipe de l'algorithme
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Résultat de l'exécution
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Conclusion
-\end_layout
-
-\begin_layout Standard
-
-\color brown
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-
-\color brown
-Simulation et déscussion des résultats
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Introduction
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Outil de simulation: CloudSim
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
-Architecture de CloudSim
 \end_layout
 
 \begin_layout Subsection
