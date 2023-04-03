@@ -1676,10 +1676,12 @@ literal "false"
 
 \color brown
 The problem of scheduling the scientific workflow on a cloud platform with
- optimisation of energy
+ energy optimization
 \end_layout
 
 \begin_layout Subsection
+
+\color brown
 Introduction
 \end_layout
 
@@ -1720,9 +1722,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+\color brown
 In this chapter, we will introduce the scientific workflow schudeling problem,
  firstly, we modelize it, then we list some related works that optimize
  the energy consumption and we finish this chapter with comparative table.
+ [this is my formulation]
 \end_layout
 
 \begin_layout Standard
@@ -1745,16 +1750,10 @@ The cloud is increasingly recognized as a new way to use compute, storage
  (prise de document de touhami le 20/03/2023)
 \end_layout
 
-\begin_layout Subsubsection
-
-\color brown
-Définitions et concepts
-\end_layout
-
 \begin_layout Subsection
 
 \color brown
-L'ordonnanceur et l'ordonnancement du workflow
+Workflow schudeling [1day]
 \end_layout
 
 \begin_layout Subsubsection
@@ -1784,13 +1783,106 @@ L'ordonnancement du workflow
 \begin_layout Subsubsection
 
 \color brown
-Objectifs de l'ordonnancement du workflow
+Critère de planification dans le Cloud Computing
+\end_layout
+
+\begin_layout Subsubsection
+Scheduling objectives
+\end_layout
+
+\begin_layout Standard
+There are many scheduling objectives
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ndamlabinmboula:tel-03590132"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Paragraph
+Cost
+\end_layout
+
+\begin_layout Standard
+The minimization of the execution cost or the respect of user-defined budget:
+ for the user, reducing execution cost is of a capital importance.
+ User sometimes have a cap on the amount of money spent on resources (i.e.
+ budget).
+ Minimizing execution cost and taking into account user-defined budget in
+ a scheduling strategy is crucial.
+\end_layout
+
+\begin_layout Paragraph
+Makespan
+\end_layout
+
+\begin_layout Standard
+The minimization of the execution time or the respect of user-defined deadline
+ as in the case of the execution cost, execution time and deadline are of
+ a capital importance for cloud users.
+ Therefore, scheduling strategies must strive to reducing the makespan while
+ mapping workflow tasks on cloud resources and be aware of user-defined
+ deadline.
+\end_layout
+
+\begin_layout Paragraph
+Workload Maximisation
+\end_layout
+
+\begin_layout Standard
+The maximization of the workload aiming at maximizing the amount of work
+ done, that is, the number of workflows executed.
+\end_layout
+
+\begin_layout Paragraph
+Maximization of VM utilisation
+\end_layout
+
+\begin_layout Standard
+idle time slots in provisioned VMs are deemed as a waste of money as they
+ were paid for but not utilised and as a result, algorithms try to avoid
+ them in their schedules.
+ Minimising idle time slots and maximising the utilisation of resources
+ helps reducing execution cost as well as energy consumption, engraving
+ profit to providers.
+\end_layout
+
+\begin_layout Paragraph
+Energy Consumption
+\end_layout
+
+\begin_layout Standard
+The current industries, organizations, and governments are really concern
+ about the reduction of energy and to reduce the carbon footprint.
+ For cloud computing providers, energy consumption reduction is a key to
+ upgrade their return of investment (ROI).
+ Energy efficient scheduling on the servers is one of the challenging problems
+ in a dynamic environment such as cloud domain for reducing the energy consumpti
+on.
+\end_layout
+
+\begin_layout Paragraph
+Reliability Awareness
+\end_layout
+
+\begin_layout Standard
+Scheduling algorithms considering reliability as part of their objectives
+ must put mechanisms in place to ensure that the workflow execution is completed
+ within the users’ QoS constraints even if resource or task failures occur.
+ Or simply minimize possible failure during workflow execution.
+\end_layout
+
+\begin_layout Paragraph
+Security Awareness
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Les techiniques de l'ordonnancement du workflow
+? Les techiniques de l'ordonnancement du workflow
 \end_layout
 
 \begin_layout Subsubsection
@@ -1799,16 +1891,72 @@ Les techiniques de l'ordonnancement du workflow
 Catégories d'algorithmes d'ordonnancement existants
 \end_layout
 
+\begin_layout Subsection
+
+\color brown
+Related works
+\end_layout
+
+\begin_layout Subsubsection
+Energy optimization problem
+\end_layout
+
+\begin_layout Standard
+Scientific workflows are the constitution of distinct tasks with complex
+ dependency.
+ Resource provisioning and the order in which workflow tasks are executed
+ are challenging problems.
+ The inefficient utilization of resources while executing the workflows
+ wastes a tremendous number of resources.
+ The inefficient utilization of resources increases the number of unused
+ provisioned resources.
+ These unused resources increase energy consumption without performing any
+ useful operation.
+ The resource utilization can be increased by efficient resource provisioning.
+ An energy efficient scheduling algorithm can be used to manage the resources
+ that are required by the task while executing these scientific workflow
+ tasks.
+ In the literature, numerous workflow scheduling algorithms have been proposed.
+ These scheduling algorithms focus on diminishing makespan and cost with
+ inadequate resources.
+ The selection and designing of a competent and operative workflow scheduling
+ algorithm are also challenging tasks.
+ The energy-aware scheduling algorithm must be selected which can provision
+ a proper resource from the offered resources which are efficient enough
+ to complete the workflow tasks within their deadline constriction, and
+ it can decrease the energy consumption
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garg2022energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 
 \color brown
-Critère de planification dans le Cloud Computing
+Optimisation difficile
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Algorithmes d'optimisation approchées [7days]
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Comparaison entre les approches d'ordonnancement des workflows [1day]
 \end_layout
 
 \begin_layout Subsection
 
 \color brown
-Modélisation du problème
+Modélisation du problème [1day]
 \end_layout
 
 \begin_layout Subsubsection
@@ -1916,68 +2064,6 @@ ely.
 \begin_layout Subsection
 
 \color brown
-Related works
-\end_layout
-
-\begin_layout Subsubsection
-Energy optimization problem
-\end_layout
-
-\begin_layout Standard
-Scientific workflows are the constitution of distinct tasks with complex
- dependency.
- Resource provisioning and the order in which workflow tasks are executed
- are challenging problems.
- The inefficient utilization of resources while executing the workflows
- wastes a tremendous number of resources.
- The inefficient utilization of resources increases the number of unused
- provisioned resources.
- These unused resources increase energy consumption without performing any
- useful operation.
- The resource utilization can be increased by efficient resource provisioning.
- An energy efficient scheduling algorithm can be used to manage the resources
- that are required by the task while executing these scientific workflow
- tasks.
- In the literature, numerous workflow scheduling algorithms have been proposed.
- These scheduling algorithms focus on diminishing makespan and cost with
- inadequate resources.
- The selection and designing of a competent and operative workflow scheduling
- algorithm are also challenging tasks.
- The energy-aware scheduling algorithm must be selected which can provision
- a proper resource from the offered resources which are efficient enough
- to complete the workflow tasks within their deadline constriction, and
- it can decrease the energy consumption
-\begin_inset CommandInset citation
-LatexCommand cite
-key "garg2022energy"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
-
-\color brown
-Optimisation difficile
-\end_layout
-
-\begin_layout Subsubsection
-
-\color brown
-Algorithmes d'optimisation approchées
-\end_layout
-
-\begin_layout Subsubsection
-
-\color brown
-Comparaison entre les approches d'ordonnancement des workflows
-\end_layout
-
-\begin_layout Subsection
-
-\color brown
 Conclusion
 \end_layout
 
@@ -1993,7 +2079,7 @@ Conclusion
 \begin_layout Section
 
 \color brown
-Etat de l'art et approche proposée
+Etat de l'art et approche proposée [1day]
 \end_layout
 
 \begin_layout Subsection
@@ -2167,7 +2253,7 @@ noprefix "false"
 
 \end_inset
 
-shows the structure of WorkflowSim that is composed of several components:
+ shows the structure of WorkflowSim that is composed of several components:
 \end_layout
 
 \begin_layout Enumerate

@@ -1,0 +1,7743 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Scientific workflows schudeling in the cloud with energy optimization
+\end_layout
+
+\begin_layout Date
+March 25
+\begin_inset Formula $^{th}$
+\end_inset
+
+, 2023
+\end_layout
+
+\begin_layout Author
+CHERIEF Houcine Abdelkader
+\end_layout
+
+\begin_layout Author
+TOUHAMI Abdelghani Chaabane
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\color brown
+To Do
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+General introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Context
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Problematic
+\end_layout
+
+\begin_layout Standard
+The energy consumption of cloud data centers is an important challenge.
+ Energy consumption is increasing day by day due to a non-energy aware strategy
+ in resource management.
+ About 0.5% of energy consumption in worldwide is related to cloud data centers,
+ while this is envisaged to fourfold in 2020.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Objectives
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Contribution
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Outline
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Workflow and scientific workflow
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Standard
+Workflows are a systematic way of describing and executing a series of computati
+onal or data manipulation steps, or tasks, in a specific application domain.
+ Workflow technology is established in the business domain for several years.
+ This fact suggests the need for detailed investigations in the qualification
+ of conventional workflow technology for the evolving application domain
+ of e-Science.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scientific workflows are a specialized form of workflows that are designed
+ for data-intensive or knowledge discovery applications in various scientific
+ disciplines.
+ Scientific workflows enable researchers to formulate, share, reuse, and
+ validate complex methods that involve multiple data sources and computational
+ platforms.
+ (To Do ChatGPT)
+\end_layout
+
+\begin_layout Standard
+There are many scientific applications in various fields, such as astronomy
+ and biology that contain a large amount of data and involve a large number
+ of tasks.
+ These applications are represented by a workflow that represents a set
+ of data processing steps.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "5"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this chapter, we present the workflow and Workflow Management System
+ (WMS) with its architecture.We will also talk about the scientific workflows,
+ its life cycle and its types.
+\end_layout
+
+\begin_layout Subsection
+Workflow definition
+\end_layout
+
+\begin_layout Standard
+Workflow is defined by Workflow Management Coalition (WfMC), which is a
+ consortium formed to define standards for the interoperability of workflow
+ management systems, as following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Workflow is the sequence of tasks, steps, and decisions that need to be
+ followed to complete a specific process.
+ It can be thought of as a set of instructions that describe how a process
+ should be performed, including the order in which tasks are to be completed,
+ who is responsible for performing each task, and what should happen next
+ based on the outcome of each task.
+ 
+\end_layout
+
+\begin_layout Standard
+Workflows can be used to automate a wide range of business processes, such
+ as invoicing, order fulfillment, human resources, and project management.
+ The goal of a workflow is to make sure that tasks are completed in the
+ correct order and by the right people, and to ensure that the process is
+ efficient and accurate.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WfMC_glossary"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The execution of a workflow is managed by a Workflow Management System (WMS).
+\end_layout
+
+\begin_layout Subsection
+Scientific workflow
+\end_layout
+
+\begin_layout Subsubsection
+Definition
+\end_layout
+
+\begin_layout Standard
+Scientific workflows are data-intensive applications representing distributed
+ data sources and complex computations in various domains, i.e.
+ astronomy, engineering sciences, and bioinformatics.
+ In distributed environments like fog computing, various sensors and experimenta
+l processes generate a large volume of data that need collection and processing
+ within specific time constraints.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "5"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Scientific workflow's life cycle
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/scientific_workflow_lifecycle.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Scientific and Business workflow's life cycle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The life cycle for scientific workflows heavily distinguishes from other
+ workflow types.
+ The life cycle is inferred from observations about theway scientists create
+ and conduct experiments and from known properties ofscientific simulations
+ and computations.
+\end_layout
+
+\begin_layout Standard
+Typically, there is only one user group, the scientists, playing the roles
+ of a modeler, user, administrator,and analyst.
+ The focus of their work is usually on single workflow instances.
+\end_layout
+
+\begin_layout Standard
+To be precise, scientists do not distinguish between workflow models and
+ instances or are not aware of a difference between models and instances,
+ respectively.
+ They setup a simulation and execute it once at a time.
+ Because scientists typically develop their workflow in a trial-and-error
+ manner, modeling and execution phases are not arranged in a strict sequence.
+\end_layout
+
+\begin_layout Standard
+In fact, they can be carried out alternated.
+ An additional cycle therefore leads from execution back to modeling phase
+ with the helpof a “suspend” operation on the workflow instance, which remains
+ hidden fromthe scientists.
+ Technical details are transparent for scientists altogether.
+\end_layout
+
+\begin_layout Standard
+For instance, conventional workflow adaptation is experienced as scientific
+ workflow modeling; the deployment (of parts of a workflow) is part of the
+ “run/resume” operation , which is also hidden for the scientist.
+ Workflow execution starts immediately after modeling.
+ 
+\end_layout
+
+\begin_layout Standard
+The traditional execution and monitoring phases aremerged into a single
+ phase in the scien tific workflow life cycle because from ascientist’s
+ point of view monitoring only visualizes a running workflow (instance).
+\end_layout
+
+\begin_layout Standard
+After execution a scientist can analyze the computed results and may remodel
+ and reexecute the workflow possibly with different parameters.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Benefits of workflow for the science
+\end_layout
+
+\begin_layout Standard
+Workflows in science provide multiple benefits
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+they contribute to sharing knowledge by being available as services for
+ collaborating scientists with the help of workflows a community-based analysis
+ of results is supported.
+\end_layout
+
+\begin_layout Itemize
+workflows are able to deal with huge amounts of data, e.g.
+ collected by sensors or calculated by scientific algorithms.
+\end_layout
+
+\begin_layout Itemize
+workflows are capable of running in distributed and highly heterogeneous
+ environments—a common scenario in scientific computations where a great
+ variety of platforms and programming languages is usually employed.
+\end_layout
+
+\begin_layout Itemize
+the automation of steps during workflow design and execution allows scientists
+ to concentrate on solving their main scientific problems.
+\end_layout
+
+\begin_layout Itemize
+workflows can be utilized to conduct scientific simulations in a parallel
+ and automated manner.
+\end_layout
+
+\begin_layout Subsubsection
+Differences between business and scientific workflows
+\end_layout
+
+\begin_layout Standard
+There are many differences between business and scientific workflows
+\begin_inset CommandInset citation
+LatexCommand cite
+key "defference_between_business_scientific_workflows"
+literal "false"
+
+\end_inset
+
+, we listed some of them:
+\end_layout
+
+\begin_layout Itemize
+Business workflows aim at automating organizational processes that are mainly
+ executed by humans, while scientific workflows aim at validating hypotheses
+ of a researcher based on available data.
+\end_layout
+
+\begin_layout Itemize
+Business workflows have a predetermined goal, while scientific workflows
+ have experimental and exploratory goals that vary more frequently.
+\end_layout
+
+\begin_layout Itemize
+Business workflows are executed under human control, while scientific workflows
+ are executed fully automatically by a computer.
+\end_layout
+
+\begin_layout Itemize
+Business workflows depend on certain resources including application programs,
+ while scientific workflows depend more strongly on proper parameter settings
+\end_layout
+
+\begin_layout Subsection
+Workflow Management System
+\end_layout
+
+\begin_layout Subsubsection
+Definition
+\end_layout
+
+\begin_layout Standard
+Every workflow is executed on a workflow management system (WMS).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+ which was defined by WfMC 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WfMC_glossary"
+literal "false"
+
+\end_inset
+
+ as following:
+\end_layout
+
+\begin_layout Standard
+A software application that is designed to help organizations automate and
+ manage their business processes.
+ A WMS allows an organization to define and implement a workflow – a series
+ of tasks, steps, and decisions – that need to be followed to complete a
+ specific process.
+ The system can then be used to track the progress of the workflow, manage
+ the flow of information and documents, and ensure that tasks are completed
+ in the correct order and by the right people.
+\end_layout
+
+\begin_layout Standard
+A WMS can be used to automate a wide range of business processes, such as
+ invoicing, order fulfillment, human resources, and project management.
+ It can also be used to integrate different systems, such as email, calendar,
+ and customer relationship management (CRM) software.
+ WMS allows you to streamline the process and make it more efficient, reduce
+ errors and delays, and give you real-time visibility into the status of
+ your processes, also it’s common to have a built-in reporting and analytics
+ tools to measure the performance of the process.
+\end_layout
+
+\begin_layout Subsubsection
+Workflow engine architecture
+\end_layout
+
+\begin_layout Standard
+workflows are compositions of tasks (also referred to as activities) by
+ means of causal or data dependencies that are carried out on a computer.
+ They are executed on a workflow management system (WMS).
+ A workflow that utilizes Web services (WSs) as implementations of tasks
+ is usually called service composition.
+ Web services are the most prominent implementation of the serviceoriented
+ architecture (SOA).
+ The Web Service technology is an approach to provide and request services
+ in distributed environments independent of programming languages, platforms,
+ and operating systems.
+ It is applied in a very wide range of applications where integration of
+ heterogeneous systems is a must.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The WfMC have published an architectural Reference Model WfRM which is a
+ framework that provides a common understanding of the concepts and components
+ that are involved in the design, execution, and management of workflows
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WfMC_glossary"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/WMS_architecture.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Workflow engine architecture
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WfMC_glossary"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are 5 interfaces
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WMS_interfaces"
+literal "false"
+
+\end_inset
+
+ which are:
+\end_layout
+
+\begin_layout Paragraph
+Interface 1 Web Service (process definition tools)
+\end_layout
+
+\begin_layout Standard
+The 1st interface service provides the link between the tools designed for
+ creating and modifying workflow definitions and the workflow enactment
+ service.
+ It controls the system connection.
+ In addition, it inquiries the workflow for process definitions and resource
+ classifications.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Interface 2 (workflow client applications) 
+\end_layout
+
+\begin_layout Standard
+Through the 2nd interface service, users have access to a work list handler
+ service and enactment services.
+ In addition, the service produces states of cases and work items.
+ The states are also controlled through this service (i.e.
+ start, interruption, hang-up, executing, etc).
+\end_layout
+
+\begin_layout Paragraph
+Interface 3 (invoked applications)
+\end_layout
+
+\begin_layout Standard
+When some tasks of a process need to invoke an application outside of the
+ workflow engine, they directly activate the workflow enactment service
+ through the 3rd interface service and open interactive applications the
+ current work item of the work list handler.
+\end_layout
+
+\begin_layout Paragraph
+Interface 4 (other workflow enactment services)
+\end_layout
+
+\begin_layout Standard
+The interoperability and communication between workflows become the bottleneck
+ to solve with the recommendations and standards of WfMC.
+ The 4th interface service handles the basic operations to exchange between
+ autonomous workflow systems.
+ Through this interface, workflows transfer cases, resources and work items.
+\end_layout
+
+\begin_layout Paragraph
+Interface 5 (administration and monitoring tools)
+\end_layout
+
+\begin_layout Standard
+The 5th interface manages the administration and the monitoring tools of
+ the workflow system.
+ Through this service, the executing process should be managed, well-supervised
+ and the events should be recorded in log files.
+\end_layout
+
+\begin_layout Subsubsection
+Main Requirements on Scientific Workflow Management Systems
+\end_layout
+
+\begin_layout Standard
+Workflows in the scientific area make use of a data-centric approach.
+ Typically, huge amounts of data have to be processed, e.g.
+ 5 GB data per day is transmitted by the Hubble telescope, and probably
+ need to be processed by a workflow, this is why modeling language for scientifi
+c workflows is primarily data-driven.
+ That means, for accommodating the scientists’ needs the main focus of the
+ modeling language should be on data flow while the control flow is considered
+ secondary.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are many requirements listed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lifecycle"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+usability
+\series default
+: since the majority of users of sWfMSs are no computer scientists.
+ A scientist needs the support of easy-to-use tools, automation as far as
+ possible and maximal flexibility in the usage of the sWfMS.This means that
+ scientists want to:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+model their workflows in a convenient way.
+\end_layout
+
+\begin_layout Enumerate
+run their workflows and store their data on resources that are specified
+ by the user himself or automatically chosen by the sWfMS.
+\end_layout
+
+\begin_layout Enumerate
+same support for services used in traditional workflows.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+flexible:
+\series default
+ it mean the ability of a system to react to changes in its environment.
+ Approaches to flexibility of workflows can be divided into two groups:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+workflow can be modified according to the changed situation (known as adaptation
+).
+ Such modifications can address different workflow dimensions (logical,
+ functional, organizational dimension) and may be applied to workflow models
+ or single workflow instances.
+ 
+\end_layout
+
+\begin_layout Enumerate
+workflow can be modeled in a way that avoids its modification even in the
+ presence of a changing environment (known as avoid change).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+monitoring: 
+\series default
+WMS should support the ability to monitor the status of the workflow execution.
+ For example, the scientist is interested in knowledge about running, finished
+ or faulted activities, allocated resources, and the dynamical choice of
+ a service implementation.
+ Inspecting the produced data is also a need.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+reproducibility:
+\series default
+ is of utmost importance for different reasons.
+ Scientists who are not involved in the execution of the workflow need to
+ be able to retrace the simulation, have to review the findings, or need
+ to use the results.
+ The operating scientist may want to repeat a workflow or parts of it to
+ draw conclusions, and to prove statements and assumptions.
+ Additionally, the scientist may share the results with people he collaborates
+ with.
+ While following and reproducing workflow runs and their (intermediate)
+ results scientists use provenance information.
+ Finally, provenance information should be displayed in a way that (non-computer
+) scientists understand the execution of workflows including the derivation
+ of data.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+robustness: 
+\series default
+it is an important issue since scientific workflows are long-running.
+ The term robustness denotes the ability of being error- resistant.
+ The needed flexibility mechanisms mentioned above are a way to improve
+ the robustness of a system.
+ But additional approaches are needed to protect the execution progress
+ from being lost in case of unforeseeable failures, to reach a consistent
+ system state even in the presence of failures, and to proceed a simulation/expe
+riment after a failure.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+scalability:
+\series default
+ scientific workflows should scale with the number of users, number of utilized
+ services, data or calculation resources and involved participants.
+ Today, typical scientific workflows are mostly executed in a central manner
+ on a single machine.
+ A decentralized workflow enactment can help to scale via distributed process
+ execution.
+ It can be achieved, for example, by parallel execution in distributed and
+ heterogeneous execution environments using provisioning techniques.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+specific requirements:
+\series default
+ there are specific requirements for each specific scientific domain, e.g.
+ medical science, chemistry or mechanical engineering.
+ Specific domain related requirements and the fact that it is hard to cover
+ all scientific domains in one WMS create the need to extends WMSs and the
+ workflow models and possibly adapt these models and their instances.
+ This includes, for example, domain specific services, result displays or
+ meta-models for semantic annotations.
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+In this chapter we have presented workflows, and specially about scientific
+ workflows, their lifecycle, their benifits and the differences between
+ them and business workflows.We have also presented workflow management system
+ (WMS) and it its architecture explained how the foreseen system meets general
+ requirements of scientists and scientific workflows.
+\end_layout
+
+\begin_layout Standard
+In the next chapter we will present the cloud computing on which scientific
+ workflows can be executed, since they require a scalable and costless infrastru
+cture.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Cloud Computing
+\end_layout
+
+\begin_layout Subsection
+Introduction
+\end_layout
+
+\begin_layout Standard
+Nowadays, cloud computing is an emerging technology due to virtualization
+ and providing low price services on pay-as per-use basis and it is the
+ most popular computing system paradigm in the academic research and industry,
+ and it provides cloud services on-demand anywhere and anytime
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the previous chapter, we have introduced the workflow technology.
+ However the execution scientific workflows needs a huge amounts of data
+ or allocate enormous computing resources and a big scalability, this is
+ why we will present in this chapter the most convivial execution infrastructure
+ which is the cloud computing model.
+\end_layout
+
+\begin_layout Subsection
+Definition of Cloud Computing
+\end_layout
+
+\begin_layout Standard
+The modern literature provides several definitions of Cloud Computing.
+ Some definitions of Cloud Computing refer to services provided by data
+ centre, while others define it as a service provided by the Internet.Still,
+ the most quoted definition of Cloud Computing is the NIST definition.
+\end_layout
+
+\begin_layout Standard
+The National Institute of Standards and Technology (NIST) which is an agency
+ of the United States Department of Commerce whose mission is to promote
+ American innovation and industrial competitiveness, define the cloud computing
+ as following : 
+\begin_inset Quotes eld
+\end_inset
+
+Cloud computing is a model for enabling ubiquitous, convenient, on-demand
+ network access to a shared pool of configurable computing resources (e.g.,
+ networks, servers, storage, applications, and services) that can be rapidly
+ provisioned and released with minimal management effort or service provider
+ interaction.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST_definition"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Characteristics of Cloud Computing
+\end_layout
+
+\begin_layout Standard
+The National Institute of Standards and Technology's definition
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST_definition"
+literal "false"
+
+\end_inset
+
+ of cloud computing identifies "five essential characteristics":
+\end_layout
+
+\begin_layout Paragraph
+On-demand self-service
+\end_layout
+
+\begin_layout Standard
+Consumers of cloud computing services, such as server time and network storage,
+ as needed automatically nearly instant access to resources.
+ To support this expectation, clouds must allow self-service access so that
+ customers can request, customize, pay, and use services without intervention
+ of human operators.
+\end_layout
+
+\begin_layout Paragraph
+Broad network access
+\end_layout
+
+\begin_layout Standard
+Capabilities are available over the network and accessed through standard
+ mechanisms that promote use by heterogeneous thin or thick client platforms
+ (e.g., mobile phones, tablets, laptops, and workstations).
+\end_layout
+
+\begin_layout Paragraph
+Resource pooling
+\end_layout
+
+\begin_layout Standard
+The provider’s computing resources are pooled to serve multiple consumers
+ using a multi-tenant model, with different physical and virtual resources
+ dynamically assigned and reassigned according to consumer demand.
+ There is a sense of location independence in that the customer generally
+ has no control or knowledge over the exact location of the provided resources
+ but may be able to specify location at a higher level of abstraction (e.g.,
+ country, state, or datacenter).
+ Examples of resources include storage, processing, memory, and network
+ bandwidth.
+\end_layout
+
+\begin_layout Paragraph
+Rapid elasticity
+\end_layout
+
+\begin_layout Standard
+Cloud computing gives the illusion of unlimited computing resources available
+ on demand in any quantity at any time.
+ Therefore, users expect clouds to rapidly provide resources in any quantity
+ at any time.
+ In particular, it is expected that the additional resources can be (a)
+ provisioned, possibly automatically, when an application load increases
+ and (b) released when load decreases (scale up and down).
+\end_layout
+
+\begin_layout Paragraph
+Measured service
+\end_layout
+
+\begin_layout Standard
+Services must be priced on a shortterm basis (e.g., by the hour), allowing
+ users to release (and not pay for) resources as soon as they are not needed.
+ For these reasons, clouds must implement features to allow efficient trading
+ of service such as pricing, accounting, and billing.
+ 
+\end_layout
+
+\begin_layout Standard
+Cloud systems automatically control and optimize resource use by leveraging
+ a metering capability at some level of abstraction appropriate to the type
+ of service (e.g., storage, processing, bandwidth, and active user accounts).
+ Resource usage can be monitored, controlled, and reported, providing transparen
+cy for both the provider and consumer of the utilized service.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cloud computing has a lot of another characteristics
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DIGITAL_NOTES_ON_CLOUD"
+literal "false"
+
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Enumerate
+Performances are being monitored by IT experts from the service provider
+ end.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Resources are abstracted or virtualized.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Availability improves with the use of multiple redundant sites
+\end_layout
+
+\begin_layout Enumerate
+Customizable: resources rented from the cloud must be highly customizable.
+\end_layout
+
+\begin_layout Enumerate
+Device and location independence, which means no maintenance, required.
+ 
+\end_layout
+
+\begin_layout Subsection
+Service Models
+\end_layout
+
+\begin_layout Standard
+The National Institute of Standards and Technology (NIST) has define 3 services
+ models in their definition
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST_definition"
+literal "false"
+
+\end_inset
+
+, which are
+\end_layout
+
+\begin_layout Subsubsection
+Software as a Service (SaaS)
+\end_layout
+
+\begin_layout Standard
+The capability provided to the consumer is to use the provider’s applications
+ running on a cloud infrastructure2 .
+ The applications are accessible from various client devices through either
+ a thin client interface, such as a web browser (e.g., web-based email), or
+ a program interface.
+ The consumer does not manage or control the underlying cloud infrastructure
+ including network, servers, operating systems, storage, or even individual
+ application capabilities, with the possible exception of limited userspecific
+ application configuration settings.
+\end_layout
+
+\begin_layout Subsubsection
+Platform as a Service (PaaS)
+\end_layout
+
+\begin_layout Standard
+The capability provided to the consumer is to deploy onto the cloud infrastructu
+re consumer-created or acquired applications created using programming languages
+, libraries, services, and tools supported by the provider.3 The consumer
+ does not manage or control the underlying cloud infrastructure including
+ network, servers, operating systems, or storage, but has control over the
+ deployed applications and possibly configuration settings for the application-h
+osting environment.
+\end_layout
+
+\begin_layout Subsubsection
+Infrastructure as a Service (IaaS)
+\end_layout
+
+\begin_layout Standard
+The capability provided to the consumer is to provision processing, storage,
+ networks, and other fundamental computing resources where the consumer
+ is able to deploy and run arbitrary software, which can include operating
+ systems and applications.
+ The consumer does not manage or control the underlying cloud infrastructure
+ but has control over operating systems, storage, and deployed applications;
+ and possibly limited control of select networking components (e.g., host
+ firewalls).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/cloud_services_model_graph-1024x465.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cloud service models
+\color brown
+ from https://www.quisted.net/index.php/2018/08/30/dc-cloud-computing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Deployment Models
+\end_layout
+
+\begin_layout Standard
+There are 5 deployment models of Cloud Computing, the first 4 was listed
+ by The NIST definition 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST_definition"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vmware"
+literal "false"
+
+\end_inset
+
+ has define the last one 
+\end_layout
+
+\begin_layout Paragraph
+Private cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is provisioned for exclusive use by a single organizati
+on comprising multiple consumers (e.g., business units).
+ It may be owned, managed, and operated by the organization, a third party,
+ or some combination of them, and it may exist on or off premises.
+\end_layout
+
+\begin_layout Paragraph
+Community cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is provisioned for exclusive use by a specific
+ community of consumers from organizations that have shared concerns (e.g.,
+ mission, security requirements, policy, and compliance considerations).
+ It may be owned, managed, and operated by one or more of the organizations
+ in the community, a third party, or some combination of them, and it may
+ exist on or off premises.
+\end_layout
+
+\begin_layout Paragraph
+Public cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is provisioned for open use by the general public.
+ It may be owned, managed, and operated by a business, academic, or government
+ organization, or some combination of them.
+ It exists on the premises of the cloud provider.
+\end_layout
+
+\begin_layout Paragraph
+Hybrid cloud
+\end_layout
+
+\begin_layout Standard
+The cloud infrastructure is a composition of two or more distinct cloud
+ infrastructures (private, community, or public) that remain unique entities,
+ but are bound together by standardized or proprietary technology that enables
+ data and application portability (e.g., cloud bursting for load balancing
+ between clouds).
+ 
+\end_layout
+
+\begin_layout Paragraph
+Multi-Cloud Computing
+\end_layout
+
+\begin_layout Standard
+Multi-Cloud = Any Combination of Native Public Clouds and Private Clouds
+\end_layout
+
+\begin_layout Standard
+Some companies can’t use a single public cloud.
+ Their developers may like Google Cloud, while IT operates in Azure both
+ on-premise and in the cloud.
+ Meanwhile, a startup they just acquired runs their killer app in Amazon
+ Web Services (AWS).
+\end_layout
+
+\begin_layout Standard
+This is the multi-cloud model.
+ It’s the ultimate in flexibility to choose the cloud that best fits the
+ application or business need.
+ It’s no wonder organizations overwhelming go the multi-cloud route, often
+ with the inclusion of hybrid cloud.
+\end_layout
+
+\begin_layout Standard
+The main advantage of this model comparing to the public model is avoiding
+ 
+\series bold
+vendor lock
+\series default
+-in which will be defined later.
+\end_layout
+
+\begin_layout Subsection
+Benefits of cloud computing
+\end_layout
+
+\begin_layout Standard
+Cloud Computing are fueled in part by its perceived benefits
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "3"
+literal "false"
+
+\end_inset
+
+
+\color inherit
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DIGITAL_NOTES_ON_CLOUD"
+literal "false"
+
+\end_inset
+
+.
+ The ideal Cloud Computing infrastructure would possess the following desirable
+ characteristics: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Reliability
+\series default
+: Backup and recovery of data are less expensive and extremely fast for
+ business continuity.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Scalability
+\series default
+: We can increase or decrease the requirement of resources according to
+ the business requirements.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Cost
+\series default
+: Cloud Computing requires significantly lesser capital expenditures to
+ get up and running, it reduces the huge capital costs of buying hardware
+ and software.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Speed
+\series default
+: resources can be accessed in minutes, typically within a few clicks ,no
+ more waiting months or years and spending millions of dollars before anyone
+ gets to log into your new solution.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Productivity
+\series default
+: Cloud computing technology allows on-the-fly, point-and-click customization
+ and report generation for business users, so IT doesn’t spend significant
+ time on such tasks.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+SLA-driven
+\series default
+: The system is dynamically managed by service-level agreements that define
+ policies such as how quickly responses to requests need to be delivered.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Multi-tenancy
+\series default
+: The system is built in a way that allows several customers to share infrastruc
+ture with mutual opacity and without compromising privacy and security.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Service-oriented
+\series default
+: The system allows composing applications out of discrete, re-usable, loosely-c
+oupled services.
+ Changes to, or failure of, a service will not disrupt other services.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Virtualized
+\series default
+: Applications are decoupled from the underlying hardware.
+ An application may rely on Grid Computing and multiple applications could
+ run on a single computer.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Data, Data, Data
+\series default
+: The key to many of the above desirable characteristics is management of
+ data: its distribution, partitioning, security and synchronization using
+ technologies like Amazon’s SimpleDB (large-scale relational databases)
+ and in-memory data grids.
+ According to premier Cloud Computing vendor, Salesforce.com, given a properly-im
+plemented Cloud Computing solution, a client should experience some or all
+ of the following benefits: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Proven Web-services integration
+\series default
+: Cloud Computing technology is much easier and quicker to integrate with
+ other enterprise applications.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Support for deep customizations
+\series default
+: The Cloud Computing infrastructure not only allows deep customization
+ and application configuration, it preserves all those customizations even
+ during upgrades and with evolving needs, thus freeing up organizational
+ IT resources.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pre-built, pre-integrated apps
+\series default
+: Hundreds of pre-built applications and application exchange capabilities
+ are either pre-integrated into larger, off-the-shelf applications or available
+ for quick integration to form new applications.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Security
+\series default
+ can improve due to centralization of data.
+\end_layout
+
+\begin_layout Subsection
+Cloud Computing's obstacles
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+To Do: statistics more recent
+\end_layout
+
+\begin_layout Standard
+There are many disadvantages of Cloud Computing.The document
+\begin_inset CommandInset citation
+LatexCommand cite
+key "4"
+literal "false"
+
+\end_inset
+
+list many disadvantages:
+\end_layout
+
+\begin_layout Paragraph
+Cloud Vulnerability
+\end_layout
+
+\begin_layout Standard
+The primary challenge posed to data management in the cloud is content security.
+ Due to the ease of access to content over the internet, concerns have been
+ raised due to data vulnerability.
+ In a review of cloud security issues, funded by IBM, 382 organizations
+ disclosed cloud security issues in 2016 across 16 different industries.
+ The security issues faced by cloud environments include; the miss-use of
+ cloud content, malicious hacking, failure of vendor security and shared
+ technology vulnerabilities.
+ While improve cloud security is an area currently undergoing considerable
+ research , and it was observed that the security of cloud content is vulnerable
+ on several levels.
+ On a "communications level" risk arises from the sharing of sensitive informati
+on (e.g.
+ access passwords).
+ On a "security level" the cloud is vulnerable to password cracking, cookie
+ poisoning and CAPTCHA breaking among other threats.
+ Moreover, cloud content is subject to Service Level Agreements (SLAs) such
+ as legal or confidentiality requirements which may compromise data security.
+ Due to the multi-tiered vulnerability of cloud architecture, current innovation
+s aiming to improve cloud security are unlikely to remove all levels of
+ threat.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Technical Issues
+\end_layout
+
+\begin_layout Standard
+Although Cloud Computing offers improved efficiency by means of “on demand”
+ content access, the cloud can also be prone to technical malfunctions such
+ as outages.
+ Even the most established cloud vendors do encounter unexpected technical
+ problems despite generally having high standards of maintenance.It is estimated
+ that cloud services are unavailable for 7.5 hours per year (99.9% reliability).
+ While, at a glance, this figure may seem impressive, it does not reach
+ the expected reliability quotient of 99.999% for sensitive data management.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Cost Creep 
+\end_layout
+
+\begin_layout Standard
+At first glance migrating to a “pay-as-you-go” pricing model as employed
+ by many cloud providers may seem financially attractive.
+ However, it has been well documented that organizations that migrate to
+ a cloud environment are often charged with additional hidden usage charges.
+ Additional usage charge can accumulate to be a deterrent to cloud adoption,
+ particularly for smaller enterprises.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Financial Risk in Disaster Scenarios
+\end_layout
+
+\begin_layout Standard
+Cloud users can incur significant costs in cases of cloud outage, security
+ breach or vendor lock-in (see below).
+ According to the Penomen Institute, for example, in 2016, the average distribut
+ed cost incurred by a datacenter outage was almost $750, 000.
+ In the same year data breaches, depending on their nature, are estimated
+ to have cost between around 130$ and 170$ to resolve per record.
+ The cost in these scenarios may fall on either the cloud utilize or the
+ cloud vendor, depending on the predefined contract between the two parties.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Vendor Lock-In
+\end_layout
+
+\begin_layout Standard
+Vendor lock-in problem in cloud computing is characterized by expensive
+ and time-consuming migration of application and data to alternative providers.
+ Cloud software vendors lock in customers in several ways:
+\end_layout
+
+\begin_layout Itemize
+by designing a system incompatible with software developed by other vendors
+\end_layout
+
+\begin_layout Itemize
+by using proprietary standards or closed architectures that lack interoperabilit
+y with other applications
+\end_layout
+
+\begin_layout Itemize
+by licensing the software under exclusive conditions.
+\end_layout
+
+\begin_layout Subsection
+Conclusion
+\end_layout
+
+\begin_layout Standard
+In this chapter we have presented the Cloud Computing,its characteristics
+ which its distinguished from other computing model, then have listed the
+ most common used services models IaaS, PaaS and SaaS.Also, we have presented
+ several deployment models.
+ Finally, benefits and obstacles of this computing model was listed.
+\end_layout
+
+\begin_layout Standard
+Cloud computing provides virtualized cloud resources as a service, on-demand,
+ and pay-per-use basis.
+ The characteristics of cloud computing such as elasticity and flexibility
+ make this environment a major trend for computation and storage services.
+ These characteristics motivate to execution of scientific applications
+ in the cloud environment
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garg2022energy"
+literal "false"
+
+\end_inset
+
+.This is why we will present in the next chapter scheduling scientific workflow.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+The problem of scheduling the scientific workflow on a cloud platform with
+ energy optimization
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Standard
+Large-scale complex scientific applications/workflow are executed and analyzed
+ in the multi-disciplinary area of research such as astronomy and physics.
+ The workflow contains a large number of mutually dependent tasks which
+ are executed according to their dependency constraint.
+ Due to dependency constraint, the child task can start its execution only
+ when parent task finishes its execution.
+ A directed acyclic graph (DAG) is used to represent workflows.
+ These workflows often have disparate requirements (such as storage and
+ CPU) and constraints (dependency) that need to be accounted during their
+ execution
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garg2022energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In cloud environment, effective management of scientific workflows is the
+ main challenge since there are numerous virtual machines and many user
+ tasks that should be scheduled by considering dependencies and various
+ objectives
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+In this chapter, we will introduce the scientific workflow scheduling problem,
+ firstly, we modelize it, then we list some related works that optimize
+ the energy consumption and we finish this chapter with comparative table.
+ [this is my formulation]
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The cloud is increasingly recognized as a new way to use compute, storage
+ and network services seamlessly and efficiently on demand.
+ It presents a promising technology that facilitates the execution of scientific
+ and commercial applications.
+ It provides flexible and scalable services, as users demand, through a
+ pay-as-you-go model.These applications are often expressed in the form of
+ scientific workflows comprising a series of linked processing steps (tasks).
+ Recently, the cloud provides them, on demand, with these infrastructures
+ with different levels of QoS.
+ The scheduling of tasks and mainly of workflow is an NP-complete problem
+ that can be solved by meta-heuristics.
+ Due to the importance of workflow applications, several research projects
+ have been conducted to design workflow management systems and appropriate
+ scheduling algorithms.
+ (prise de document de touhami le 20/03/2023)
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Workflow scheduling [1day]
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Définition de l'ordonnanceur
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Définition de l'ordonnancement
+\end_layout
+
+\begin_layout Subsubsection
+Workflow schudeling
+\end_layout
+
+\begin_layout Standard
+Workflow scheduling calls for high computation and communication costs,
+ especially scientific workflows that have to do with areas as astronomy
+ and biology are among the most commonly used cloud applications.
+ In cloud computing, a service provider provides users with various capacities
+ at various costs.
+ Usually, faster resources are more expensive than slower ones.
+ Thus, the scheduler with varied resources for workflow will have different
+ runtimes and costs; therefore, there will be various restrictions by the
+ user.
+ The time restriction guarantees that the workflow is done within the time
+ specified by the user.
+ The cost constraint guarantees that the cost does not exceed the budget
+ established by the user.
+ The optimal response will create a balance between these two criteria
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Workflow schudeling types
+\end_layout
+
+\begin_layout Standard
+Task scheduling can be categorized, as offline scheduling, and online scheduling
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Offline scheduling which means the execution time is calculated, and mapping
+ tasks shall be examined at pre-scheduled times.
+ This scheduling approach is static.
+ This strategy helps us prepare a supply plan for tasks, allocate resources
+ to them, and then execute the tasks according to this supply plan
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.
+ 
+\color brown
+Static scheduling generates a scheduling plan (SP) that allocates all executable
+ tasks to compute nodes before execution and the WMS strictly adheres to
+ the scheduling plan throughout the duration of the scientific workflow
+ execution.
+ Since it is prior to execution, static scheduling generates little overhead
+ during execution.
+ It is efficient if the WMS can accurately predict the execution time of
+ each task, when the execution environment varies little during workflow
+ execution and when the WMS has sufficient information about the computing
+ and storage capabilities of the corresponding computers.
+ However, when the execution environment undergoes dynamic changes, it is
+ very difficult to achieve load balance.
+ Static task scheduling algorithms have two types of processor selection
+ methods: 
+\series bold
+heuristic-based
+\series default
+ and 
+\series bold
+guided random search-based
+\series default
+.
+ The heuristic-based method schedules tasks according to a predefined rule
+ while the random search-based method schedules tasks randomly
+\begin_inset CommandInset citation
+LatexCommand cite
+key "benhammouda2021contribution"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The second approach is online task scheduling, which means dynamic scheduling
+ tasks, where one needs to use and consider available resources rather than
+ operating time.
+ The tasks will be performed without delay, using the available resources
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.
+ 
+\color brown
+Dynamic scheduling produces scheduling plans that distribute and allocate
+ executable tasks to compute nodes during workflow execution.
+ This type of scheduling is suitable for scientific workflows, in which
+ the workload of tasks is difficult to estimate, or for environments where
+ computer capabilities vary greatly during execution.
+ It should be noted that dynamic scheduling requires time to dynamically
+ generate scheduling plans during execution.
+ Dynamic scheduling algorithms can be based on queueing techniques in a
+ publish/subscribe model with different strategies such as First In First
+ Out (FIFO), adaptive, etc
+\begin_inset CommandInset citation
+LatexCommand cite
+key "benhammouda2021contribution"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+? Critère de planification dans le Cloud Computing
+\end_layout
+
+\begin_layout Subsubsection
+Scheduling objectives
+\end_layout
+
+\begin_layout Standard
+There are many scheduling objectives
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ndamlabinmboula:tel-03590132"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Paragraph
+Cost
+\end_layout
+
+\begin_layout Standard
+The minimization of the execution cost or the respect of user-defined budget:
+ for the user, reducing execution cost is of a capital importance.
+ User sometimes have a cap on the amount of money spent on resources (i.e.
+ budget).
+ Minimizing execution cost and taking into account user-defined budget in
+ a scheduling strategy is crucial.
+\end_layout
+
+\begin_layout Paragraph
+Makespan
+\end_layout
+
+\begin_layout Standard
+The minimization of the execution time or the respect of user-defined deadline
+ as in the case of the execution cost, execution time and deadline are of
+ a capital importance for cloud users.
+ Therefore, scheduling strategies must strive to reducing the makespan while
+ mapping workflow tasks on cloud resources and be aware of user-defined
+ deadline.
+\end_layout
+
+\begin_layout Paragraph
+Workload Maximization
+\end_layout
+
+\begin_layout Standard
+The maximization of the workload aiming at maximizing the amount of work
+ done, that is, the number of workflows executed.
+\end_layout
+
+\begin_layout Paragraph
+Maximization of VM utilization
+\end_layout
+
+\begin_layout Standard
+idle time slots in provisioned VMs are deemed as a waste of money as they
+ were paid for but not utilized and as a result, algorithms try to avoid
+ them in their schedules.
+ Minimizing idle time slots and maximizing the utilization of resources
+ helps reducing execution cost as well as energy consumption, engraving
+ profit to providers.
+\end_layout
+
+\begin_layout Paragraph
+Energy Consumption
+\end_layout
+
+\begin_layout Standard
+The current industries, organizations, and governments are really concern
+ about the reduction of energy and to reduce the carbon footprint.
+ For cloud computing providers, energy consumption reduction is a key to
+ upgrade their return of investment (ROI).
+ Energy efficient scheduling on the servers is one of the challenging problems
+ in a dynamic environment such as cloud domain for reducing the energy consumpti
+on.
+\end_layout
+
+\begin_layout Paragraph
+Reliability Awareness
+\end_layout
+
+\begin_layout Standard
+Scheduling algorithms considering reliability as part of their objectives
+ must put mechanisms in place to ensure that the workflow execution is completed
+ within the users’ QoS constraints even if resource or task failures occur.
+ Or simply minimize possible failure during workflow execution.
+\end_layout
+
+\begin_layout Paragraph
+Security Awareness
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+? Les techiniques de l'ordonnancement du workflow
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+? Catégories d'algorithmes d'ordonnancement existants
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Related works[9days]
+\end_layout
+
+\begin_layout Subsubsection
+Energy optimization problem
+\end_layout
+
+\begin_layout Standard
+Scientific workflows are the constitution of distinct tasks with complex
+ dependency.
+ Resource provisioning and the order in which workflow tasks are executed
+ are challenging problems.
+ The inefficient utilization of resources while executing the workflows
+ wastes a tremendous number of resources.
+ The inefficient utilization of resources increases the number of unused
+ provisioned resources.
+ These unused resources increase energy consumption without performing any
+ useful operation.
+ The resource utilization can be increased by efficient resource provisioning.
+ An energy efficient scheduling algorithm can be used to manage the resources
+ that are required by the task while executing these scientific workflow
+ tasks.
+ In the literature, numerous workflow scheduling algorithms have been proposed.
+ These scheduling algorithms focus on diminishing makespan and cost with
+ inadequate resources.
+ The selection and designing of a competent and operative workflow scheduling
+ algorithm are also challenging tasks.
+ The energy-aware scheduling algorithm must be selected which can provision
+ a proper resource from the offered resources which are efficient enough
+ to complete the workflow tasks within their deadline constriction, and
+ it can decrease the energy consumption
+\begin_inset CommandInset citation
+LatexCommand cite
+key "garg2022energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Hard optimization[1 day]
+\end_layout
+
+\begin_layout Standard
+A multi-objective optimization approach is suggested here for scientific
+ workflow task-scheduling problems in cloud computing.
+ More frequently, scientific workflow involves a large number of tasks.
+ It requires more resources to perform all these tasks.
+ Such a large amount of computing power can be supported only by cloud infrastru
+cture.
+ To implement complex science applications, more computing energy is expended,
+ so the use of cloud virtual machines in an energy-saving way is essential.
+ However, even today, it is a difficult challenge to conduct a scientific
+ workflow in an energy-aware cloud platform.
+ The hardness of this problem increases even more with several contradictory
+ goals.
+ Most of the existing research does not consider the essential characteristic
+ of cloud and significant issues, such as energy variation and throughput
+ besides makespan and cost.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Algorithmes d'optimisation approchées [7days]
+\end_layout
+
+\begin_layout Standard
+Workflow scheduling in the cloud environment is an NP-hard optimization
+ problem with rich literature over the last decade.
+ Previous works have presented many meta-heuristic, and heuristic-based
+ methods to solve this problem
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.We list here some of related works which optimize energy consumption
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Accelerated Search (AS)
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Accelerated Search (AS) algorithm based on Dynamic Programming (DP) to obtain
+ a combination of various task schemes which can be completed in a given
+ time with the minimum possible energy by introducing the guaranteed probability
+ and data migration energy.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://www.sciencedirect.com/science/article/abs/pii/S0743731516301745?via%3Dihub
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Plain GA
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Plain GA, CA+GA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+plain genetic (Plain GA), (ii) cellular automata supported by genetic approach
+ (CA + GA), and (iii) heuristic, giving preferences to high-efficiency machines
+ in allocation (EAH), based on a typical FIFO algorithm The used fitness
+ function is based on energy minimization only.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+PBHGA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Parallel bi-objective hybrid genetic algorithm (PBHGA) is a parallel
+ evolutionary algorithm for solving multi-objective optimization problems.
+ It combines several optimization techniques including genetic algorithm
+ (GA) and local search.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The algorithm works by using an initial population of random solutions.
+ Individuals in this population are rated based on their goals and their
+ fitness is assessed using a fitness function.
+ Then, individuals are selected for breeding using a rank-based or roulette
+ selection operator.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Reproduction is done using genetic operators such as mutation and crossover.
+ Mutation involves modifying a single gene of the individual while crossbreeding
+ involves creating new individuals by combining the characteristics of two
+ different parents.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The process of selection and reproduction is repeated for several generations
+ until an optimal solution is found.
+ During the whole optimization process, PBHGA maintains a population of
+ solutions to efficiently explore the search space.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The parallel approach of the algorithm helps to speed up the optimization
+ process by running multiple search tasks simultaneously on different processors.
+ It also makes it possible to efficiently explore regions of the search
+ space that would otherwise be difficult to reach.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Finally, the hybrid genetic algorithm uses local search techniques to improve
+ the quality of solutions by applying perturbation operations to existing
+ solutions.
+ These perturbation operations are designed to slightly perturb existing
+ solutions to bring them closer to an optimal solution.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://d1wqtxts1xzle7.cloudfront.net/30720910/meta20100_submission_167-libre.pdf?1
+391833479=&response-content-disposition=inline%3B+filename%3DA_Parallel_Bi_objec
+tive_Hybrid_Genetic_A.pdf&Expires=1680289419&Signature=NvSZ74YMq238Mge6yJo3lCmUXT
+NExrHFua9fkF8I7LUvQmzmHo1Pn9S4MH-53B8bU-gDc9JpCPoP0vTk-q5bnriImBXuoaevMakjOKmkzl
+TFQMaHtsQQfstc0tckuqSSdJnflS~bNJcUgVDvBzH0zTgjyiDODbcr-5HnJ3kFM8a1MViJwGUSVrTwUA
+tH5zLaZn17D9nE~BCB92y5IEAQQY40IXQdffofKusk-c6TgUitAlVd6rGIlRZemuBI4536iEc0s70ys5
+IvfR-vqJGKhu4T84ZHLSOlW4rml2WBbZGdqH7ZZVQbtA6veFpLOT9IcKuc5A-D3ppGZr-pagXt-A__&K
+ey-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+NSGA-II, MOCell, IBEA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+NSGA-II, MOCell and IBEA are popular multi-objective evolutionary algorithms
+ for solving multi-objective optimization problems.
+\end_layout
+
+\begin_layout Subparagraph
+
+\color brown
+NSGA-II (Non-dominated Sorting Genetic Algorithm II) 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+uses a non-dominated sorting approach to assess the quality of population
+ solutions.
+ Solutions are ranked according to their dominance over other solutions,
+ and non-dominated solutions are grouped into Pareto fronts.
+ The Pareto fronts are then ranked in order of dominance to create a new
+ population of parent solutions.
+ This parent population is used to generate a new population of child solutions
+ by crossover and mutation.
+\end_layout
+
+\begin_layout Subparagraph
+
+\color brown
+MOCell (Multi-Objective Cellular Genetic Algorithm) 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+uses a grid approach to divide the search space into cells, and each cell
+ is treated as a separate optimization problem.
+ The solutions are then evaluated locally and the best individuals are selected
+ to reproduce within the cell.
+ Then, the solutions are exchanged between cells to avoid local convergence.
+\end_layout
+
+\begin_layout Subparagraph
+
+\color brown
+IBEA (Indicator-Based Evolutionary Algorithm) 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+uses quality indicators to assess the quality of solutions.
+ It uses an indicator function that measures the distance of each solution
+ to an approximation of the true Pareto front.
+ The most distant solutions are selected for reproduction in order to favor
+ the diversity of the population.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+These algorithms all use an evolutionary approach to optimize multiple goals
+ at the same time.
+ Candidate solutions are evaluated against several optimization criteria,
+ and the best solutions are selected for replication.
+ The algorithms then use crossover and mutation operators to generate a
+ new population of candidate solutions.
+ The process is repeated until solutions of sufficient quality are found.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+One of the advantages of these algorithms is that they allow to find several
+ optimal solutions which are equivalent in terms of quality for different
+ criteria.
+ These solutions can then be used to explore the search space and help make
+ informed decisions.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/6606595
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+HCFS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Heuristics with Continuous Frequency Scaling (HCFS) algorithm is an
+ optimization technique that solves scheduling problems using a heuristic
+ approach.
+ It is particularly suitable for solving task scheduling problems that have
+ complex time dependencies and resource constraints.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.5396
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EAMD
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+new energy-aware scheduling algorithm called Energy Aware Scheduling by
+ Minimizing Duplication(EAMD) which considers the energy consumption as
+ well as the makespan of applications.
+ It adopts a subtle energy-aware method to determine and delete the abundant
+ task copies in the schedules generated by duplication-based algorithms,
+ which is easier to operate than DVFS and produces no extra time and energy
+ consumption.
+ This algorithm can reduce large amount of energy consumption while having
+ the same makespan compared with duplication-based algorithms without energy
+ awareness.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/document/6319162
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+MMF-DVFS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The MMF-DVFS (Multi-Objective Multi-Frequency Dynamic Voltage and Frequency
+ Scaling) algorithm is an optimization algorithm for power management in
+ embedded systems.
+ It aims to simultaneously minimize power consumption and execution time
+ of multiple tasks with quality of service (QoS) constraints such as timeliness
+ and reliability.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The MMF-DVFS algorithm uses an approach based on multi-objective optimization
+ which seeks to find a compromise between the objectives of minimizing energy
+ consumption and execution time.
+ The algorithm uses a technique called "Dynamic Voltage and Frequency Scaling"
+ (DVFS) which allows the frequency and voltage of the processor to be dynamicall
+y adjusted according to performance and power consumption requirements.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The MMF-DVFS algorithm is also able to take into account QoS constraints
+ using a decomposition approach into several sub-problems.
+ The algorithm decomposes the global problem into several sub-problems for
+ which it individually optimizes the objectives while keeping the other
+ objectives at an acceptable level.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The MMF-DVFS algorithm uses local and global search methods to find the
+ best possible solution.
+ Local search methods are used to improve local solutions while global search
+ methods are used to explore new regions of the search space.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/5493460
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EASLA, Improved EASLA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+EASLA (Efficient Antlion Optimizer with a Small Local Attraction) is a metaheuri
+stic optimization algorithm inspired by the hunting behavior of antlions.
+ The algorithm is used for solving various optimization problems, including
+ function optimization and feature selection.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Improved EASLA algorithm is an enhanced version of EASLA, which incorporates
+ some modifications to improve its performance.
+ The key modifications include the incorporation of a mutation operator
+ to explore the search space and the use of a dynamic population size to
+ adapt to the search problem.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The basic idea behind EASLA is to simulate the hunting behavior of antlions,
+ which use a combination of ambush and trap techniques to capture their
+ prey.
+ In EASLA, the antlion represents the best solution found so far, and the
+ ants represent potential solutions in the search space.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The algorithm starts by randomly generating a population of ants and placing
+ them in the search space.
+ The ants move toward the antlion based on a probability function that takes
+ into account both the distance to the antlion and the local attraction
+ of the area.
+ The antlion is then updated to the best solution found among the ants.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Improved EASLA algorithm extends this basic framework by introducing
+ a mutation operator that randomly modifies the position of some ants, which
+ can help to explore new regions of the search space.
+ The population size is also dynamically adjusted during the search to balance
+ exploration and exploitation.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Overall, EASLA and its improved variant aim to balance exploration and exploitat
+ion in the search space, using a combination of local and global search
+ strategies to find good solutions to optimization problems.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Seyedali Mirjalili and Seyed Mohammad Mirjalili, "Efficient ant optimizer
+ with small local attraction", Advances in Engineering Software, vol.
+ 102, p.
+ 24-45, 2016.
+ Seyedali Mirjalili and Seyed Mohammad Mirjalili, "Improved Ant Optimizer:
+ A New Metaheuristic Algorithm for Solving Optimization Problems", Applied
+ Soft Computing, vol.
+ 41, p.
+ 407-423, 2016.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+QHA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Quantum-Inspired Harmony Search Algorithm (QHA) is a quantum-inspired
+ optimization method for solving optimization problems.
+ The algorithm starts by initializing a set of candidate solutions for the
+ optimization problem.
+ Each candidate solution is represented by a vector of parameter values.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/document/7173041
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EADAGS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Scheduling (EADAGS) on heterogeneous processors that can run on discrete
+ operating voltages Such processors can scale down their voltages and slow
+ down to reduce energy whenever they idle due to task dependencies.
+ EADAGS combines dynamic voltage scaling (DVS) with Decisive Path Scheduling
+ (DPS) to achieve the twin objectives 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://link.springer.com/article/10.1007/s10586-009-0119-6
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+eFLS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The eFLS (enhanced fuzzy logic system) algorithm is a modeling method based
+ on fuzzy logic for decision making in uncertain environments.
+ The goal of the eFLS algorithm is to create a robust decision system that
+ can adapt to changing situations using fuzzy decision rules.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Roeder, J.; Rouxel, B.; Altmeyer, S.; Grelck, C.
+ Energy-aware scheduling of multi-version tasks on heterogeneous real-time
+ systems.
+ In Proceedings of the 36th Annual ACM Symposium on Applied Computing, Gwangju,
+ Republic of Korea, 22–26 March 2021; pp.
+ 501–510.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+VHEST, EASA
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EDLS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Exponential Differencing Least Squares (EDLS) algorithm is a linear
+ regression estimation algorithm that is used to model data that has exponential
+ trends or time-varying growth rates.
+ It is widely used in finance to model interest rates, exchange rates, and
+ asset prices.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The EDLS algorithm works by minimizing the sum of the squares of the deviations
+ between the observed values and the values predicted by the model.
+ Unlike classical linear regression methods which assume that errors have
+ a normal distribution, the EDLS algorithm assumes that errors have an exponenti
+al distribution.
+ This approach makes it possible to take into account exponential trends
+ in the data and to better model variations in growth rates.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+article intitulé "A Two-Step Estimation Procedure for Dynamic Panels with
+ Non-Stationary Common Factors", publié dans le Journal of Econometrics
+ en 2005.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+LESA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+GACSM: (GACSM), to address task scheduling on heterogeneous multiprocessor
+ systems using Dynamic Voltage and Frequency Scaling (DVFS).
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/document/8974273
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EED, EEND
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+algorithms, namely, Energy-Efficiency with Duplication (EED) and Energy-Efficien
+cy with Non Duplication (EEND) Both algorithms, in contrast to their counterpart
+s in the literature, strive to make a balance across the energy consumption,
+ the schedule length, and the number of processors used.
+ Synthetic benchmarks and real-world applications are used to evaluate the
+ performance of our algorithms.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/document/7300601
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+RSMECC
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The RSMECC (Reed-Solomon-MDPC Code-based Encryption and Compression) algorithm
+ is a data encryption and compression algorithm that uses Reed-Solomon codes
+ and MDPC (Moderate Density Parity-Check) codes.
+ The algorithm begins by generating a public key and a private key for data
+ encryption.
+ The public key is shared with the sender of the data while the private
+ key is kept by the receiver.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://link.springer.com/article/10.1007/s00521-019-04415-2
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+ECS, ECS + idle 
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+ESPA
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+GACSM
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EAD, PEBD
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+algorithms-Energy-Aware Duplication (EAD) scheduling and Performance-Energy
+ Balanced Duplication (PEBD) scheduling.
+ Existing duplication-based scheduling algorithms replicate all possible
+ tasks to shorten schedule length without reducing energy consumption caused
+ by duplication.
+ .
+ Our algorithms, in contrast, strive to balance schedule lengths and energy
+ savings by judiciously replicating predecessors of a task if the duplication
+ can aid in performance without degrading energy efficiency.
+ To illustrate the effectiveness of EAD and PEBD.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/document/5611491
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+WPEP
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Workflow performance evaluation platforms (WPEP) algorithm is not an
+ optimization algorithm, but rather a method for evaluating the performance
+ of workflows, i.e.
+ automated work processes in which tasks are executed sequentially or in
+ parallel.
+ The first step is to model the workflow, identifying the tasks, transitions
+ and resources needed for each task.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/9393895
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+RMREC
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The "Reducing energy consumption using remapping of critical tasks" algorithm
+ is an optimization method to minimize the power consumption of computing
+ applications by remapping critical tasks to the most energy-efficient cores.
+ Critical tasks are identified using performance profiling techniques to
+ determine which tasks consume the most processing time.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/9253551
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+MW-HBDCS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+is a scheduling method that makes it possible to efficiently plan the execution
+ of several workflows on a set of heterogeneous resources while respecting
+ budget and deadline constraints.
+ The problem is modeled using a formal representation of workflows and resources
+, as well as budget and time constraints.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://link.springer.com/article/10.1007/s00500-018-3229-3
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+MinD + ED
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The "Minimum Dependencies Energy-efficient DAG (MinD+ED)" algorithm is a
+ scheduling method for workflows represented in the form of a DAG (Directed
+ Acyclic Graph) which aims to minimize energy consumption while guaranteeing
+ the completion of the workflow on time.
+ The workflow is represented as a DAG, where nodes represent tasks and arcs
+ represent dependencies between tasks.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/8109158
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EnReal Method
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The EnReal Method (Energy and Reliability aware Method) algorithm is a schedulin
+g method for scientific workflows that aims to minimize energy consumption
+ while ensuring high reliability of results.
+ The workflow is represented as a DAG (Directed Acyclic Graph), where the
+ nodes represent the tasks and the arcs represent the dependencies between
+ the tasks.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/7276993
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+AVVMC
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+the AVVMC VM consolidation scheme that focuses on balanced resource utilization
+ of servers across different computing resources (CPU, memory, and network
+ I/O) with the goal of minimizing power consumption and resource wastage,
+ adaptation and integration of the Ant Colony Optimization (ACO) metaheuristic
+ with balanced usage of computing resources based on vector algebra.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=63826b7681bb1ff81956
+12ef75428812b6126a77
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+FFO-EVMM
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Adaptive GA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Adaptive GA (Genetic Algorithm) algorithm is an optimization method
+ inspired by Darwin's theory of evolution The Adaptive GA algorithm begins
+ by initializing a population of candidate solutions, which are sets of
+ values representing the parameters to be optimized.
+ These candidate solutions are often randomly generated , For each candidate
+ solution in the population, the algorithm evaluates the quality of the
+ solution using an objective function, also called a fitness function.
+ This function assigns a numerical value to each solution based on the quality
+ of that solution.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://www.tandfonline.com/doi/abs/10.1080/00221680209499862
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Hybrid Cultural and ACO
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+MPSO-FGA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The MPSO-FGA (Multi-Parent Particle Swarm Optimization with Fitness Gradient
+ Adaptation) algorithm is a hybrid optimization method combining Particle
+ Swarm Optimization (PSO) and Evolutionary Optimization (EA).
+ he MPSO-FGA algorithm begins by initializing a population of candidate
+ solutions, which are sets of values representing the parameters to be optimized.
+ These candidate solutions are often randomly generated.
+ For each candidate solution in the population, the algorithm evaluates
+ the quality of the solution using an objective function, also called a
+ fitness function.
+ This function assigns a numeric value to each solution based on the quality
+ of that solution
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/8015589
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+FOA-SA- LB
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The FOA-SA-LB (Fruit Fly Optimization Algorithm with Simulated Annealing
+ and Levy Flight Backtracking) algorithm is a hybrid optimization method
+ that combines the Fruit Fly Swarm Optimization (FOA) algorithm, the simulated
+ annealing algorithm (SA) and Lévy's jump algorithm with backtracking (LB)
+ The FOA-SA-LB algorithm begins by initializing a population of candidate
+ solutions, which are sets of values representing the parameters to be optimized.
+ These candidate solutions are often randomly generated.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://www.sciencedirect.com/science/article/pii/S2352914817300187
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+REEWS
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Real-coded Estimation of Distribution Algorithm with Re-Evaluation and
+ Windowing Strategy (REEWS) algorithm is an optimization method that uses
+ a distribution-based approach to find the optimal solution to a given optimizat
+ion problem.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+University of Technology of Belfort-Montbéliard in France
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+HUA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+he HUA (Hybridization of Harmony Search Algorithm and Univariate Marginal
+ Distribution Algorithm) is an evolutionary hybrid algorithm that combines
+ the advantages of two popular algorithms, namely the Harmony Search Algorithm
+ and the Distribution Algorithm.
+ Univariate Marginal Distribution Algorithm The algorithm starts by generating
+ a population of candidate solutions randomly.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The HUA algorithm (Hybridization of Harmony Search Algorithm and Univariate
+ Marginal Distribution Algorithm) was proposed by researchers S.
+ B.
+ Park and S.
+ M.
+ Lee in their article entitled "A hybridization of harmony search algorithm
+ and univariate marginal distribution algorithm for optimization problems"
+ published in the scientific journal "Expert Systems with Applications"
+ in 2010.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+MHRA
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+he MHRA algorithm (Multi-Objective Harmony Search Algorithm with Reference-Point
+-Based Nondominated Sorting Approach) is an evolutionary algorithm used
+ to solve multi-objective optimization problems.
+ The algorithm starts by generating a population of candidate solutions
+ randomly.
+ Each candidate solution is evaluated using an objective function that measures
+ its quality.
+ This function assigns a vector of values
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/abstract/document/4289081
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EARES-D
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The EARES-D (Enhanced Adaptive Range Extended Search with Diversity) algorithm
+ is a global optimization algorithm that has been proposed to solve complex
+ optimization problems The algorithm starts by generating a population of
+ candidate solutions randomly in a given search space.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://www.sciencedirect.com/science/article/pii/S1084804522000595
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EViMA
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+EAH
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The EAH (Exploratory Adaptation Hyper-heuristics) algorithm is a hyper-heuristic
+ optimization method for solving combinatorial optimization problems.
+ The goal of the EAH algorithm is to solve combinatorial optimization problems
+ using a heuristic approach that can adapt its behavior depending on the
+ characteristics of the problem.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+https://ieeexplore.ieee.org/document/6778110
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Comparaison entre les approches d'ordonnancement des workflows [1day]
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Float table
+wide false
+sideways true
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\color brown
+\begin_inset Tabular
+<lyxtabular version="3" rows="38" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Algorithm type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Year
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Algorithm
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Metrics,QoS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+System
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy aware mechanism
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Advantages
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Limitations
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Dynamic programming
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Accelerated Search
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), Probability of execution (C), ExecT (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous multicore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Evolutionary algorithms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Plain GA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Evolutionary algorithms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Plain GA, CA+GA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Evolutionary algorithms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+PBHGA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Pareto front (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous virtualized cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Evolutionary algorithms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+NSGA-II, MOCell, IBEA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Pareto front (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+HCFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O, C), Reliability (O, C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Homogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EAMD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+MMF-DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EASLA, Improved EASLA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous clusters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+QHA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O, C), ExecT (O, C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EADAGS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+eFLS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+VHEST, EASA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Utilization (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Homogeneous virtualized cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EDLS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+LESA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+ExecT (O), EC (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EED, EEND
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Homogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+RSMECC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+AST (O), AFT (O), ExecT (O), EC (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+ECS, ECS + idle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+ESPA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS, DPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+GACSM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (C)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Heterogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+DVFS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EAD, PEBD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EC (O), ExecT (O)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Homogeneous cluster
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2021
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+WPEP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Resource scheduling, fault-tolerant, energy efficient approaches
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2020
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+RMREC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Lower energy consumption without compromising budget constraint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2018
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+MW-HBDCS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+reliability and energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2016
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+MinD + ED
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EnReal Method
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Resource Utilization and energy consumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+improve resource utilization and energy consumption rate in datacenter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Workflow and user heterogeneity is ignored
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+AVVMC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Power consumption and resource wastage
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Improvement in both energy consumption and resource wastage
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+limited search space.
+ This could lead to limited consolidation decisions
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2016
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+FFO-EVMM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy consumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Efficient in sharing workload to under loaded VMs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Time consuming
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2016
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Adaptive GA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy consumption and Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+It generate fair schedules with very low time complexity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Stuck in local optimal solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2017
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Hybrid Cultural and ACO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Makespan and energy consumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Hybrid Cultural and ACO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Limited search space
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2017
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+MPSO-FGA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy consumption and makespan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Decreases energy and Makespan better than the compared algorithms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Less scalable
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2017
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+FOA-SA- LB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Makespan and energy consumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Faster convergence in comparison with other methods
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Less efficient with large search space
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+REEWS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Reliability and energy consumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Improved system efficiency
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Limited parameters
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2017
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+HUA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy consumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Overcomes VM overloaded and underloaded problem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+It requires more time to execute workflows
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2018
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+MHRA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy consumption and makespan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+It provide better scheduling options for both cloud users and service providers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Less efficient in scheduling deadline contains tasks
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EARES-D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy, completing time and resource utilization
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Efficient in performing VM allocation that shares workload evenly.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+It requires more time to compute
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+2022
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+EViMA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Energy consumption, Makespan and Cost
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Efficient in managing cloud resources and generates faster solutions in
+ comparison with other approaches
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+Not considering instance acquisition and termination delay
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Workflow scheduling algorithms, systems, and optimization metrics used for
+ them.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Problem modeling[1day]
+\end_layout
+
+\begin_layout Subsubsection
+Workflow modelisation
+\end_layout
+
+\begin_layout Standard
+In the workflow scheduling problem, applications are defined by the directed
+ acyclicgraphs (DAGs).
+ A workflow includes a set of interdependent tasks that are bounded together
+ through data or functional dependencies
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We consider a workflow W as a graph G = (T, D) , where T = { T , T ,…, T
+ } indicates n tasksand shows the data flow dependencies among them.
+ The dataflow dependency ( T
+\begin_inset Formula $_{i}$
+\end_inset
+
+ , T
+\begin_inset Formula $_{j}$
+\end_inset
+
+ ) means that task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+ is an immediate predecessor of task T
+\begin_inset Formula $_{j}$
+\end_inset
+
+ and task Tj is an immediate successor of task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+.
+ In some cases, there are several predecessors and successors and so Pr(T
+\begin_inset Formula $_{i}$
+\end_inset
+
+) and Su(T
+\begin_inset Formula $_{i}$
+\end_inset
+
+) are defined to indicate the set ofimmediate predecessors and successors
+ for task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Pr(T_{i})=\left\{ Tj|\left(T_{j},T_{i}\right)\epsilon D\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Su(T_{i})=\left\{ Tj|\left(T_{i},T_{j}\right)\epsilon D\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+T
+\begin_inset Formula $_{entry}$
+\end_inset
+
+ and T
+\begin_inset Formula $_{exit}$
+\end_inset
+
+ are a task without any predecessors and a task without any successors,respectiv
+ely.
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Cloud datacenter model [EViMA référence]
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Cloud data center is a network of computing resources that enables application
+ and data sharing.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+In our proposed data center model, we assume that a data center has a set
+ of M heterogeneous physical machines (PM) that are used to configure a
+ set of k VMs for workflow tasks scheduling.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Let p = (p
+\begin_inset Formula $_{1}$
+\end_inset
+
+, p
+\begin_inset Formula $_{2}$
+\end_inset
+
+, p
+\begin_inset Formula $_{3}$
+\end_inset
+
+ ...p
+\begin_inset Formula $_{n}$
+\end_inset
+
+), denotes the different types of PMs available in a cloud data center.
+ These PMs have different Processing capacity such as CPUs, memory, bandwidth,
+ network I/O, and the size of the storage which are measured in million
+ instructions per second (MIPS).
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+VMs are deployed on PMs and each PM can host k VMs.
+ Let k be a set of VM types (vm
+\begin_inset Formula $_{1}$
+\end_inset
+
+, vm
+\begin_inset Formula $_{2}$
+\end_inset
+
+, vm
+\begin_inset Formula $_{3}$
+\end_inset
+
+, ...vm
+\begin_inset Formula $_{k}$
+\end_inset
+
+) provided to users at an hourly based pricing model.
+ We assume that the VMs are infinite and each VM type k is capable of providing
+ an infinite number of VMs for workflow tasks execution.
+ [EViMA référence]
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+VM allocation model [EViMA référence]
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Reducing energy consumption in a cloud data center has recently become a
+ major concern for many researchers.
+ This is because the cloud environment has become a trusted platform that
+ individuals, organizations, and the government rely on to conduct business.
+ So, if the energy consumption in the cloud data center is not reduced,
+ it will have a direct or indirect impact on all the stakeholders.
+ In this study, a VM allocation model has been proposed (see Fig.
+ 2), which aims at managing cloud resources to reduce energy consumption
+ in the cloud data center.
+ In workflow scheduling, a scheduler is developed to assign the right tasks
+ to the right VMs to improve the scheduling objectives.
+ However, the biggest challenge is how to manage the cloud resources effectively
+ to achieve the set goals.
+ This is because cloud users turn in a large number of requests that require
+ resources to schedule.
+ This becomes even more obvious if these requests (tasks) are to be scheduled
+ within certain deadlines.
+ This challenge can be well managed if the scheduler is implemented with
+ a well-defined resource management plan.
+ In the model, we assume that there are only three types of VMs (VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+, VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+, and VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+) in the cloud data center, which are specifically defined herein:
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Definition 1.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The VMs are deployed based on their energy consumption level.
+ There are three (3) physical machines (PMs) hosting five VMs (three different
+ types).
+ Each VM type k has an infinite number of instances to handle multiple workflow
+ tasks.
+ The VMs are defined by specifications as follows: 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+𝑉𝑀 𝑇𝑦𝑝𝑒 = 
+\begin_inset Formula $\begin{cases}
+𝑉𝑀_{𝐻𝐸𝐶}(𝐻𝐸𝐶_{1}),(𝐻𝐸𝐶_{2}),(𝐻𝐸𝐶_{3})........𝐻𝐸𝐶_{𝑘} & 𝑉𝑀_{𝑀𝐸𝐶}(𝑀𝐸𝐶_{1}),(𝑀𝐸𝐶_{2}),(𝑀𝐸𝐶_{3})......𝑀𝐸𝐶𝑘\begin{cases}
+𝑉𝑀_{𝐿𝐸𝐶}(𝐿𝐸𝐶_{1}),(𝐿𝐸𝐶_{2}),(𝐿𝐸𝐶_{3})..........𝐿𝐸𝐶_{𝑘} & 2\end{cases}\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+• Where VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+ is a list of virtual machines with high processing speed (VMs with high
+ energy consumption).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+• Where VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+ represents a set of VMs with medium processing speed (VMs with medium energy
+ consumption).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+• Where VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+ is a group of virtual machines with lower processing speed (VMs with lower
+ energy consumption).
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Definition 2.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Each workflow contains several set of workflow tasks representing (Wt1,
+ Wt2, Wt3, Wt4 .
+ .
+ .
+ .
+ .
+ .
+ .
+ , Wtn); Wt is a set of ‘n’ workflow tasks in a scientific workflow application.
+ We assume there are three compositions of workflow tasks which are defined
+ herein: 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+𝐓𝐚𝐬𝐤𝐬 𝐆𝐫𝐨𝐮𝐩𝐢𝐧𝐠 = 
+\begin_inset Formula $\begin{cases}
+𝐻𝐶𝑇(𝐻𝐶𝑇1),(𝐻𝐶𝑇2),(𝐻𝐶𝑇3)........𝐻𝐶𝑇𝑛 & 𝑀𝐶𝑇(𝑀𝐶𝑇1),(𝑀𝐶𝑇2),(𝑀𝐶𝑇3)......𝑀𝐶𝑇𝑛\end{cases}$
+\end_inset
+
+ 
+\begin_inset Formula $\begin{cases}
+𝐿𝐶𝑇(𝐿𝐶𝑇1),(𝐿𝐶𝑇2),(𝐿𝐶𝑇3)...........𝐿𝐶𝑇𝑛 & 1\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+• Where HCT is a set of tasks in the tasks ready queue that is defined as
+ highly critical tasks that are at risk of missing their deadlines if they
+ are not migrated to a high-speed procession VM immediately.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+• Where MCT represents a group of queued workflow tasks that are classified
+ as medium critical.
+ This group of tasks is less critical compared to HCT, but more critical
+ than LCT.
+ These tasks can be migrated to medium speed VMs for execution.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+• Where LCT is a group of tasks in the ready queue defined as less critical
+ tasks.
+ This category of tasks does not need to be processed on high-speed VMs
+ for scheduling.
+ The LCTs can be allocated on lower power VMs (VMs with lower processing
+ speed) because their expected finish time (EFT) is far from their deadline.
+ The EFT of workflow taski on VM type k can be calculated using Equation
+ 1.
+ Where S(wti) is the size of workflow taski, EC (VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+) is the execution capacity of VM type k (Haidri et al., 2017).
+ This represents the expected schedule.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+𝐸𝐹𝑇𝑤𝑡𝑖,𝑉𝑀
+\begin_inset Formula $_{𝑘}$
+\end_inset
+
+ = 
+\begin_inset Formula $\frac{𝑆(𝑤𝑡𝑖)}{𝐸𝐶(𝑉𝑀_{𝑘})}$
+\end_inset
+
+ ⟺ { 𝐸𝑥𝑝𝑒𝑐𝑡𝑒𝑑 𝑆𝑐ℎ𝑒𝑑𝑢𝑙𝑒 (1)
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Definition 3.
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Every workflow task has a deadline.
+ A deadline is a time-based scheduling constraint that requires a workflow
+ task to be scheduled within a specified time period.
+ These deadlines are set by users.
+ A task can have a shorter/earliest deadline or a longer deadline.
+ A shorter/earliest deadline task is a task that is close to its specified
+ scheduling time.
+ Such tasks are assigned the highest priorities.
+ Tasks with long deadlines are tasks that do not require higher priority.
+ This is because such tasks are not close to their predefined deadlines
+ and therefore can be assigned to resources after the higher priority tasks
+ (shorter deadline tasks) have been scheduled.
+ Thus, each task must be executed before the specified deadline.
+ If the execution of a workflow task 𝑇 exceeds its deadline, it means that
+ the deadline constraint set by the user has been violated.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+As shown in Fig.
+ 2, we have four workflow tasks that have arrived and are queued to be mapped
+ to VMs.
+ The arrived tasks are 𝑤𝑡1, 𝑤𝑡2, 𝑤𝑡3, and 𝑤𝑡4.
+ We also have three types of VMs (𝑉𝑀
+\begin_inset Formula $_{𝐻𝐸𝐶}$
+\end_inset
+
+, 𝑉𝑀
+\begin_inset Formula $_{𝑀𝐸𝐶}$
+\end_inset
+
+, and 𝑉𝑀
+\begin_inset Formula $_{𝐿𝐸𝐶}$
+\end_inset
+
+).
+ These tasks have different deadlines, and we need to map them to VMs based
+ on their deadlines.
+ 𝑤𝑡1 belongs to the HCT group because its deadline is 2 min, which is too
+ tight, and if it is not allocated immediately, it might miss its deadline.
+ To prevent 𝑤𝑡1 from missing its deadline, we quickly mapped it to VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+.
+ The reason is that VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+ is a high-speed VM that can finish executing 𝑤𝑡1 before or on its deadline.
+ The next task closer to its deadline is 𝑤𝑡4, and since VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+ is currently executing 𝑤𝑡1, we mapped 𝑤𝑡4 to VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+.
+ The projections show that by the time 𝑤𝑡1 will meet its deadline, 𝑤𝑡3 will
+ have 3 min left to also meet its deadline (5min-2 min).
+ Therefore, 𝑤𝑡3 is classified as an HCT at that time, and if there is no
+ other HCT in the waiting queue at that time, then 𝑤𝑡3 is mapped to VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+ and 𝑤𝑡2 is mapped to VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+.
+ In this case, VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+ is idle.
+ The idle VM is turned off or put into safe mode to save power.
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Multi-objective optimization problem formulation [EViMA référence]
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The goal of workflow scheduling is to find the best optimal solution from
+ various optimization methods that can give good results for the optimization
+ problem.
+ The optimization problem can be single objective or multi objective optimizatio
+n problem (Sofia and GaneshKumar, 2018).
+ Single-objective optimization involves optimizing only one scheduling objective
+, such as execution makespan or cost.
+ Multiobjective optimization, on the other hand, focuses on optimizing two
+ or more objectives.
+ The problem of multi-objective optimization varies from user to user and
+ must be managed accordingly.
+ Some users may want a reduced execution makespan and execution cost while
+ ensuring that QoS constraints are not violated, others may want to reduce
+ energy consumption and task execution time while ensuring effective utilization
+ of cloud resources.
+ In this work, a multi-objective scheduling problem has been considered.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+We consider a workflow application as DAG.
+ It is modeled with data dependencies representing precedence constraints
+ between tasks.
+ The edge e(wti, wtj) indicates that wti is a direct predecessor of wtj
+ and should finish execution before the workflow wtj, which is a direct
+ successor of wti (Li et al., 2015).
+ These tasks represent requests from the users to be processed on cloud
+ resources (VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+, (VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+, VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+) so that the energy consumption, makespan and execution cost are reduced
+ without violating the deadlines of the tasks.
+ However, reducing energy consumption increases the execution cost of scientific
+ workflow applications.
+ This is because energy consumption and execution cost are conflicting metrics.
+ Our goal is to reduce the energy consumption, makespan and execution cost
+ of workflow tasks with dependency constraints.
+ The degree of dependency of workflow task on wti can be calculated using
+ Eq.
+ (2) (Anwar and Deng, 2018).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+ddi= ( 
+\begin_inset Formula $\sum$
+\end_inset
+
+𝑤𝑡𝑝 𝜖 𝑝𝑟𝑒𝑑(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑝,𝑖 + 
+\begin_inset Formula $\sum$
+\end_inset
+
+𝑤𝑡𝑐 𝜖 𝑆𝑢𝑐𝑐(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑐,𝑖 ) (2) 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+where 
+\begin_inset Formula $\sum$
+\end_inset
+
+ 𝑤𝑡𝑝𝜖 𝑝𝑟𝑒𝑑(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑝,𝑖 is the summation of all the inward edges of workflow
+ task 𝑤𝑡𝑖 and 
+\begin_inset Formula $\sum$
+\end_inset
+
+ 𝑤𝑡𝑐 𝜖𝑆𝑢𝑐𝑐(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑐,𝑖  is the summation of all the outward edges of workflow
+ task wti.
+ 
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Definition 4.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Since the paper aims at improving resource management to reduce energy consumpti
+on in cloud data centers at lower cost without violating scheduling constraints,
+ energy consumption can be derived from Eq.
+ (3).
+ Here, TEE is the total energy consumed for executing workflows, E DT is
+ the energy consumed for transferring all data, and the sum of energy consumed
+ for scheduling all tasks on all VM.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+𝑇 E𝐸 = 𝐸D𝐸 +
+\begin_inset Formula $\sum$
+\end_inset
+
+𝐸𝑛 𝐸𝑘 (3) 
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Definition 5.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The metric for the execution cost is calculated using Eq.
+ (4), where TC is the total cost, Pj is the processing time of job j, PC
+ is the processing cost, and TrC is the cost of transferring the input files
+ (F
+\begin_inset Formula $_{inj}$
+\end_inset
+
+) and the output files (F
+\begin_inset Formula $_{outj}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+𝑇𝐶 = ( 𝑃𝑗 ∗ 𝑃𝐶 + ( 
+\begin_inset Formula $\sum$
+\end_inset
+
+ 𝑓𝜖𝐹𝑖𝑛𝑗 𝑆𝑖𝑧𝑒(𝑓) + 
+\begin_inset Formula $\sum$
+\end_inset
+
+ 𝑓𝜖𝐹𝑜𝑢𝑡𝑗 𝑆𝑖𝑧𝑒(𝑓)) ) ∗ 𝑇 𝑟𝐶 (4)
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Etat de l'art et approche proposée [1day]
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Algorithme étudié EViMA [EviMa document]
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The existing workflow scheduling solutions for energy conservation in cloud
+ data center faces scheduling efficiency problems and therefore, there is
+ a need to introduce more robust scheduling solutions to improve data center
+ energy management (Kaur and Mehta, 2017).
+ In view of this objective, this paper presented a resource management approach
+ for workflow tasks scheduling called EviMA.
+ The proposed approach focuses on improving resource management in the cloud
+ data center to obtain the best task schedules that reduces energy consumption,
+ execution makespan and execution cost without violating deadline constraints.
+ The EViMA algorithm is supported by four (4) other algorithms, namely Highly
+ Critical Workflow Task Selection Algorithm (HiCTSA), Low Critical Task
+ Selection Algorithm (LoCTSA), VM Power Regulating Algorithm (VM-PRA) and
+ Slack Time Harvesting Algorithm (STiHA).
+ The algorithm takes as input a set of workflow tasks represented by wt
+ = (wt1, wt2, wt3, .
+ .
+ .
+ wtn) and a set of instances (VMs) represented by (VMHEC, VMMEC, and VMLEC).
+ The ‘‘n’’ workflow tasks can be any type of task in a queue that requires
+ resources for scheduling.
+ The algorithm starts by identifying the arrived tasks and computing their
+ expected finishing times (EFT) to determine the task execution order.
+ Then, a task priority queue is created in which the tasks are arranged
+ in three execution orders based on their critical times (HCT, MCT, and
+ LCT) as defined in Section 3.
+ To determine the execution order of the tasks, their expected finishing
+ times are calculated using Eq.
+ (1).
+ The tasks that are close to their deadline and need to be mapped to VMs
+ at or before their deadline are given higher priority.
+ To generate cost-efficient and energy-optimized schedules, a VM assignment
+ order is also introduced (Line 5).
+ In this work, we assumed that there are only three types of VMs (VMHEC,
+ VMMEC, and VMLEC).
+ See Section 3 for a complete description of the VM types.
+ Once both the tasks execution order and VM assignment order is established,
+ we employ EViMA to explore through the various workflow tasks to find the
+ overall critical tasks (HCTs), (tasks that are approaching their deadline)
+ from the ready queue and immediately assign them to a high speed procession
+ VM (VMHEC).
+ This is done to find high-quality solutions to the workflow scheduling
+ problem.
+ For example, if wti through the searching process is found to belong to
+ the HCT queue, Algorithm 2 is called to assign it to a VM with high processing
+ speed (VMHEC), as described in line 8.
+ However, if the task belongs to the LCT group, Algorithm 3 is called to
+ process it, as described in line 9.
+ On the other hand, if the expected finishing time of the task is less than
+ or equal to the harvested slack time of VMk, Algorithm 5 is applied to
+ schedule the task as in lines 15 and 16.
+ If the expected end time is equal to the deadline, assign the task directly
+ to VMMEC as in lines 11 and 12.
+ Otherwise, apply Algorithm 4 to shut down the VM when one of the VMs is
+ idle to save power (line 18).
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+#TODO insérer le corp de l'algorithme et ses algorithms fils
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Highly critical task selection algorithm (HiCTSA)
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+Workflows are inherently complex.
+ A single workflow application may contain multiple workflow tasks with
+ dependencies and deadlines.
+ This raises the question of which workflow tasks should be selected first
+ and to which VM.
+ To solve the task selection and assignment problem, we proposed a Highly
+ Critical Task Selection Algorithm (HiCTSA), presented as Algorithm 2.
+ HiCTSA works at both the VM and task levels to ensure that tasks are selected
+ and assigned to resources for execution to avoid delays.
+ We consider a set of workflow tasks WT = (wt1, tw2, tw3..........wtn) in a workflow
+ application.
+ These tasks have different deadlines, and therefore users expect them to
+ be executed before their deadlines.
+ Also, these tasks require some resources to start the scheduling process.
+ Algorithm 2 starts by checking the criticality of the tasks as in line
+ 1, and then compares the expected finishing time of each workflow task
+ in the ready queue (line 2).
+ If the expected finishing time of workflow task wt1 approaches its deadline,
+ this task is marked as an HCT task (line 4).
+ A mapping is then created for all HCT (line 5).
+ However, if two or more tasks have the same deadline, another high speed
+ VM is deployed to map those tasks (line 7 and 8).
+ The goal of HiCTSA is to ensure that all workflow tasks meet their deadlines.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Low critical task selection algorithm (LoCTSA)
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The cost associated with executing workflow tasks has become one of the
+ biggest challenges in cloud data centers.
+ This is because most scheduling techniques lack proper task selection and
+ resource allocation mechanisms to assign the right task to the right resources
+ for execution.
+ Because of this, non-critical workflow tasks are assigned to high-speed
+ resources, which drives up the execution cost of workflow tasks.
+ We can reduce the execution cost by using the Low Critical Task Selection
+ Algorithm (LoCTSA) proposed in Algorithm 3 in this paper.
+ LoCTSA consists of two phases.
+ The first phase is the task identification and grouping phase, in which
+ less critical tasks are identified and queued for execution.
+ In the first phase, the algorithm compares the expected finishing time
+ of each workflow task with its deadline.
+ If a task’s EFT is greater than its deadline, the task is moved to a new
+ queue called the LCT queue (lines 1, 2, and 3).
+ This is done to avoid mapping less critical tasks to HEC VM.
+ The second phase is the VM allocation phase.
+ In the second phase, the quality of the solution is improved by ensuring
+ that all less critical tasks are assigned to VMs with lower processing
+ speed (VMs with lower cost and lower energy consumption) instead of assigning
+ them to VMs with higher execution cost.
+ This is done to reduce the cost of running workflow tasks.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+VM power regulating algorithm (VM-PRA)
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+We introduced a new method called VM-PRA (see Algorithm 4) to check the
+ status of all VMs used to execute workflow tasks.
+ Sometimes,underutilized VMs are not shut down, which can increase the power
+ consumption of a data center.
+ Our proposed VM-PRA overcomes this drawback by introducing Idle ‘‘off’’
+ Busy ‘‘on’’ techniques that identify the status of all VMs.
+ The method starts by defining the status of all VMs that are used for workflow
+ tasks execution.
+ The VMs are divided into two stages, namely a busy stage and an idle stage.
+ A VM is said to be busy when it is currently executing or processing a
+ workflow task.
+ Idle VMs, on the other hand, are VMs that have not yet been assigned any
+ job or have completed the execution process and are waiting for more jobs
+ to be executed.
+ The algorithm checks, if there are some idle VMs, and if so, it switches
+ all idle VMs to the memory state.
+ For example, when VMHEC and VMLEC are running and VMMEC is idle, the VM-PRA
+ algorithm quickly switches VMMEC into power saving mode to save some energy.
+ In reality, VMs do not consume power, but when the VM is powered off or
+ put into power saving mode, it reduces the power consumption of its PM,
+ and hence a reduction in data center power consumption.
+ For more information on how an inactive VM can be put into energy-saving
+ mode, refer to Definition 3 of the VM deployment model.
+\end_layout
+
+\begin_layout Paragraph
+
+\color brown
+Slack time harvesting method (STiHaM)
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+The Slack Time Harvesting Method is presented in Algorithm 5.
+ Slack time is a time interval that occurs when a particular task completes
+ its execution before its actual scheduled completion time.
+ In other words, it is a time difference between a task’s scheduled completion
+ time and its actual completion time (Mezmaz et al., 2011).
+ The slack time is used to accumulate the slack times for each VM type in
+ the VM pool as in line 5 of Algorithm 5.
+ A slack time hub is attached to each VM to store the slack times of each
+ VM (see line 6).
+ If a slack time of VMk is equal to the EFT of wti, the scheduler is asked
+ to map wti to VMk to use the slack time as in lines 7 and 8 of Algorithm
+ 5.
+ The slack time is used to further reduce the execution cost of the workflows.
+ Since wti can be scheduled on VMk using the obtained slack time, the cost
+ of provisioning a new VM to schedule the tasks is saved.
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Algorithme de ...
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Approche proposée
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Objectif du travail
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Principe de algorithm
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Description de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Les étapes de l'approche
+\end_layout
+
+\begin_layout Subsubsection
+
+\color brown
+Diagramme de l'approche proposée
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+Implémentation, simulation et déscussion des résultats
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Introduction
+\end_layout
+
+\begin_layout Standard
+In a workflowsim simulator, we have simulated the proposed approach.
+ We compared the outcomes of 
+\color brown
+four separate scientific workflows
+\color inherit
+ with the EViMA algorithm.
+ 
+\color brown
+The reason for EViMA selection is that it is
+\color inherit
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In this chapter, the workflow, simulation tool and parameters,
+\color brown
+ performance metric, and outcomes of the measurement 
+\color inherit
+will be presented.
+\end_layout
+
+\begin_layout Subsection
+Workflows 
+\end_layout
+
+\begin_layout Standard
+We use four different types of benchmark workflows (Montage, Cybershake,
+ LIGO, and Epigenomics, Sipht) available on the Pegasus website.
+ These workflows typically involve complex data of various sizes and complicated
+ computer simulations.
+ They need high computation power, and the availability of large infrastructures
+ that cloud computing environments provide with different quality of service
+ levels.
+ The quality of schedules obtained by various algorithms is also compared
+ using these workflows.
+ Information about the task dependencies, the amount of data transmitted,
+ and the execution time estimates are presented in DAX format.
+ DAX files include a single time estimate for each task.
+ To simulate the case of different time constraints provided by users, start
+ time, and a deadline for each workflow are randomly assigned 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each of these workflow types has four different workloads.
+ For example, the Cybershake workflow has four workloads, including 30,
+ 50, 100, and 1000 tasks
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+.Scheduling workflows are classified into two kinds of balanced and unbalanced
+ .A balanced workflow has some pipelines that need similar services.
+ Nevertheless, they process various types of services.
+ The unbalanced workflow is more complicated and has many parallel tasks
+ that involve many services
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hard_optimization_mohammadzadeh2021energy"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/workflows_compressed - Copie.jpg
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Structure of Scientific Workflows used https://confluence.pegasus.isi.edu/display/p
+egasus/Deprecated%20Workflow%20Generator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simulation tool: WorkflowSim
+\end_layout
+
+\begin_layout Standard
+Over the past few years, cloud computing has gained tremendous popularity
+ since itpresents a flexible and efficient solution for many services by
+ Internet .
+ Cloud is a large and complex system since it is composed of several users,
+ service providers,physical machines, service broker, task scheduling algorithms
+ , bandwidth, internetlatency, and storage technology etc.
+ On the other hands, all cloud-base dimplementations need various configurations.
+ Therefore, it is very difficult for researchers to evaluate the performance
+ of their policies in a real cloud environment
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As a result, the simulator can play an important role in reducing cost,
+ efficiency,infrastructure complexity, and security risks before a solution
+ can be deployed on realinfrastructure.
+ By focusing on issues related to the quality of a particular componentunder
+ various scenarios, cloud simulators enable performance analysts to monitor
+ the behaviors of the system
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Description and main features
+\end_layout
+
+\begin_layout Standard
+WorkflowSim was introduced for modeling Scientific Workflows in cloud environmen
+t.
+ Workflows in heterogeneous distributed systems show different levels of
+ overheads that are explained based on computational operations and miscellaneou
+s works.
+\end_layout
+
+\begin_layout Standard
+Most of simulators such as CloudSim do not consider fine granularity simulations
+ of workflows and task clustering.
+ Task clustering reduces the number of jobs to be executed and so execution
+ overhead is decreased.
+\end_layout
+
+\begin_layout Standard
+Generally, a job may have high risk for suffering from failures since it
+ consists of several tasks.
+ Researchers with WorkflowSim can study the impact of job failures runtime
+ performance of workflows for different clustering methods.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Architecture
+\end_layout
+
+\begin_layout Standard
+Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:WorkflowSim's-Architecture"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the structure of WorkflowSim that is composed of several components:
+\end_layout
+
+\begin_layout Enumerate
+Workflow Mapper that maps abstract workflows to concrete workflows.
+\end_layout
+
+\begin_layout Enumerate
+Workflow Engine that controls the data dependencies.
+\end_layout
+
+\begin_layout Enumerate
+Workflow Scheduler assigns jobs to resources.
+\end_layout
+
+\begin_layout Enumerate
+Clustering Engine that groups small tasks into a large job.
+\end_layout
+
+\begin_layout Enumerate
+Failure Generator that injects task failures for each execution site.
+\end_layout
+
+\begin_layout Enumerate
+Failure Monitor that stores the failure information such as resource id
+ and task id.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/workflowSim_architecture.jpg
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:WorkflowSim's-Architecture"
+
+\end_inset
+
+WorkflowSim's Architecture 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Downloading and Installing WorkflowSim with Eclipse
+\end_layout
+
+\begin_layout Standard
+To make the first WorkflowSim project, follow this steps
+\begin_inset CommandInset citation
+LatexCommand cite
+key "GitHub_WorkflowSim_repo"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Register a GitHub account and fork WorkflowSim branch:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Go to the repository page (https://github.com/WorkflowSim/WorkflowSim-1.0)
+\end_layout
+
+\begin_layout Enumerate
+Click 'Fork' on the top-right corner next to 'Star'.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then you will have your own branch of WorkflowSim and you can maintain your
+ codes under this branch and commit your changes to it.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Check out your source codes:
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+create a new java project called 'WorkflowSim' (it doesn't have to be 'WorkflowS
+im').
+\end_layout
+
+\begin_layout Enumerate
+Right click your project, choose 'Import'.
+ Click 'Git'->'Projects from Git'.
+\end_layout
+
+\begin_layout Enumerate
+Set the URL to be your reposotory.
+ And then you will see a branch called 'master', tick it and continue.
+ And you don't need import projects again so just cancel.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Import Source Files and Libraries:
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Right click the project again and choose 'Properties'.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Go to 'Java Build Path'.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Link two source directories (your_repo_root/examples, your_repo_root/sources)to
+ the source folders.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Add two external Jars (your_repo_root/lib/flanagan.jar and your_repo_root/lib/jdo
+m-2.0.0.jar) to the Libraries.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Run an Example:
+\series default
+ Run an example i.e., org.workflowsim.examples.WorkflowSimBasicExample1.java.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Open WorkflowSimBasicExample1.java
+\end_layout
+
+\begin_layout Enumerate
+replace the String daxPath = "/Users/chenweiwei/Work/WorkflowSim-1.0/config/dax/M
+ontage_100.xml"; with your real physical file path.
+\end_layout
+
+\begin_layout Enumerate
+Right click on WorkflowSimBasicExample1.java and choose 'Run File'.
+ You should be able to see some output
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Strengths
+\end_layout
+
+\begin_layout Standard
+WorkflowSim has many advantages
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+ which are:
+\end_layout
+
+\begin_layout Enumerate
+It supports a stack of workflow parser and workflow engine delay to workflow
+ optimization techniques with better accuracy are implemented.
+\end_layout
+
+\begin_layout Enumerate
+It implements several workflow-scheduling methods such as HEFT, Min-Min,
+ and Max-Min and so developers can compare their algorithms with them in
+ a simple way.
+\end_layout
+
+\begin_layout Enumerate
+It considers task clustering and layered overhead to the workflow simulation.
+ Therefore, developers can test various strategies based on a real trace
+ of overheads.
+\end_layout
+
+\begin_layout Enumerate
+It models failures for two layers (i.e., task/job) by an interface and hence
+ developers can design fault-tolerant techniques.
+\end_layout
+
+\begin_layout Subsubsection
+Limitations
+\end_layout
+
+\begin_layout Standard
+WorkflowSim has some limitations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cloud_computing_simulators"
+literal "false"
+
+\end_inset
+
+ such as:
+\end_layout
+
+\begin_layout Enumerate
+It includes limited types of failures.
+ Therefore, developers cannot simulate the situation when a task is not
+ successfully sent due to network problems or workflow scheduler issues.
+\end_layout
+
+\begin_layout Enumerate
+It does not consider the performance characteristic of file I/O.
+ Therefore, developers cannot obtain suitable simulation for data-intensive
+ applications since these applications involve reading or writing huge data
+ files.
+\end_layout
+
+\begin_layout Enumerate
+It supports only simple workflow techniques and so developers cannot use
+ other important approaches like workflow partitioning in their implementations.
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Simulation parameter
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Expérimentation
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Comparison and discussion of the solution
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Conclusion
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\color brown
+General conclusion
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Discussion
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Limites
+\end_layout
+
+\begin_layout Subsection
+
+\color brown
+Perspectives
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "bibleographie"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
