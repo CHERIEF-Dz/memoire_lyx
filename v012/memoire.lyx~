@@ -86,7 +86,7 @@ Scientific workflows schudeling in the cloud with energy optimization
 \end_layout
 
 \begin_layout Date
-March 25
+April 4
 \begin_inset Formula $^{th}$
 \end_inset
 
@@ -1681,7 +1681,7 @@ The problem of scheduling the scientific workflow on a cloud platform with
 \begin_layout Subsection
 
 \color brown
-Introduction
+?Introduction
 \end_layout
 
 \begin_layout Standard
@@ -1752,23 +1752,47 @@ The cloud is increasingly recognized as a new way to use compute, storage
 \begin_layout Subsection
 
 \color brown
-Workflow scheduling [1day]
+Workflow scheduling
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Définition de l'ordonnanceur
+? Définition de l'ordonnanceur
 \end_layout
 
 \begin_layout Subsubsection
+Definition of Task scheduling of scientific workflows
+\end_layout
 
-\color brown
-Définition de l'ordonnancement
+\begin_layout Standard
+Task scheduling of scientific workflow is extremely important.
+ Task scheduling algorithms is based on appropriate policies to deploy scientifi
+c workflow to the physical nodes in the cloud computing system.
+ Because various physical nodes are heterogeneous, and their running status
+ are dynamic changed over time, at the same time, the system resources required
+ by users and the request types of users are different, so that the design
+ of the scheduling algorithms of scientific workflow is complex in the cloud
+ computing system.
+ A bad scheduling policy can lead to a decline in system performance, a
+ long time span of request feedback, a decrease in user satisfaction, and
+ a decrease in system throughput.
+ In general, the goal of tasks scheduling of scientific workflow in the
+ cloud environment is to optimize the allocation of scientific workflow,
+ maximize user satisfaction, and maximize the economic benefits of operators,
+ and minimize operating costs
+\begin_inset CommandInset citation
+LatexCommand cite
+key "geng2019improved"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
-Workflow schudeling
+Scientific workflow schudeling
 \end_layout
 
 \begin_layout Standard
@@ -1797,7 +1821,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Workflow schudeling types
+Task schudeling types
 \end_layout
 
 \begin_layout Standard
@@ -1825,10 +1849,7 @@ literal "false"
 
 \end_inset
 
-.
- 
-\color brown
-Static scheduling generates a scheduling plan (SP) that allocates all executable
+.Static scheduling generates a scheduling plan (SP) that allocates all executable
  tasks to compute nodes before execution and the WMS strictly adheres to
  the scheduling plan throughout the duration of the scientific workflow
  execution.
@@ -1851,7 +1872,17 @@ guided random search-based
 \series default
 .
  The heuristic-based method schedules tasks according to a predefined rule
- while the random search-based method schedules tasks randomly.
+ while the random search-based method schedules tasks randomly
+\begin_inset CommandInset citation
+LatexCommand cite
+key "benhammouda2021contribution"
+literal "false"
+
+\end_inset
+
+
+\color brown
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1866,10 +1897,7 @@ literal "false"
 
 \end_inset
 
-.
- 
-\color brown
-Dynamic scheduling produces scheduling plans that distribute and allocate
+.Dynamic scheduling produces scheduling plans that distribute and allocate
  executable tasks to compute nodes during workflow execution.
  This type of scheduling is suitable for scientific workflows, in which
  the workload of tasks is difficult to estimate, or for environments where
@@ -1878,13 +1906,15 @@ Dynamic scheduling produces scheduling plans that distribute and allocate
  generate scheduling plans during execution.
  Dynamic scheduling algorithms can be based on queueing techniques in a
  publish/subscribe model with different strategies such as First In First
- Out (FIFO), adaptive, etc.
-\end_layout
+ Out (FIFO), adaptive, etc
+\begin_inset CommandInset citation
+LatexCommand cite
+key "benhammouda2021contribution"
+literal "false"
 
-\begin_layout Subsubsection
+\end_inset
 
-\color brown
-? Critère de planification dans le Cloud Computing
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1995,7 +2025,7 @@ Security Awareness
 \begin_layout Subsection
 
 \color brown
-Related works[9days]
+?Related works[8days]
 \end_layout
 
 \begin_layout Subsubsection
@@ -2036,8 +2066,8 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
-Hard optimization[1 day]
+\begin_layout Paragraph
+Hard optimization
 \end_layout
 
 \begin_layout Standard
@@ -3064,6 +3094,7 @@ Comparaison entre les approches d'ordonnancement des workflows [1day]
 
 \color brown
 \begin_inset Float table
+placement ph
 wide false
 sideways true
 status open
@@ -6248,7 +6279,7 @@ Workflow scheduling algorithms, systems, and optimization metrics used for
 \begin_layout Subsection
 
 \color brown
-Problem modeling[1day]
+Problem modeling
 \end_layout
 
 \begin_layout Subsubsection
@@ -6294,7 +6325,10 @@ We consider a workflow W as a graph G = (T, D) , where T = { T , T ,…, T
 \end_inset
 
 .
- In some cases, there are several predecessors and successors and so Pr(T
+\end_layout
+
+\begin_layout Itemize
+In some cases, there are several predecessors and successors and so Pr(T
 \begin_inset Formula $_{i}$
 \end_inset
 
@@ -6320,9 +6354,9 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 Pr(T_{i})=\left\{ Tj|\left(T_{j},T_{i}\right)\epsilon D\right\} 
-\]
+\end{equation}
 
 \end_inset
 
@@ -6331,9 +6365,9 @@ Pr(T_{i})=\left\{ Tj|\left(T_{j},T_{i}\right)\epsilon D\right\}
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 Su(T_{i})=\left\{ Tj|\left(T_{i},T_{j}\right)\epsilon D\right\} 
-\]
+\end{equation}
 
 \end_inset
 
@@ -6353,33 +6387,88 @@ T
 ely.
 \end_layout
 
-\begin_layout Subsubsection
-
+\begin_layout Itemize
+The degree of dependency of workflow task on wti can be calculated using
 \color brown
-Cloud datacenter model [EViMA référence]
+ 
+\color inherit
+this equation.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+ddi=(\sum_{T_{p}𝜖Pr(T_{i})}𝑒(T_{p},T_{i})+\sum_{T_{c}𝜖Su(T_{i})}𝑒(T_{i},T_{c}))
+\end{equation}
 
-\color brown
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\sum_{T_{p}𝜖Pr(T_{i})}𝑒(T_{p},T_{i})$
+\end_inset
+
+ is the summation of all the inward edges of workflow task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $\sum_{T_{c}𝜖Su(T_{i})}𝑒(T_{i},T_{c}))$
+\end_inset
+
+ is the summation of all the outward edges of workflow task T
+\begin_inset Formula $_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Cloud datacenter model
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Cloud data center is a network of computing resources that enables application
  and data sharing.
  
 \end_layout
 
 \begin_layout Standard
-
-\color brown
-In our proposed data center model, we assume that a data center has a set
- of M heterogeneous physical machines (PM) that are used to configure a
- set of k VMs for workflow tasks scheduling.
+We assume that a data center has a set of 
+\series bold
+M
+\series default
+ heterogeneous physical machines (PM) that are used to configure a set of
+ 
+\series bold
+k
+\series default
+ VMs for workflow tasks scheduling.
  
 \end_layout
 
 \begin_layout Standard
-
-\color brown
-Let p = (p
+Let 
+\series bold
+p
+\series default
+ = (p
 \begin_inset Formula $_{1}$
 \end_inset
 
@@ -6402,10 +6491,16 @@ Let p = (p
 \end_layout
 
 \begin_layout Standard
-
-\color brown
-VMs are deployed on PMs and each PM can host k VMs.
- Let k be a set of VM types (vm
+VMs are deployed on PMs and each PM can host 
+\series bold
+k
+\series default
+ VMs.
+ Let 
+\series bold
+k
+\series default
+ be a set of VM types (vm
 \begin_inset Formula $_{1}$
 \end_inset
 
@@ -6422,29 +6517,48 @@ VMs are deployed on PMs and each PM can host k VMs.
 \end_inset
 
 ) provided to users at an hourly based pricing model.
- We assume that the VMs are infinite and each VM type k is capable of providing
- an infinite number of VMs for workflow tasks execution.
- [EViMA référence]
+ We assume that the VMs are infinite and each VM type
+\series bold
+ k
+\series default
+ is capable of providing an infinite number of VMs for workflow tasks execution.
 \end_layout
 
 \begin_layout Subsubsection
+VM allocation model
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
 
-\color brown
-VM allocation model [EViMA référence]
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 Reducing energy consumption in a cloud data center has recently become a
  major concern for many researchers.
  This is because the cloud environment has become a trusted platform that
  individuals, organizations, and the government rely on to conduct business.
  So, if the energy consumption in the cloud data center is not reduced,
  it will have a direct or indirect impact on all the stakeholders.
- In this study, a VM allocation model has been proposed (see Fig.
- 2), which aims at managing cloud resources to reduce energy consumption
- in the cloud data center.
+ 
+\end_layout
+
+\begin_layout Standard
+A VM allocation model has been proposed (see Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "VM_allocation_model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), which aims at managing cloud resources to reduce energy consumption in
+ the cloud data center.
  In workflow scheduling, a scheduler is developed to assign the right tasks
  to the right VMs to improve the scheduling objectives.
  However, the biggest challenge is how to manage the cloud resources effectively
@@ -6455,7 +6569,55 @@ Reducing energy consumption in a cloud data center has recently become a
  within certain deadlines.
  This challenge can be well managed if the scheduler is implemented with
  a well-defined resource management plan.
- In the model, we assume that there are only three types of VMs (VM
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/VM_allocation_model.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+VM allocation model 
+\begin_inset CommandInset label
+LatexCommand label
+name "VM_allocation_model"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the model, we assume that there are only three types of VMs (VM
 \begin_inset Formula $_{HEC}$
 \end_inset
 
@@ -6471,38 +6633,36 @@ Reducing energy consumption in a cloud data center has recently become a
 \end_layout
 
 \begin_layout Paragraph
-
-\color brown
 Definition 1.
  
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 The VMs are deployed based on their energy consumption level.
  There are three (3) physical machines (PMs) hosting five VMs (three different
  types).
- Each VM type k has an infinite number of instances to handle multiple workflow
- tasks.
+ Each VM type 
+\series bold
+k
+\series default
+ has an infinite number of instances to handle multiple workflow tasks.
  The VMs are defined by specifications as follows: 
 \end_layout
 
 \begin_layout Standard
-
-\color brown
-𝑉𝑀 𝑇𝑦𝑝𝑒 = 
+\align center
+𝑉𝑀 𝑇𝑦𝑝𝑒 =
 \begin_inset Formula $\begin{cases}
-𝑉𝑀_{𝐻𝐸𝐶}(𝐻𝐸𝐶_{1}),(𝐻𝐸𝐶_{2}),(𝐻𝐸𝐶_{3})........𝐻𝐸𝐶_{𝑘} & 𝑉𝑀_{𝑀𝐸𝐶}(𝑀𝐸𝐶_{1}),(𝑀𝐸𝐶_{2}),(𝑀𝐸𝐶_{3})......𝑀𝐸𝐶𝑘\begin{cases}
-𝑉𝑀_{𝐿𝐸𝐶}(𝐿𝐸𝐶_{1}),(𝐿𝐸𝐶_{2}),(𝐿𝐸𝐶_{3})..........𝐿𝐸𝐶_{𝑘} & 2\end{cases}\end{cases}$
+𝑉𝑀_{𝐻𝐸𝐶} & (𝐻𝐸𝐶_{1}),(𝐻𝐸𝐶_{2}),(𝐻𝐸𝐶_{3})........𝐻𝐸𝐶_{𝑘}\\
+𝑉𝑀_{𝑀𝐸𝐶} & (𝑀𝐸𝐶_{1}),(𝑀𝐸𝐶_{2}),(𝑀𝐸𝐶_{3})......𝑀𝐸𝐶𝑘\\
+𝑉𝑀_{𝐿𝐸𝐶} & (𝐿𝐸𝐶_{1}),(𝐿𝐸𝐶_{2}),(𝐿𝐸𝐶_{3})..........𝐿𝐸𝐶_{𝑘}
+\end{cases}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 • Where VM
 \begin_inset Formula $_{HEC}$
 \end_inset
@@ -6513,8 +6673,6 @@ The VMs are deployed based on their energy consumption level.
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 • Where VM
 \begin_inset Formula $_{MEC}$
 \end_inset
@@ -6525,8 +6683,6 @@ The VMs are deployed based on their energy consumption level.
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 • Where VM
 \begin_inset Formula $_{LEC}$
 \end_inset
@@ -6536,15 +6692,11 @@ The VMs are deployed based on their energy consumption level.
 \end_layout
 
 \begin_layout Paragraph
-
-\color brown
 Definition 2.
  
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 Each workflow contains several set of workflow tasks representing (Wt1,
  Wt2, Wt3, Wt4 .
  .
@@ -6553,30 +6705,37 @@ Each workflow contains several set of workflow tasks representing (Wt1,
  .
  .
  .
- , Wtn); Wt is a set of ‘n’ workflow tasks in a scientific workflow application.
+ , Wtn); 
+\series bold
+Wt
+\series default
+ is a set of ‘
+\series bold
+n
+\series default
+’ workflow tasks in a scientific workflow application.
  We assume there are three compositions of workflow tasks which are defined
  herein: 
 \end_layout
 
 \begin_layout Standard
+\align center
 
-\color brown
-𝐓𝐚𝐬𝐤𝐬 𝐆𝐫𝐨𝐮𝐩𝐢𝐧𝐠 = 
+\shape italic
+Tasks grouping
+\shape default
+ =
 \begin_inset Formula $\begin{cases}
-𝐻𝐶𝑇(𝐻𝐶𝑇1),(𝐻𝐶𝑇2),(𝐻𝐶𝑇3)........𝐻𝐶𝑇𝑛 & 𝑀𝐶𝑇(𝑀𝐶𝑇1),(𝑀𝐶𝑇2),(𝑀𝐶𝑇3)......𝑀𝐶𝑇𝑛\end{cases}$
-\end_inset
-
- 
-\begin_inset Formula $\begin{cases}
-𝐿𝐶𝑇(𝐿𝐶𝑇1),(𝐿𝐶𝑇2),(𝐿𝐶𝑇3)...........𝐿𝐶𝑇𝑛 & 1\end{cases}$
+𝐻𝐶𝑇 & (𝐻𝐶𝑇1),(𝐻𝐶𝑇2),(𝐻𝐶𝑇3)........𝐻𝐶𝑇𝑛\\
+𝑀𝐶𝑇 & (𝑀𝐶𝑇1),(𝑀𝐶𝑇2),(𝑀𝐶𝑇3)......𝑀𝐶𝑇𝑛\\
+𝐿𝐶𝑇 & (𝐿𝐶𝑇1),(𝐿𝐶𝑇2),(𝐿𝐶𝑇3)...........𝐿𝐶𝑇𝑛
+\end{cases}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 • Where HCT is a set of tasks in the tasks ready queue that is defined as
  highly critical tasks that are at risk of missing their deadlines if they
  are not migrated to a high-speed procession VM immediately.
@@ -6584,8 +6743,6 @@ Each workflow contains several set of workflow tasks representing (Wt1,
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 • Where MCT represents a group of queued workflow tasks that are classified
  as medium critical.
  This group of tasks is less critical compared to HCT, but more critical
@@ -6594,70 +6751,104 @@ Each workflow contains several set of workflow tasks representing (Wt1,
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 • Where LCT is a group of tasks in the ready queue defined as less critical
  tasks.
  This category of tasks does not need to be processed on high-speed VMs
  for scheduling.
  The LCTs can be allocated on lower power VMs (VMs with lower processing
  speed) because their expected finish time (EFT) is far from their deadline.
- The EFT of workflow taski on VM type k can be calculated using Equation
- 1.
- Where S(wti) is the size of workflow taski, EC (VM
-\begin_inset Formula $_{k}$
-\end_inset
-
-) is the execution capacity of VM type k (Haidri et al., 2017).
- This represents the expected schedule.
 \end_layout
 
 \begin_layout Standard
-
-\color brown
-𝐸𝐹𝑇𝑤𝑡𝑖,𝑉𝑀
-\begin_inset Formula $_{𝑘}$
+The EFT of workflow task
+\begin_inset Formula $_{i}$
 \end_inset
 
- = 
-\begin_inset Formula $\frac{𝑆(𝑤𝑡𝑖)}{𝐸𝐶(𝑉𝑀_{𝑘})}$
+ on VM type
+\series bold
+ k
+\series default
+ can be calculated using this equation which represents the expected schedule.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+𝐸𝐹𝑇_{wt_{i},VM_{k}}=\frac{S(wti)}{EC(VM_{k})}⟺{𝐸𝑥𝑝𝑒𝑐𝑡𝑒𝑑𝑆𝑐ℎ𝑒𝑑𝑢𝑙𝑒}
+\end{equation}
+
 \end_inset
 
- ⟺ { 𝐸𝑥𝑝𝑒𝑐𝑡𝑒𝑑 𝑆𝑐ℎ𝑒𝑑𝑢𝑙𝑒 (1)
+
+\end_layout
+
+\begin_layout Itemize
+Where S(wti) is the size of workflow task
+\begin_inset Formula $_{i}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+EC (VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+) is the execution capacity of VM type k.
+ 
 \end_layout
 
 \begin_layout Paragraph
-
-\color brown
 Definition 3.
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 Every workflow task has a deadline.
  A deadline is a time-based scheduling constraint that requires a workflow
  task to be scheduled within a specified time period.
  These deadlines are set by users.
  A task can have a shorter/earliest deadline or a longer deadline.
- A shorter/earliest deadline task is a task that is close to its specified
+ 
+\end_layout
+
+\begin_layout Itemize
+A shorter/earliest deadline task is a task that is close to its specified
  scheduling time.
  Such tasks are assigned the highest priorities.
- Tasks with long deadlines are tasks that do not require higher priority.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tasks with long deadlines are tasks that do not require higher priority.
  This is because such tasks are not close to their predefined deadlines
  and therefore can be assigned to resources after the higher priority tasks
  (shorter deadline tasks) have been scheduled.
- Thus, each task must be executed before the specified deadline.
+\end_layout
+
+\begin_layout Standard
+Thus, each task must be executed before the specified deadline.
  If the execution of a workflow task 𝑇 exceeds its deadline, it means that
  the deadline constraint set by the user has been violated.
  
 \end_layout
 
 \begin_layout Standard
+As shown in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "VM_allocation_model"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 
 \color brown
-As shown in Fig.
- 2, we have four workflow tasks that have arrived and are queued to be mapped
+,
+\color inherit
+ we have four workflow tasks that have arrived and are queued to be mapped
  to VMs.
  The arrived tasks are 𝑤𝑡1, 𝑤𝑡2, 𝑤𝑡3, and 𝑤𝑡4.
  We also have three types of VMs (𝑉𝑀
@@ -6719,22 +6910,31 @@ As shown in Fig.
 \begin_layout Subsubsection
 
 \color brown
-Multi-objective optimization problem formulation [EViMA référence]
+Multi-objective optimization problem formulation
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 The goal of workflow scheduling is to find the best optimal solution from
  various optimization methods that can give good results for the optimization
  problem.
  The optimization problem can be single objective or multi objective optimizatio
-n problem (Sofia and GaneshKumar, 2018).
+n problem.
  Single-objective optimization involves optimizing only one scheduling objective
 , such as execution makespan or cost.
  Multiobjective optimization, on the other hand, focuses on optimizing two
  or more objectives.
- The problem of multi-objective optimization varies from user to user and
+\end_layout
+
+\begin_layout Standard
+The problem of multi-objective optimization varies from user to user and
  must be managed accordingly.
  Some users may want a reduced execution makespan and execution cost while
  ensuring that QoS constraints are not violated, others may want to reduce
@@ -6745,14 +6945,9 @@ n problem (Sofia and GaneshKumar, 2018).
 \end_layout
 
 \begin_layout Standard
-
-\color brown
 We consider a workflow application as DAG.
  It is modeled with data dependencies representing precedence constraints
  between tasks.
- The edge e(wti, wtj) indicates that wti is a direct predecessor of wtj
- and should finish execution before the workflow wtj, which is a direct
- successor of wti (Li et al., 2015).
  These tasks represent requests from the users to be processed on cloud
  resources (VM
 \begin_inset Formula $_{HEC}$
@@ -6771,43 +6966,11 @@ We consider a workflow application as DAG.
  However, reducing energy consumption increases the execution cost of scientific
  workflow applications.
  This is because energy consumption and execution cost are conflicting metrics.
- Our goal is to reduce the energy consumption, makespan and execution cost
+\end_layout
+
+\begin_layout Standard
+Our goal is to reduce the energy consumption, makespan and execution cost
  of workflow tasks with dependency constraints.
- The degree of dependency of workflow task on wti can be calculated using
- Eq.
- (2) (Anwar and Deng, 2018).
- 
-\end_layout
-
-\begin_layout Standard
-
-\color brown
-ddi= ( 
-\begin_inset Formula $\sum$
-\end_inset
-
-𝑤𝑡𝑝 𝜖 𝑝𝑟𝑒𝑑(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑝,𝑖 + 
-\begin_inset Formula $\sum$
-\end_inset
-
-𝑤𝑡𝑐 𝜖 𝑆𝑢𝑐𝑐(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑐,𝑖 ) (2) 
-\end_layout
-
-\begin_layout Standard
-
-\color brown
-where 
-\begin_inset Formula $\sum$
-\end_inset
-
- 𝑤𝑡𝑝𝜖 𝑝𝑟𝑒𝑑(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑝,𝑖 is the summation of all the inward edges of workflow
- task 𝑤𝑡𝑖 and 
-\begin_inset Formula $\sum$
-\end_inset
-
- 𝑤𝑡𝑐 𝜖𝑆𝑢𝑐𝑐(𝑤𝑡𝑖) 𝑒𝑤𝑡𝑐,𝑖  is the summation of all the outward edges of workflow
- task wti.
- 
 \end_layout
 
 \begin_layout Paragraph
@@ -6818,42 +6981,80 @@ Definition 4.
 \end_layout
 
 \begin_layout Standard
-
+Since we aims at improving resource management to reduce energy consumption
+ in cloud data centers at lower cost without violating scheduling constraints,
+ energy consumption can be derived from the next equation
 \color brown
-Since the paper aims at improving resource management to reduce energy consumpti
-on in cloud data centers at lower cost without violating scheduling constraints,
- energy consumption can be derived from Eq.
- (3).
- Here, TEE is the total energy consumed for executing workflows, E DT is
- the energy consumed for transferring all data, and the sum of energy consumed
- for scheduling all tasks on all VM.
+.
+ 
+\color inherit
+Here, TE
+\begin_inset Formula $_{E}$
+\end_inset
+
+ is the total energy consumed for executing workflows, ED
+\begin_inset Formula $_{E}$
+\end_inset
+
+is the energy consumed for transferring all data, and the sum of 
+\color brown
+energy consumed for scheduling all tasks
+\color inherit
+ on all VM.
  
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+TE_{E}=ED_{E}+\sum_{En}^{Ek}?
+\end{equation}
 
-\color brown
-𝑇 E𝐸 = 𝐸D𝐸 +
-\begin_inset Formula $\sum$
 \end_inset
 
-𝐸𝑛 𝐸𝑘 (3) 
+
 \end_layout
 
 \begin_layout Paragraph
-
-\color brown
 Definition 5.
  
 \end_layout
 
 \begin_layout Standard
-
+The metric for the execution cost is calculated using the following equation:
 \color brown
-The metric for the execution cost is calculated using Eq.
- (4), where TC is the total cost, Pj is the processing time of job j, PC
- is the processing cost, and TrC is the cost of transferring the input files
- (F
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+𝑇𝐶=(𝑃_{𝑗}*𝑃𝐶+(\sum_{𝑓𝜖𝐹𝑖𝑛𝑗}𝑆𝑖𝑧𝑒(𝑓)+\sum_{𝑓𝜖𝐹𝑜𝑢𝑡𝑗}𝑆𝑖𝑧𝑒(𝑓)))*𝑇𝑟𝐶
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where,
+\end_layout
+
+\begin_layout Itemize
+TC is the total cost.
+\end_layout
+
+\begin_layout Itemize
+Pj is the processing time of job j
+\end_layout
+
+\begin_layout Itemize
+PC is the processing cost
+\end_layout
+
+\begin_layout Itemize
+TrC is the cost of transferring the input files (F
 \begin_inset Formula $_{inj}$
 \end_inset
 
@@ -6865,23 +7066,460 @@ The metric for the execution cost is calculated using Eq.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Definition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unity
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wt
+\begin_inset Formula $_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+workflow task
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Virtual Machine type k
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+𝐸𝐹𝑇
+\begin_inset Formula $_{Wti,VM_{k}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Expected Finish Time of task Wti executed on VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Second
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S(wt
+\begin_inset Formula $_{i}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Size of wt
+\begin_inset Formula $_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Million Instruction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+EC (VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Execution Capacity of VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MIPS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TE
+\begin_inset Formula $_{E}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Energy consumed for executing workflows
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \color brown
-𝑇𝐶 = ( 𝑃𝑗 ∗ 𝑃𝐶 + ( 
-\begin_inset Formula $\sum$
+?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{DT}$
 \end_inset
 
- 𝑓𝜖𝐹𝑖𝑛𝑗 𝑆𝑖𝑧𝑒(𝑓) + 
-\begin_inset Formula $\sum$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Energy consumed for Data Rransferring
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color brown
+?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Cost
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pj
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Processing time of job j
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Processing Cost
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TrC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cost of Transferring the input files (F
+\begin_inset Formula $_{inj}$
 \end_inset
 
- 𝑓𝜖𝐹𝑜𝑢𝑡𝑗 𝑆𝑖𝑧𝑒(𝑓)) ) ∗ 𝑇 𝑟𝐶 (4)
+) and the output files (F
+\begin_inset Formula $_{outj}$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Symbols used in the formulas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 
 \color brown
-Conclusion
+?Conclusion
 \end_layout
 
 \begin_layout Standard
@@ -7164,7 +7802,7 @@ Conclusion
 \begin_layout Section
 
 \color brown
-Implémentation, simulation et déscussion des résultats
+Implementation, simulation and discussion of results
 \end_layout
 
 \begin_layout Subsection
@@ -7411,7 +8049,7 @@ Failure Monitor that stores the failure information such as resource id
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -7654,7 +8292,7 @@ Simulation parameter
 \begin_layout Subsection
 
 \color brown
-Expérimentation
+Experimentation
 \end_layout
 
 \begin_layout Subsection

@@ -1681,7 +1681,7 @@ The problem of scheduling the scientific workflow on a cloud platform with
 \begin_layout Subsection
 
 \color brown
-Introduction
+?Introduction
 \end_layout
 
 \begin_layout Standard
@@ -1752,23 +1752,47 @@ The cloud is increasingly recognized as a new way to use compute, storage
 \begin_layout Subsection
 
 \color brown
-Workflow scheduling [1day]
+?Workflow scheduling [1day]
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Définition de l'ordonnanceur
+? Définition de l'ordonnanceur
 \end_layout
 
 \begin_layout Subsubsection
+Definition of Task scheduling of scientific workflows
+\end_layout
 
-\color brown
-Définition de l'ordonnancement
+\begin_layout Standard
+Task scheduling of scientific workflow is extremely important.
+ Task scheduling algorithms is based on appropriate policies to deploy scientifi
+c workflow to the physical nodes in the cloud computing system.
+ Because various physical nodes are heterogeneous, and their running status
+ are dynamic changed over time, at the same time, the system resources required
+ by users and the request types of users are different, so that the design
+ of the scheduling algorithms of scientific workflow is complex in the cloud
+ computing system.
+ A bad scheduling policy can lead to a decline in system performance, a
+ long time span of request feedback, a decrease in user satisfaction, and
+ a decrease in system throughput.
+ In general, the goal of tasks scheduling of scientific workflow in the
+ cloud environment is to optimize the allocation of scientific workflow,
+ maximize user satisfaction, and maximize the economic benefits of operators,
+ and minimize operating costs
+\begin_inset CommandInset citation
+LatexCommand cite
+key "geng2019improved"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
-Workflow schudeling
+Scientific workflow schudeling
 \end_layout
 
 \begin_layout Standard
@@ -1797,7 +1821,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Workflow schudeling types
+Task schudeling types
 \end_layout
 
 \begin_layout Standard
@@ -1825,10 +1849,7 @@ literal "false"
 
 \end_inset
 
-.
- 
-\color brown
-Static scheduling generates a scheduling plan (SP) that allocates all executable
+.Static scheduling generates a scheduling plan (SP) that allocates all executable
  tasks to compute nodes before execution and the WMS strictly adheres to
  the scheduling plan throughout the duration of the scientific workflow
  execution.
@@ -1859,6 +1880,8 @@ literal "false"
 
 \end_inset
 
+
+\color brown
 .
 \end_layout
 
@@ -1874,10 +1897,7 @@ literal "false"
 
 \end_inset
 
-.
- 
-\color brown
-Dynamic scheduling produces scheduling plans that distribute and allocate
+.Dynamic scheduling produces scheduling plans that distribute and allocate
  executable tasks to compute nodes during workflow execution.
  This type of scheduling is suitable for scientific workflows, in which
  the workload of tasks is difficult to estimate, or for environments where
@@ -2011,7 +2031,7 @@ Security Awareness
 \begin_layout Subsection
 
 \color brown
-Related works[9days]
+?Related works[9days]
 \end_layout
 
 \begin_layout Subsubsection
@@ -6264,7 +6284,7 @@ Workflow scheduling algorithms, systems, and optimization metrics used for
 \begin_layout Subsection
 
 \color brown
-Problem modeling[1day]
+?Problem modeling[1day]
 \end_layout
 
 \begin_layout Subsubsection
@@ -6897,7 +6917,7 @@ The metric for the execution cost is calculated using Eq.
 \begin_layout Subsection
 
 \color brown
-Conclusion
+?Conclusion
 \end_layout
 
 \begin_layout Standard
