@@ -8273,7 +8273,15 @@ literal "false"
 \begin_layout Subsection
 
 \color brown
-Algorithme de ...
+VM Placement
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al_Dulaimy2018type"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8309,7 +8317,7 @@ Steps of our approach
 \begin_layout Subsubsection
 
 \color brown
-Diagrammes
+Diagrams
 \end_layout
 
 \begin_layout Subsection

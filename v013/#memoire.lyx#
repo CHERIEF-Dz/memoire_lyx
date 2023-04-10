@@ -8276,7 +8276,7 @@ literal "false"
 VM Placement
 \begin_inset CommandInset citation
 LatexCommand cite
-key "not_used_Al_Dulaimy2018type"
+key "Al_Dulaimy2018type"
 literal "false"
 
 \end_inset
@@ -8291,9 +8291,37 @@ Poposed approach
 \end_layout
 
 \begin_layout Subsubsection
-
-\color brown
 Objectifs
+\end_layout
+
+\begin_layout Standard
+The objective of our project is to provide a workflow scheduling mechanism
+ in Cloud Computing.
+ We propose an approach that consists of managing the available resources
+ within a Cloud Computing system in the most efficient way possible and
+ properly assigning tasks to virtual machines in order to minimize cost,
+ makespan and energy without violating the deadline constraints established
+ for each task by the user, in order to satisfy QoS.
+\end_layout
+
+\begin_layout Standard
+So, this approach consider the following metrics and constraint:
+\end_layout
+
+\begin_layout Itemize
+Energy consumption
+\end_layout
+
+\begin_layout Itemize
+Cost
+\end_layout
+
+\begin_layout Itemize
+Maskespan
+\end_layout
+
+\begin_layout Itemize
+Deadline
 \end_layout
 
 \begin_layout Subsubsection
@@ -8303,9 +8331,36 @@ Principle of our proposed approach
 \end_layout
 
 \begin_layout Subsubsection
-
-\color brown
 Description of approach
+\end_layout
+
+\begin_layout Standard
+Our proposed approach is a version of the EViMA algorithm with the addition
+ of a VM placement algorithm.
+\end_layout
+
+\begin_layout Itemize
+We suggest doing workflow partioning and grouping tasks in same partition
+ as just one task, this can reduce the schudeling time.
+\end_layout
+
+\begin_layout Itemize
+We suggest starting the EViMA algorithm first for schudeling scientific
+ workflows.
+\end_layout
+
+\begin_layout Itemize
+We think that when the PM is underloaded or overloaded, it will consume
+ more energy this why we think that if we apply and during execution we
+ apply one (or more) virtual machine migration strategy(s) as in this article
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al_Dulaimy2018type"
+literal "false"
+
+\end_inset
+
+,may be we will avoid this 2 cases and so reducing energy consumed by PM.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8317,7 +8372,7 @@ Steps of our approach
 \begin_layout Subsubsection
 
 \color brown
-Diagrammes
+Diagrams
 \end_layout
 
 \begin_layout Subsection
