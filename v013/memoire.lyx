@@ -6,6 +6,9 @@
 \origin unavailable
 \textclass article
 \use_default_options true
+\begin_modules
+todonotes
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -86,7 +89,7 @@ Scientific workflows schudeling in the cloud with energy optimization
 \end_layout
 
 \begin_layout Date
-April 8
+April 10
 \begin_inset Formula $^{th}$
 \end_inset
 
@@ -141,6 +144,14 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList algorithm
 
 \end_inset
 
@@ -7695,158 +7706,385 @@ Introduction
 \begin_layout Subsection
 
 \color brown
-Algorithme étudié EViMA [EviMa document]
+Studied algorithm EViMA
+\end_layout
+
+\begin_layout Subsubsection
+EViMA
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+EViMA focuses on improving resource management in the cloud data center
+ to obtain the best task schedules that reduces energy consumption, execution
+ makespan and execution cost without violating deadline constraints.
+ 
+\end_layout
 
-\color brown
-The existing workflow scheduling solutions for energy conservation in cloud
- data center faces scheduling efficiency problems and therefore, there is
- a need to introduce more robust scheduling solutions to improve data center
- energy management (Kaur and Mehta, 2017).
- In view of this objective, this paper presented a resource management approach
- for workflow tasks scheduling called EviMA.
- The proposed approach focuses on improving resource management in the cloud
- data center to obtain the best task schedules that reduces energy consumption,
- execution makespan and execution cost without violating deadline constraints.
- The EViMA algorithm is supported by four (4) other algorithms, namely Highly
- Critical Workflow Task Selection Algorithm (HiCTSA), Low Critical Task
- Selection Algorithm (LoCTSA), VM Power Regulating Algorithm (VM-PRA) and
- Slack Time Harvesting Algorithm (STiHA).
- The algorithm takes as input a set of workflow tasks represented by wt
- = (wt1, wt2, wt3, .
+\begin_layout Standard
+The EViMA algorithm is supported by 4 other algorithms, namely:
+\end_layout
+
+\begin_layout Itemize
+Highly Critical Workflow Task Selection Algorithm (HiCTSA)
+\end_layout
+
+\begin_layout Itemize
+Low Critical Task Selection Algorithm (LoCTSA)
+\end_layout
+
+\begin_layout Itemize
+VM Power Regulating Algorithm (VM-PRA),
+\end_layout
+
+\begin_layout Itemize
+Slack Time Harvesting Algorithm (STiHA).
+ 
+\end_layout
+
+\begin_layout Standard
+The algorithm takes as input a set of workflow tasks represented by wt =
+ (wt1, wt2, wt3, .
  .
  .
- wtn) and a set of instances (VMs) represented by (VMHEC, VMMEC, and VMLEC).
+ wtn) and a set of instances (VMs) represented by (VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+, VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+, and VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+).
  The ‘‘n’’ workflow tasks can be any type of task in a queue that requires
  resources for scheduling.
- The algorithm starts by identifying the arrived tasks and computing their
+ 
+\end_layout
+
+\begin_layout Enumerate
+The algorithm starts by identifying the arrived tasks and computing their
  expected finishing times (EFT) to determine the task execution order.
- Then, a task priority queue is created in which the tasks are arranged
- in three execution orders based on their critical times (HCT, MCT, and
- LCT) as defined in Section 3.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Then, a task priority queue is created in which the tasks are arranged in
+ three execution orders based on their critical times (HCT, MCT, and LCT).
  To determine the execution order of the tasks, their expected finishing
- times are calculated using Eq.
+ times are calculated using
+\color brown
+ Eq.
  (1).
- The tasks that are close to their deadline and need to be mapped to VMs
+ 
+\color inherit
+The tasks that are close to their deadline and need to be mapped to VMs
  at or before their deadline are given higher priority.
- To generate cost-efficient and energy-optimized schedules, a VM assignment
+ 
+\end_layout
+
+\begin_layout Enumerate
+To generate cost-efficient and energy-optimized schedules, a VM assignment
  order is also introduced (Line 5).
- In this work, we assumed that there are only three types of VMs (VMHEC,
- VMMEC, and VMLEC).
- See Section 3 for a complete description of the VM types.
  Once both the tasks execution order and VM assignment order is established,
  we employ EViMA to explore through the various workflow tasks to find the
  overall critical tasks (HCTs), (tasks that are approaching their deadline)
  from the ready queue and immediately assign them to a high speed procession
- VM (VMHEC).
+ VM (VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+).
  This is done to find high-quality solutions to the workflow scheduling
  problem.
  For example, if wti through the searching process is found to belong to
- the HCT queue, Algorithm 2 is called to assign it to a VM with high processing
- speed (VMHEC), as described in line 8.
- However, if the task belongs to the LCT group, Algorithm 3 is called to
- process it, as described in line 9.
- On the other hand, if the expected finishing time of the task is less than
- or equal to the harvested slack time of VMk, Algorithm 5 is applied to
- schedule the task as in lines 15 and 16.
- If the expected end time is equal to the deadline, assign the task directly
- to VMMEC as in lines 11 and 12.
- Otherwise, apply Algorithm 4 to shut down the VM when one of the VMs is
- idle to save power (line 18).
+ the HCT queue, 
+\color brown
+Algorithm 2 
+\color inherit
+is called to assign it to a VM with high processing speed (VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+), as described in line 8.
+ However, if the task belongs to the LCT group, 
+\color brown
+Algorithm 3
+\color inherit
+ is called to process it, as described in line 9.
+ 
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Enumerate
+On the other hand, if the expected finishing time of the task is less than
+ or equal to the harvested slack time of VMk,
 \color brown
-#TODO insérer le corp de l'algorithme et ses algorithms fils
+ Algorithm 5
+\color inherit
+ is applied to schedule the task as in lines 15 and 16.
+ 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Enumerate
+If the expected end time is equal to the deadline, assign the task directly
+ to VM
+\begin_inset Formula $_{MEC}$
+\end_inset
 
+ as in lines 11 and 12.
+ Otherwise, apply
 \color brown
+ Algorithm 4 
+\color inherit
+to shut down the VM when one of the VMs is idle to save power (line 18).
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+EViMA
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Algorithm/EViMA.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Highly critical task selection algorithm (HiCTSA)
 \end_layout
 
 \begin_layout Standard
-
+Highly Critical Task Selection Algorithm (HiCTSA), presented 
 \color brown
-Workflows are inherently complex.
- A single workflow application may contain multiple workflow tasks with
- dependencies and deadlines.
- This raises the question of which workflow tasks should be selected first
- and to which VM.
- To solve the task selection and assignment problem, we proposed a Highly
- Critical Task Selection Algorithm (HiCTSA), presented as Algorithm 2.
- HiCTSA works at both the VM and task levels to ensure that tasks are selected
+as Algorithm 2
+\color inherit
+, solve the problem of which workflow tasks should be selected first and
+ to which VM and ensure that all workflow tasks meet their deadlines.
+\end_layout
+
+\begin_layout Standard
+HiCTSA works at both the VM and task levels to ensure that tasks are selected
  and assigned to resources for execution to avoid delays.
  We consider a set of workflow tasks WT = (wt1, tw2, tw3..........wtn) in a workflow
  application.
  These tasks have different deadlines, and therefore users expect them to
  be executed before their deadlines.
  Also, these tasks require some resources to start the scheduling process.
- Algorithm 2 starts by checking the criticality of the tasks as in line
- 1, and then compares the expected finishing time of each workflow task
- in the ready queue (line 2).
+\end_layout
+
+\begin_layout Standard
+Algorithm 2 starts by checking the criticality of the tasks as in line 1.Then
+ compares the expected finishing time of each workflow task in the ready
+ queue (line 2).
  If the expected finishing time of workflow task wt1 approaches its deadline,
  this task is marked as an HCT task (line 4).
  A mapping is then created for all HCT (line 5).
  However, if two or more tasks have the same deadline, another high speed
  VM is deployed to map those tasks (line 7 and 8).
- The goal of HiCTSA is to ensure that all workflow tasks meet their deadlines.
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+HiCTSA
 \color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Algorithm/EViMA_HiCTSA.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Low critical task selection algorithm (LoCTSA)
 \end_layout
 
 \begin_layout Standard
-
+Low Critical Task Selection Algorithm (LoCTSA)
 \color brown
-The cost associated with executing workflow tasks has become one of the
- biggest challenges in cloud data centers.
- This is because most scheduling techniques lack proper task selection and
- resource allocation mechanisms to assign the right task to the right resources
- for execution.
- Because of this, non-critical workflow tasks are assigned to high-speed
- resources, which drives up the execution cost of workflow tasks.
- We can reduce the execution cost by using the Low Critical Task Selection
- Algorithm (LoCTSA) proposed in Algorithm 3 in this paper.
- LoCTSA consists of two phases.
- The first phase is the task identification and grouping phase, in which
+ proposed in Algorithm 3
+\color inherit
+,reduce the execution cost and consists of two phases:
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The first phase is the task identification and grouping phase, in which
  less critical tasks are identified and queued for execution.
  In the first phase, the algorithm compares the expected finishing time
  of each workflow task with its deadline.
  If a task’s EFT is greater than its deadline, the task is moved to a new
  queue called the LCT queue (lines 1, 2, and 3).
  This is done to avoid mapping less critical tasks to HEC VM.
- The second phase is the VM allocation phase.
+\end_layout
+
+\begin_layout Enumerate
+The second phase is the VM allocation phase.
  In the second phase, the quality of the solution is improved by ensuring
  that all less critical tasks are assigned to VMs with lower processing
  speed (VMs with lower cost and lower energy consumption) instead of assigning
  them to VMs with higher execution cost.
  This is done to reduce the cost of running workflow tasks.
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LoCTSA
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Paragraph
+\end_inset
 
-\color brown
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Algorithm/EViMA_LoCTSA.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 VM power regulating algorithm (VM-PRA)
 \end_layout
 
 \begin_layout Standard
-
-\color brown
-We introduced a new method called VM-PRA (see Algorithm 4) to check the
- status of all VMs used to execute workflow tasks.
+VM-PRA (see Algorithm 4) check the status of all VMs used to execute workflow
+ tasks.
  Sometimes,underutilized VMs are not shut down, which can increase the power
- consumption of a data center.
- Our proposed VM-PRA overcomes this drawback by introducing Idle ‘‘off’’
- Busy ‘‘on’’ techniques that identify the status of all VMs.
- The method starts by defining the status of all VMs that are used for workflow
+ consumption of a data center.VM-PRA overcomes this drawback by introducing
+ Idle ‘‘off’’ Busy ‘‘on’’ techniques that identify the status of all VMs.
+ 
+\end_layout
+
+\begin_layout Standard
+The method starts by defining the status of all VMs that are used for workflow
  tasks execution.
  The VMs are divided into two stages, namely a busy stage and an idle stage.
  A VM is said to be busy when it is currently executing or processing a
@@ -7856,18 +8094,85 @@ We introduced a new method called VM-PRA (see Algorithm 4) to check the
  to be executed.
  The algorithm checks, if there are some idle VMs, and if so, it switches
  all idle VMs to the memory state.
- For example, when VMHEC and VMLEC are running and VMMEC is idle, the VM-PRA
- algorithm quickly switches VMMEC into power saving mode to save some energy.
+ For example, when VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+ and VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+ are running and VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+is idle, the VM-PRA algorithm quickly switches VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+ into power saving mode to save some energy.
  In reality, VMs do not consume power, but when the VM is powered off or
  put into power saving mode, it reduces the power consumption of its PM,
  and hence a reduction in data center power consumption.
- For more information on how an inactive VM can be put into energy-saving
- mode, refer to Definition 3 of the VM deployment model.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+VM-PRA
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Algorithm/EViMA_VM_PRA.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \color brown
+#TODO insérer le corp de l'algorithme et ses algorithms fils
+\end_layout
+
+\begin_layout Subsubsection
 Slack time harvesting method (STiHaM)
 \end_layout
 
@@ -7875,62 +8180,144 @@ Slack time harvesting method (STiHaM)
 
 \color brown
 The Slack Time Harvesting Method is presented in Algorithm 5.
- Slack time is a time interval that occurs when a particular task completes
+ 
+\color inherit
+Slack time is a time interval that occurs when a particular task completes
  its execution before its actual scheduled completion time.
  In other words, it is a time difference between a task’s scheduled completion
- time and its actual completion time (Mezmaz et al., 2011).
+ time and its actual completion time.
  The slack time is used to accumulate the slack times for each VM type in
- the VM pool as in line 5 of Algorithm 5.
- A slack time hub is attached to each VM to store the slack times of each
+ the VM pool as in line 5 of
+\color brown
+ Algorithm 5.
+ 
+\color inherit
+A slack time hub is attached to each VM to store the slack times of each
  VM (see line 6).
- If a slack time of VMk is equal to the EFT of wti, the scheduler is asked
- to map wti to VMk to use the slack time as in lines 7 and 8 of Algorithm
- 5.
+ If a slack time of VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+ is equal to the EFT of wt
+\begin_inset Formula $_{i}$
+\end_inset
+
+, the scheduler is asked to map wt
+\begin_inset Formula $_{i}$
+\end_inset
+
+ to VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+ to use the slack time as in lines 7 and 8 of
+\color brown
+ Algorithm 5
+\color inherit
+.
  The slack time is used to further reduce the execution cost of the workflows.
- Since wti can be scheduled on VMk using the obtained slack time, the cost
- of provisioning a new VM to schedule the tasks is saved.
+ Since wti can be scheduled on VM
+\begin_inset Formula $_{k}$
+\end_inset
+
+ using the obtained slack time, the cost of provisioning a new VM to schedule
+ the tasks is saved
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+STiHaM
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/Algorithm/EViMA_STiHaM.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 
 \color brown
-Algorithme de ...
+VM Placement
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al_Dulaimy2018type"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 
 \color brown
-Approche proposée
+Poposed approach
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Objectif du travail
+Objectifs
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Principe de algorithm
+Principle of our proposed approach
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Description de l'approche
+Description of approach
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Les étapes de l'approche
+Steps of our approach
 \end_layout
 
 \begin_layout Subsubsection
 
 \color brown
-Diagramme de l'approche proposée
+Diagrams
 \end_layout
 
 \begin_layout Subsection
@@ -8438,10 +8825,62 @@ It supports only simple workflow techniques and so developers cannot use
 Simulation parameter
 \end_layout
 
+\begin_layout Standard
+In this work, we assumed that there are only three types of VMs (VMHEC,
+ VMMEC, and VMLEC).
+\begin_inset CommandInset citation
+LatexCommand cite
+key "konjaang2022energy"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 
 \color brown
 Experimentation
+\end_layout
+
+\begin_layout Standard
+
+\color brown
+We have developed a tool for testing using Client/Server model using Java
+ Spring Boot framework for this reasons:
+\end_layout
+
+\begin_layout Itemize
+
+\color brown
+Cloud computer SaaS use this Client/Server Applications.
+\end_layout
+
+\begin_layout Itemize
+
+\color brown
+Java Spring Boot is well used to develop Web Applications with modern UI
+ and less code.
+\end_layout
+
+\begin_layout Itemize
+
+\color brown
+We can save result in database.
+\end_layout
+
+\begin_layout Itemize
+
+\color brown
+We can have help from my internship supervisor in SONATRACH who work in
+ Web Group.
+\end_layout
+
+\begin_layout Itemize
+
+\color brown
+We have think to do something different.
 \end_layout
 
 \begin_layout Subsection
