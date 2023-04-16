@@ -8556,6 +8556,16 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
+This chapter was devoted to presenting our approach, based on EViMA algorithm
+ and VM placement and cosolidation,to scheduling workflow tasks in a cloud
+ computing environment.
+\end_layout
+
+\begin_layout Standard
+In the next chapter, we will present our experiment and simulation
+\end_layout
+
+\begin_layout Standard
 
 \color brown
 \begin_inset Newpage newpage
@@ -8582,7 +8592,7 @@ In a workflowsim simulator, we have simulated the proposed approach.
 \color brown
 four separate scientific workflows
 \color inherit
- with the improved EViMA algorithm.
+ with our proposed algorithm.
 \end_layout
 
 \begin_layout Standard
