@@ -8466,7 +8466,6 @@ literal "false"
 .
 \end_layout
 
-<<<<<<< HEAD
 \begin_layout Standard
 Dynamic VM consolidation follows a distributed model, where the problem
  is divided into 4 sub-problems
@@ -8575,6 +8574,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/boxplot.png
+	scale 50
 
 \end_inset
 
@@ -8708,8 +8708,6 @@ literal "false"
 .
 \end_layout
 
-=======
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
 \begin_layout Subsection
 
 \color brown
@@ -8766,17 +8764,10 @@ We suggest starting the EViMA algorithm first for scheduling scientific
 \end_layout
 
 \begin_layout Itemize
-<<<<<<< HEAD
 We think that when the PM is under-loaded or overloaded, it will consume
  more energy this why we think that if we apply during execution one or
  more virtual machine migration strategies and plicies as in this article
-=======
-
-\color brown
-We think that when the PM is under-loaded or overloaded, it will consume
- more energy this why we think that if we apply and during execution we
- apply one (or more) virtual machine migration strategy(s) as in this article
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Al_Dulaimy2018type"
@@ -8784,11 +8775,7 @@ literal "false"
 
 \end_inset
 
-<<<<<<< HEAD
 ,may be we will avoid this problem and so reducing energy consumed by PM.
-=======
-,may be we will avoid this 2 cases and so reducing energy consumed by PM.
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
 \end_layout
 
 \begin_layout Subsubsection
@@ -8810,7 +8797,6 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-<<<<<<< HEAD
 This chapter was devoted to presenting our approach, based on EViMA algorithm
  and VM placement and cosolidation,to scheduling workflow tasks in a cloud
  computing environment.
@@ -8821,8 +8807,6 @@ In the next chapter, we will present our experiment and simulation
 \end_layout
 
 \begin_layout Standard
-=======
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
 
 \color brown
 \begin_inset Newpage newpage
@@ -8849,11 +8833,7 @@ In a workflowsim simulator, we have simulated the proposed approach.
 \color brown
 four separate scientific workflows
 \color inherit
-<<<<<<< HEAD
  with our proposed algorithm.
-=======
- with the improved EViMA algorithm.
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
 \end_layout
 
 \begin_layout Standard
@@ -9325,8 +9305,8 @@ Simulation parameter
 \end_layout
 
 \begin_layout Standard
-<<<<<<< HEAD
-In this work, we assumed that there are only three types of VMs (VM
+<<<<<<< HEADIn this work, we assumed that there are only three types of
+ VMs (VM
 \begin_inset Formula $_{HEC}$
 \end_inset
 
@@ -9338,11 +9318,8 @@ In this work, we assumed that there are only three types of VMs (VM
 \begin_inset Formula $_{LEC}$
 \end_inset
 
-).
-=======
-In this work, we assumed that there are only three types of VMs (VMHEC,
- VMMEC, and VMLEC).
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
+).=======In this work, we assumed that there are only three types of VMs
+ (VMHEC, VMMEC, and VMLEC).>>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
 \begin_inset CommandInset citation
 LatexCommand cite
 key "konjaang2022energy"
@@ -9388,17 +9365,15 @@ We can save result in database.
 \begin_layout Itemize
 
 \color brown
-<<<<<<< HEAD
-=======
-We can have help from my internship supervisor in SONATRACH who work in
- Web Group.
+<<<<<<< HEAD=======We can have help from my internship supervisor in SONATRACH
+ who work in Web Group.
 \end_layout
 
 \begin_layout Itemize
 
 \color brown
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
-We have think to do something different.
+>>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327aWe have think to do something
+ different.
 \end_layout
 
 \begin_layout Subsection
