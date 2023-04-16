@@ -8370,8 +8370,6 @@ name "algorithm5_STiHaM"
 \end_layout
 
 \begin_layout Subsection
-
-\color brown
 VM placement & VM consolidation
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -8466,6 +8464,248 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+Dynamic VM consolidation follows a distributed model, where the problem
+ is divided into 4 sub-problems
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al_Dulaimy2018type"
+literal "false"
+
+\end_inset
+
+
+\color inherit
+:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Host under-load detection:
+\series default
+ Determining if a host is considered to be under-loaded, so that all VMs
+ should be migrated, and the host should be switched to a low-power mode.There
+ are 2 methods:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Static Thresholding: fixed value is set to a utilization threshold, and
+ below this value, the PM is considered under-loaded.
+\end_layout
+
+\begin_layout Itemize
+Dynamic Thresholding: Static Thresholding are unsuitable for a cloud computing
+ environment which has dynamic, and unpredictable workloads.
+ The system should be able to automatically adjust its behavior depending
+ on the workload patterns, there are 2 patterns:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Adaptive Thresholding (AT): This study proposes an Adaptive Thresholding
+ (AT) technique based on statistical analysis of historical data, collected
+ during the lifetime of VMs.
+ AT adjusts the value of the CPU utilization threshold depending on:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mean Adaptive Thresholding: depending on the mean of the values of the minimum
+ PMs utilization in the data center, an adaptive value is set to a utilization
+ threshold.
+ This value is changed frequently due to the dynamic, and the unpredictable
+ workloads of the cloud environment.
+\end_layout
+
+\begin_layout Itemize
+Median Adaptive Thresholding: it depends on the median.
+ An adaptive value is set to a utilization threshold.
+ This value is also changed frequently in a cloud environment.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Boxplot: It is one of the most frequently used graphical techniques for
+ analyzing data sets, see Fig
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "box_plot_description"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ To create a boxplot, the elements of any data set are arranged in ascending
+ order.
+ Then, the median value of the arranged numbers, (called in this method
+ Q2), is calculated.
+ Q2 divides the data into two subsets.
+ To divide the data into quarters, the medians of these two subsets are
+ calculated too.
+ The median of the left subset is called Q1, while the median of the right
+ one is called Q3.
+ If the data set has an even number of elements, Q1 will be the average
+ of the two middle elements.
+ This works with the two subsets as well, if they have an even number of
+ elements.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/boxplot.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Description of the Boxplot Method
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "box_plot_description"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Host overload detection:
+\series default
+ Determining if a host is considered to be overloaded, so that some VMs
+ should be migrated to other active, or reactivated hosts, to meet the QoS
+ requirements.There are 2 methods which was expliqued before:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Static Thresholding.
+\end_layout
+
+\begin_layout Itemize
+Dynamic Thresholding: there are 2 patterns:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Adaptive Thresholding (AT).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mean Adaptive Thresholding: depending on the mean of the values of the maximum
+ PMs utilization in the data center, an adaptive value is set to a utilization
+ threshold.
+\end_layout
+
+\begin_layout Itemize
+Median Adaptive Thresholding: it depends on the median of the values of
+ the maximum PMs utilization in the data center.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Boxplot.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+VM selection:
+\series default
+ Selecting VMs that would be migrated from an under/ overloaded hosts.There
+ are many policies:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+RS Policy: Random selection
+\end_layout
+
+\begin_layout Itemize
+SS Policy
+\end_layout
+
+\begin_layout Itemize
+MTCM Policy
+\end_layout
+
+\begin_layout Itemize
+MECM Policy
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+VM placement:
+\series default
+ Placing VMs selected for migration to other active, or reactivated hosts.The
+ model is based on MCKP, which is a generalization of the classical version
+ for KP.
+ The proposed model is employed for both
+\series bold
+ Initial VM placement
+\series default
+, and 
+\series bold
+After Migration VM Placement
+\series default
+.
+ By studying the approaches presented in the literature to enhance the energy
+ efficiency in virtualized cloud data centers, it could be noted that the
+ approaches with conditional VM placement are much better compared with
+ random VM placement approaches.
+ The conditional VM placement approaches results in better energy efficiency
+\color brown
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al_Dulaimy2018type"
+literal "false"
+
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
 \begin_layout Subsection
 
 \color brown
@@ -8522,11 +8762,9 @@ We suggest starting the EViMA algorithm first for scheduling scientific
 \end_layout
 
 \begin_layout Itemize
-
-\color brown
 We think that when the PM is under-loaded or overloaded, it will consume
- more energy this why we think that if we apply and during execution we
- apply one (or more) virtual machine migration strategy(s) as in this article
+ more energy this why we think that if we apply during execution one or
+ more virtual machine migration strategies and plicies as in this article
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Al_Dulaimy2018type"
@@ -8534,7 +8772,7 @@ literal "false"
 
 \end_inset
 
-,may be we will avoid this 2 cases and so reducing energy consumed by PM.
+,may be we will avoid this problem and so reducing energy consumed by PM.
 \end_layout
 
 \begin_layout Subsubsection
@@ -9064,8 +9302,19 @@ Simulation parameter
 \end_layout
 
 \begin_layout Standard
-In this work, we assumed that there are only three types of VMs (VMHEC,
- VMMEC, and VMLEC).
+In this work, we assumed that there are only three types of VMs (VM
+\begin_inset Formula $_{HEC}$
+\end_inset
+
+, VM
+\begin_inset Formula $_{MEC}$
+\end_inset
+
+, and VM
+\begin_inset Formula $_{LEC}$
+\end_inset
+
+).
 \begin_inset CommandInset citation
 LatexCommand cite
 key "konjaang2022energy"
@@ -9106,13 +9355,6 @@ Java Spring Boot is well used to develop Web Applications with modern UI
 
 \color brown
 We can save result in database.
-\end_layout
-
-\begin_layout Itemize
-
-\color brown
-We can have help from my internship supervisor in SONATRACH who work in
- Web Group.
 \end_layout
 
 \begin_layout Itemize
