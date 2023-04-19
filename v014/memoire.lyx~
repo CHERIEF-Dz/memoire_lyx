@@ -5,6 +5,9 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{algpseudocode}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -95,7 +98,7 @@ Scientific workflows schudeling in the cloud with energy optimization
 \end_layout
 
 \begin_layout Date
-April 10
+April 18
 \begin_inset Formula $^{th}$
 \end_inset
 
@@ -8560,48 +8563,6 @@ noprefix "false"
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/boxplot.png
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Description of the Boxplot Method
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "box_plot_description"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Enumerate
 
 \series bold
@@ -8640,7 +8601,7 @@ Median Adaptive Thresholding: it depends on the median of the values of
 
 \end_deeper
 \begin_layout Itemize
-Boxplot.
+Boxplot (we will use this method in our approach).
 \end_layout
 
 \end_deeper
@@ -8656,19 +8617,30 @@ VM selection:
 
 \begin_deeper
 \begin_layout Itemize
-RS Policy: Random selection
+Random Sampling (RS) Policy
 \end_layout
 
 \begin_layout Itemize
-SS Policy
+Systematic Sampling (SS) Policy
 \end_layout
 
 \begin_layout Itemize
-MTCM Policy
+Minimum Time Cost Migration (MTCM) Policy
 \end_layout
 
 \begin_layout Itemize
-MECM Policy
+Minimum Energy Cost Migration (MECM) Policy (we will use this method in
+ our approach, see Algorithm
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Algorithm_MECM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
 \end_layout
 
 \end_deeper
@@ -8677,19 +8649,8 @@ MECM Policy
 \series bold
 VM placement:
 \series default
- Placing VMs selected for migration to other active, or reactivated hosts.The
- model is based on MCKP, which is a generalization of the classical version
- for KP.
- The proposed model is employed for both
-\series bold
- Initial VM placement
-\series default
-, and 
-\series bold
-After Migration VM Placement
-\series default
-.
- By studying the approaches presented in the literature to enhance the energy
+ Placing VMs selected for migration to other active, or reactivated hosts.By
+ studying the approaches presented in the literature to enhance the energy
  efficiency in virtualized cloud data centers, it could be noted that the
  approaches with conditional VM placement are much better compared with
  random VM placement approaches.
@@ -8706,6 +8667,100 @@ literal "false"
 
 \color inherit
 .
+\color brown
+The model is based on MCKP, which is a generalization of the classical version
+ for KP.
+ The proposed model is employed for both
+\series bold
+ Initial VM placement
+\series default
+, and 
+\series bold
+After Migration VM Placement
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/boxplot.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Description of the Boxplot Method
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "box_plot_description"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Algorithm of MECM
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Algorithm_MECM"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Algorithm/MECM.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8765,9 +8820,8 @@ We suggest starting the EViMA algorithm first for scheduling scientific
 
 \begin_layout Itemize
 We think that when the PM is under-loaded or overloaded, it will consume
- more energy this why we think that if we apply during execution one or
- more virtual machine migration strategies and plicies as in this article
- 
+ more energy this why we think that if we apply during execution some of
+ virtual machine migration strategies and plicies as in this article 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Al_Dulaimy2018type"
@@ -8776,12 +8830,294 @@ literal "false"
 \end_inset
 
 ,may be we will avoid this problem and so reducing energy consumed by PM.
+ After seeing the results of experiments and test performance 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al_Dulaimy2018type"
+literal "false"
+
+\end_inset
+
+, so we decide to apply the best pilicies which are:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Boxplot: for both 
+\series bold
+host overload and underload detection
+\end_layout
+
+\begin_layout Itemize
+MECM for 
+\series bold
+VM selection
+\end_layout
+
+\begin_layout Itemize
+
+\color brown
+MCKP for 
+\series bold
+VM placement
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 
 \color brown
 Steps of our approach
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Our approach
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+algblockdefx [Foreach] {Foreach} {EndForeach} [1] {
+\backslash
+textbf{foreach} #1 
+\backslash
+textbf{do}} {
+\backslash
+textbf{end foreach}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Require{Workflow, set of VMs and set of VM types $(VM_{HEC}, VM_{MEC}, VM_{LEC})
+$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+State $wt_{ReadyPool} = (wt_{1}, wt_{2}, wt_{3},...wt_{n})$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+While{$wt_{ReadyPool} 
+\backslash
+neq 
+\backslash
+emptyset$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+State {Compute EFT of each tasks}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+State {Group $Tasks 
+\backslash
+Rightarrow $HCT, MCT, LCT}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+State {Group $VMs 
+\backslash
+Rightarrow (VM_{HEC}, VM_{MEC}, VM_{LEC})$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+Foreach {wt in $wt_{ReadyPool}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+If{$wt_{i}$ in HCT and $wt_{j}$ in LCT }
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+State apply algorithm 2 to execute HCT
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+State apply algorithm 3 to execute LCT 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+Else
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+If{EFT of $wt_{i}$ = Dl of $wt_{i}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+State $wt_{i} 
+\backslash
+mapsto VM_{MEC}$
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+State Update $wt_{ReadyPool}$
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+Else
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+If{EFT of $wt_{i}$ $
+\backslash
+leq$ ST}
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+State apply algorithm 5
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+Else
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+State apply algorithm 4 to save mood the idle VM
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+State Update $wt_{ReadyPool}$
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+EndIf
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+EndIf
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+EndIf
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+EndForeach
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+EndWhile
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -8803,7 +9139,7 @@ This chapter was devoted to presenting our approach, based on EViMA algorithm
 \end_layout
 
 \begin_layout Standard
-In the next chapter, we will present our experiment and simulation
+In the next chapter, we will present our experiment and simulation.
 \end_layout
 
 \begin_layout Standard
@@ -9108,7 +9444,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection
-Downloading and Installing WorkflowSim with Eclipse
+Downloading and Installing WorkflowSim with Eclipse without GitHub
 \end_layout
 
 \begin_layout Standard
@@ -9126,25 +9462,21 @@ literal "false"
 \begin_layout Enumerate
 
 \series bold
-Register a GitHub account and fork WorkflowSim branch:
-\end_layout
+Download Source Files
+\series default
+ directly from
+\begin_inset CommandInset href
+LatexCommand href
+name " https://github.com/WorkflowSim/WorkflowSim-1.0/archive/master.zip"
+target "this link"
+literal "false"
 
-\begin_deeper
-\begin_layout Enumerate
-Go to the repository page (https://github.com/WorkflowSim/WorkflowSim-1.0)
-\end_layout
+\end_inset
 
-\begin_layout Enumerate
-Click 'Fork' on the top-right corner next to 'Star'.
+ and unzip it to your_repo_root.
  
 \end_layout
 
-\begin_layout Enumerate
-Then you will have your own branch of WorkflowSim and you can maintain your
- codes under this branch and commit your changes to it.
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 
 \series bold
@@ -9161,44 +9493,11 @@ im').
 
 \begin_layout Enumerate
 Right click your project, choose 'Import'.
- Click 'Git'->'Projects from Git'.
+ Click 'General'->'Projects from Folder or Archive'.(see )
 \end_layout
 
 \begin_layout Enumerate
-Set the URL to be your reposotory.
- And then you will see a branch called 'master', tick it and continue.
- And you don't need import projects again so just cancel.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\series bold
-Import Source Files and Libraries:
-\series default
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Right click the project again and choose 'Properties'.
- 
-\end_layout
-
-\begin_layout Enumerate
-Go to 'Java Build Path'.
- 
-\end_layout
-
-\begin_layout Enumerate
-Link two source directories (your_repo_root/examples, your_repo_root/sources)to
- the source folders.
- 
-\end_layout
-
-\begin_layout Enumerate
-Add two external Jars (your_repo_root/lib/flanagan.jar and your_repo_root/lib/jdo
-m-2.0.0.jar) to the Libraries.
+Set the URL to be your extracted folder.
 \end_layout
 
 \end_deeper
@@ -9222,7 +9521,7 @@ ontage_100.xml"; with your real physical file path.
 
 \begin_layout Enumerate
 Right click on WorkflowSimBasicExample1.java and choose 'Run File'.
- You should be able to see some output
+ You should be able to see some output.
 \end_layout
 
 \end_deeper
@@ -9305,8 +9604,7 @@ Simulation parameter
 \end_layout
 
 \begin_layout Standard
-<<<<<<< HEADIn this work, we assumed that there are only three types of
- VMs (VM
+In this work, we assumed that there are only three types of VMs (VM
 \begin_inset Formula $_{HEC}$
 \end_inset
 
@@ -9318,8 +9616,7 @@ Simulation parameter
 \begin_inset Formula $_{LEC}$
 \end_inset
 
-).=======In this work, we assumed that there are only three types of VMs
- (VMHEC, VMMEC, and VMLEC).>>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327a
+).
 \begin_inset CommandInset citation
 LatexCommand cite
 key "konjaang2022energy"
@@ -9365,15 +9662,14 @@ We can save result in database.
 \begin_layout Itemize
 
 \color brown
-<<<<<<< HEAD=======We can have help from my internship supervisor in SONATRACH
- who work in Web Group.
+We can have help from my internship supervisor in SONATRACH who work in
+ Web Group.
 \end_layout
 
 \begin_layout Itemize
 
 \color brown
->>>>>>> 998fc324d1401d49bd2ded000d793a0487c0327aWe have think to do something
- different.
+We have think to do something different.
 \end_layout
 
 \begin_layout Subsection

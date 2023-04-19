@@ -8895,32 +8895,21 @@ status open
 
 
 \backslash
-algblockdefx [Foreach] {Foreach} {EndForeach} [1] {
-\backslash
-textbf{foreach} #1 
-\backslash
-textbf{do}} {
-\backslash
-textbf{end foreach}}
-\end_layout
-
-\begin_layout Plain Layout
-
+begin{algorithmic}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{algorithmic}[1]
+Require{Workflow, set of VMs and set of VM types (VMheC, VMmec, VMlec)}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-Require{Workflow, set of VMs and set of VM types $(VM_{HEC}, VM_{MEC}, VM_{LEC})
-$}
+Ensure 
 \end_layout
 
 \begin_layout Plain Layout
@@ -8936,164 +8925,16 @@ State $wt_{ReadyPool} = (wt_{1}, wt_{2}, wt_{3},...wt_{n})$
 \backslash
 While{$wt_{ReadyPool} 
 \backslash
-neq 
-\backslash
-phi$}
+neq 10$}
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-State {Compute EFT of each tasks}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
+State $x 
 \backslash
-State {Group $Tasks 
-\backslash
-Rightarrow $HCT, MCT, LCT}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-State {Group $VMs 
-\backslash
-Rightarrow (VM_{HEC}, VM_{MEC}, VM_{LEC})$}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-Foreach {wt in $wt_{ReadyPool}$}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-If{$wt_{i}$ in HCT and $wt_{j}$ in LCT }
-\end_layout
-
-\begin_layout Plain Layout
-
-			
-\backslash
-State apply algorithm 2 to execute HCT
-\end_layout
-
-\begin_layout Plain Layout
-
-			
-\backslash
-State apply algorithm 3 to execute LCT 
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-Else
-\end_layout
-
-\begin_layout Plain Layout
-
-			
-\backslash
-If{EFT of $wt_{i}$ = Dl of $wt_{i}$}
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-State $wt_{i} 
-\backslash
-mapsto VM_{MEC}$
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-State Update $wt_{ReadyPool}$
-\end_layout
-
-\begin_layout Plain Layout
-
-			
-\backslash
-Else
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-If{EFT of $wt_{i}$ $
-\backslash
-leq$ ST}
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
-State apply algorithm 5
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-Else
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
-State apply algorithm 4 to save mood the idle VM
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
-State Update $wt_{ReadyPool}$
-\end_layout
-
-\begin_layout Plain Layout
-
-				
-\backslash
-EndIf
-\end_layout
-
-\begin_layout Plain Layout
-
-			
-\backslash
-EndIf
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-EndIf
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-EndForeach
+gets x + i$
 \end_layout
 
 \begin_layout Plain Layout
