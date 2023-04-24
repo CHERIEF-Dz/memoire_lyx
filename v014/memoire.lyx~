@@ -7706,14 +7706,10 @@ In the next chapter we will suggest our proposed approach
 \end_layout
 
 \begin_layout Section
-
-\color brown
-State of art and our proposed approach [1day]
+State of art and our proposed approach
 \end_layout
 
 \begin_layout Subsection
-
-\color brown
 Introduction
 \end_layout
 
@@ -8876,6 +8872,7 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float algorithm
+placement h
 wide false
 sideways false
 status open
@@ -8945,6 +8942,7 @@ noprefix "false"
 
 ).
 \begin_inset Float algorithm
+placement h
 wide false
 sideways false
 status open
@@ -9621,11 +9619,100 @@ im').
 
 \begin_layout Enumerate
 Right click your project, choose 'Import'.
- Click 'General'->'Projects from Folder or Archive'.(see )
+ Click 'General'->'Projects from Folder or Archive'.(see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Import-a-project"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/worflowsim/Capture d’écran 2023-04-24 142112.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Import a project
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Import-a-project"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Set the URL to be your extracted folder.
+Set the URL to be your extracted folder (wait until Finish button will be
+ enabled) .
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/worflowsim/2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Set URL to be the extracted folder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper

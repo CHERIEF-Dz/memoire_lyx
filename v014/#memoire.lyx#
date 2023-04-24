@@ -9619,18 +9619,7 @@ im').
 
 \begin_layout Enumerate
 Right click your project, choose 'Import'.
- Click 'General'->'Projects from Folder or Archive'.(see Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Import-a-project"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-)
+ Click 'General'->'Projects from Folder or Archive'.
 \begin_inset Float figure
 wide false
 sideways false
@@ -9640,7 +9629,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/worflowsim/Capture d’écran 2023-04-24 142112.png
-	scale 75
 
 \end_inset
 
@@ -9652,13 +9640,6 @@ status open
 
 \begin_layout Plain Layout
 Import a project
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Import-a-project"
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -9676,18 +9657,8 @@ name "fig:Import-a-project"
 \end_layout
 
 \begin_layout Enumerate
-Set the URL to be your extracted folder (wait until Finish button will be
- enabled as in Fig.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Set-URL-to"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) .
+Set the URL to be your extracted folder (wait until Finish butun will be
+ enabaled.
 \begin_inset Float figure
 wide false
 sideways false
@@ -9697,7 +9668,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/worflowsim/2.png
-	scale 50
 
 \end_inset
 
@@ -9709,13 +9679,6 @@ status open
 
 \begin_layout Plain Layout
 Set URL to be the extracted folder
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Set-URL-to"
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
